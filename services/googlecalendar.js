@@ -117,6 +117,17 @@ async function authorize() {
     throw new Error('Hãy thêm GCAL_FORCE_ENV=true vào file .env của bạn!');
 }
 
+    // Verify auth helper for diagnostics
+    async function verifyAuth() {
+        try {
+            await authorize(false);
+            return { ok: true };
+        }
+        catch (err) {
+            return { ok: false, error: err.code || err.message || String(err) };
+        }
+    }
+
 async function taoSuKienTranDau(tranDau, tenGiaiDau) {
     var auth = await authorize();
     var calendar = google.calendar({ version: 'v3', auth: auth });
@@ -138,4 +149,5 @@ module.exports = {
     buildCreateEventUrl: buildCreateEventUrl,
     hasEnvOAuthConfig: hasEnvOAuthConfig,
     shouldUseEnvOAuth: shouldUseEnvOAuth
+        ,verifyAuth: verifyAuth
 };

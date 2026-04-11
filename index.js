@@ -78,6 +78,7 @@ app.use('/bangxephang', require('./routers/bangxephang'));
 app.use('/doituyen', require('./routers/doituyen'));
 app.use('/nhatkyhethong', require('./routers/nhatkyhethong'));
 app.use('/thongbao', require('./routers/thongbao'));
+app.use('/gcal', require('./routers/gcal'));
 
 app.get('/health', (req, res) => res.send('OK'));
 
