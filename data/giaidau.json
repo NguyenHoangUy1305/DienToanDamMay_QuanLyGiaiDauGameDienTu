@@ -1,0 +1,278 @@
+[
+  {
+    "_id": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "TenGiaiDau": "FC Online Spring Open 2023",
+    "NgayBatDau": {
+      "$date": "2023-03-01T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2023-03-20T00:00:00.000Z"
+    },
+    "TheThuc": "1vs1",
+    "SoLuongToiDa": 16,
+    "TrangThai": "Da ket thuc",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2023-03-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2023-03-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bba"
+    },
+    "TenGiaiDau": "FC Online Summer Open 2023",
+    "NgayBatDau": {
+      "$date": "2023-06-01T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2023-06-25T00:00:00.000Z"
+    },
+    "TheThuc": "1vs1",
+    "SoLuongToiDa": 16,
+    "TrangThai": "Da ket thuc",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2023-06-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2023-06-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "TenGiaiDau": "FC Online Autumn Open 2024",
+    "NgayBatDau": {
+      "$date": "2024-09-01T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2024-09-25T00:00:00.000Z"
+    },
+    "TheThuc": "1vs1",
+    "SoLuongToiDa": 16,
+    "TrangThai": "Da ket thuc",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2024-09-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2024-09-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "TenGiaiDau": "FC Online Winter Open 2024",
+    "NgayBatDau": {
+      "$date": "2024-12-05T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2024-12-28T00:00:00.000Z"
+    },
+    "TheThuc": "1vs1",
+    "SoLuongToiDa": 16,
+    "TrangThai": "Da ket thuc",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2024-12-05T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2024-12-05T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "TenGiaiDau": "FC Online Spring Open 2025",
+    "NgayBatDau": {
+      "$date": "2025-03-05T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2025-03-30T00:00:00.000Z"
+    },
+    "TheThuc": "1vs1",
+    "SoLuongToiDa": 16,
+    "TrangThai": "Da ket thuc",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2025-03-05T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-03-05T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "TenGiaiDau": "FC Online Summer Open 2026",
+    "NgayBatDau": {
+      "$date": "2026-06-01T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2026-06-25T00:00:00.000Z"
+    },
+    "TheThuc": "1vs1",
+    "SoLuongToiDa": 16,
+    "TrangThai": "Sap dien ra",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-06-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-06-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "TenGiaiDau": "FC Online Team League 2023",
+    "NgayBatDau": {
+      "$date": "2023-04-01T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2023-04-30T00:00:00.000Z"
+    },
+    "TheThuc": "doi",
+    "SoLuongToiDa": 8,
+    "TrangThai": "Da ket thuc",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2023-04-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2023-04-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "TenGiaiDau": "FC Online Team League 2024",
+    "NgayBatDau": {
+      "$date": "2024-04-01T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2024-04-30T00:00:00.000Z"
+    },
+    "TheThuc": "doi",
+    "SoLuongToiDa": 8,
+    "TrangThai": "Da ket thuc",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2024-04-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2024-04-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "TenGiaiDau": "FC Online Team League 2025",
+    "NgayBatDau": {
+      "$date": "2025-04-01T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2025-04-30T00:00:00.000Z"
+    },
+    "TheThuc": "doi",
+    "SoLuongToiDa": 8,
+    "TrangThai": "Da ket thuc",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2025-04-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-04-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "TenGiaiDau": "FC Online Team League 2026",
+    "NgayBatDau": {
+      "$date": "2026-04-20T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2026-05-20T00:00:00.000Z"
+    },
+    "TheThuc": "doi",
+    "SoLuongToiDa": 8,
+    "TrangThai": "Dang dien ra",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-04-20T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-04-20T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "TenGiaiDau": "FC Online Pro Masters 2026",
+    "NgayBatDau": {
+      "$date": "2026-05-15T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2026-06-15T00:00:00.000Z"
+    },
+    "TheThuc": "doi",
+    "SoLuongToiDa": 8,
+    "TrangThai": "Sap dien ra",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-05-15T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-05-15T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "TenGiaiDau": "FC Online Champions Cup 2026",
+    "NgayBatDau": {
+      "$date": "2026-08-01T00:00:00.000Z"
+    },
+    "NgayKetThuc": {
+      "$date": "2026-08-30T00:00:00.000Z"
+    },
+    "TheThuc": "1vs1",
+    "SoLuongToiDa": 16,
+    "TrangThai": "Sap dien ra",
+    "MoTa": "Giai dau FC Online mua giai gan nhat",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-08-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-08-01T00:00:00.000Z"
+    }
+  }
+]

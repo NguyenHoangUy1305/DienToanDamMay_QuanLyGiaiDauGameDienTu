@@ -1,0 +1,7 @@
+{
+  "watch": ["index.js", "routers", "services", "models", "views"],
+  "ext": "js,ejs,json",
+  "ignore": ["node_modules", "public", ".git"],
+  "delay": "250",
+  "exec": "node index.js"
+}

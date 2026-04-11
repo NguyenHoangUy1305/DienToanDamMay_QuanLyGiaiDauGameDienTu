@@ -1,0 +1,40 @@
+{
+  "name": "qlgiaigame",
+  "version": "1.0.0",
+  "description": "trang tin quản lý giải đấu fco+ mongodb",
+  "homepage": "https://github.com/DTH235812-NHoangUy/DienToanDamMay_QuanLyGiaiDauGameDienTu#readme",
+  "bugs": {
+    "url": "https://github.com/DTH235812-NHoangUy/DienToanDamMay_QuanLyGiaiDauGameDienTu/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DTH235812-NHoangUy/DienToanDamMay_QuanLyGiaiDauGameDienTu.git"
+  },
+  "license": "ISC",
+  "author": "Nguyen Hoang Uy",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "nodemon --config nodemon.json",
+    "dev": "nodemon index.js",
+    "test": "nodemon index.js"
+  },
+  "dependencies": {
+    "@google-cloud/local-auth": "^3.0.1",
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.1",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "googleapis": "^171.4.0",
+    "mongoose": "^9.4.1",
+    "nodemon": "^3.1.14"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3"
+  }
+}

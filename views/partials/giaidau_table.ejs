@@ -1,0 +1,37 @@
+﻿<table class="table table-bordered table-hover align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>Tên giải đấu</th>
+            <th>Ngày bắt đầu</th>
+            <th>Ngày kết thúc</th>
+            <th>Thể thức</th>
+            <th>Số lượng tối đa</th>
+            <th>Trạng thái</th>
+            <th width="170">Chức năng</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (data && data.length > 0) { %>
+            <% data.forEach(function(item) { %>
+                <tr>
+                    <td><%= item.TenGiaiDau %></td>
+                    <td><%= new Date(item.NgayBatDau).toLocaleDateString('vi-VN') %></td>
+                    <td><%= new Date(item.NgayKetThuc).toLocaleDateString('vi-VN') %></td>
+                    <td><%= toVietnameseTournamentType(item.TheThuc) %></td>
+                    <td><%= item.SoLuongToiDa %></td>
+                    <td><%= toVietnameseTournamentStatus(item.TrangThai) %></td>
+                    <td>
+                        <% if (canManage) { %>
+                            <a href="/giaidau/sua/<%= item._id %>" class="btn btn-warning btn-sm">Sửa</a>
+                            <% if (isAdmin) { %>
+                                <a href="/giaidau/xoa/<%= item._id %>" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa?');">Xóa</a>
+                            <% } %>
+                        <% } %>
+                    </td>
+                </tr>
+            <% }) %>
+        <% } else { %>
+            <tr><td colspan="7" class="text-center"><%= emptyText %></td></tr>
+        <% } %>
+    </tbody>
+</table>

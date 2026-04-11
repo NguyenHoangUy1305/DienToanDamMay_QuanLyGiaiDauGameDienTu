@@ -1,0 +1,2482 @@
+[
+  {
+    "_id": {
+      "$oid": "000000000000000000001389"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 1",
+    "DoiThu2": "Solo Player 2",
+    "ThoiGianThiDau": {
+      "$date": "2023-03-02T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Solo Player 2",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000138a"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 3",
+    "DoiThu2": "Solo Player 4",
+    "ThoiGianThiDau": {
+      "$date": "2023-03-03T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": "Solo Player 4",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000138b"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007ff"
+    },
+    "DoiThu2Id": {
+      "$oid": "000000000000000000000800"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 5",
+    "DoiThu2": "Solo Player 6",
+    "ThoiGianThiDau": {
+      "$date": "2023-03-04T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": "Solo Player 5",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000138c"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "000000000000000000000801"
+    },
+    "DoiThu2Id": {
+      "$oid": "000000000000000000000802"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 7",
+    "DoiThu2": "Solo Player 8",
+    "ThoiGianThiDau": {
+      "$date": "2023-03-05T00:00:00.000Z"
+    },
+    "TySo1": 3,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "Solo Player 7",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000138d"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d1"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007d2"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 1-1",
+    "DoiThu2": "Player 1-2",
+    "ThoiGianThiDau": {
+      "$date": "2023-03-06T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 1-2",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000138e"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d3"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007d4"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 1-3",
+    "DoiThu2": "Player 2-1",
+    "ThoiGianThiDau": {
+      "$date": "2023-03-07T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 2-1",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000138f"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d5"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007d6"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 2-2",
+    "DoiThu2": "Player 2-3",
+    "ThoiGianThiDau": {
+      "$date": "2023-06-02T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 2-3",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001390"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d7"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007d8"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 3-1",
+    "DoiThu2": "Player 3-2",
+    "ThoiGianThiDau": {
+      "$date": "2023-06-03T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 3-2",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001391"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d9"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007da"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 3-3",
+    "DoiThu2": "Player 4-1",
+    "ThoiGianThiDau": {
+      "$date": "2023-06-04T00:00:00.000Z"
+    },
+    "TySo1": 3,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 3-3",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001392"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007db"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007dc"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 4-2",
+    "DoiThu2": "Player 4-3",
+    "ThoiGianThiDau": {
+      "$date": "2023-06-05T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 4-3",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001393"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007dd"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007de"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 5-1",
+    "DoiThu2": "Player 5-2",
+    "ThoiGianThiDau": {
+      "$date": "2023-06-06T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 5-2",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001394"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007df"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007e0"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 5-3",
+    "DoiThu2": "Player 6-1",
+    "ThoiGianThiDau": {
+      "$date": "2023-06-07T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 6-1",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001395"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007e1"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007e2"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 6-2",
+    "DoiThu2": "Player 6-3",
+    "ThoiGianThiDau": {
+      "$date": "2024-09-02T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hoa",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001396"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007e3"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007e4"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 7-1",
+    "DoiThu2": "Player 7-2",
+    "ThoiGianThiDau": {
+      "$date": "2024-09-03T00:00:00.000Z"
+    },
+    "TySo1": 3,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hoa",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001397"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007e5"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007e6"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 7-3",
+    "DoiThu2": "Player 8-1",
+    "ThoiGianThiDau": {
+      "$date": "2024-09-04T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hoa",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001398"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007e7"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007e8"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 8-2",
+    "DoiThu2": "Player 8-3",
+    "ThoiGianThiDau": {
+      "$date": "2024-09-05T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hoa",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001399"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007e9"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007ea"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 9-1",
+    "DoiThu2": "Player 9-2",
+    "ThoiGianThiDau": {
+      "$date": "2024-09-06T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hoa",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000139a"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007eb"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007ec"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 9-3",
+    "DoiThu2": "Player 10-1",
+    "ThoiGianThiDau": {
+      "$date": "2024-09-07T00:00:00.000Z"
+    },
+    "TySo1": 3,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hoa",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000139b"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 1",
+    "DoiThu2": "Solo Player 2",
+    "ThoiGianThiDau": {
+      "$date": "2024-12-06T00:00:00.000Z"
+    },
+    "TySo1": 3,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Solo Player 1",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000139c"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 3",
+    "DoiThu2": "Solo Player 4",
+    "ThoiGianThiDau": {
+      "$date": "2024-12-07T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": "Solo Player 4",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000139d"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007ff"
+    },
+    "DoiThu2Id": {
+      "$oid": "000000000000000000000800"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 5",
+    "DoiThu2": "Solo Player 6",
+    "ThoiGianThiDau": {
+      "$date": "2024-12-08T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": "Solo Player 5",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000139e"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "000000000000000000000801"
+    },
+    "DoiThu2Id": {
+      "$oid": "000000000000000000000802"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 7",
+    "DoiThu2": "Solo Player 8",
+    "ThoiGianThiDau": {
+      "$date": "2024-12-09T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "Solo Player 7",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000139f"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d1"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007d2"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 1-1",
+    "DoiThu2": "Player 1-2",
+    "ThoiGianThiDau": {
+      "$date": "2024-12-10T00:00:00.000Z"
+    },
+    "TySo1": 3,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 1-1",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013a0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d3"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007d4"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 1-3",
+    "DoiThu2": "Player 2-1",
+    "ThoiGianThiDau": {
+      "$date": "2024-12-11T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 2-1",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013a1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d5"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007d6"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 2-2",
+    "DoiThu2": "Player 2-3",
+    "ThoiGianThiDau": {
+      "$date": "2025-03-06T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 2-3",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013a2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d7"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007d8"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 3-1",
+    "DoiThu2": "Player 3-2",
+    "ThoiGianThiDau": {
+      "$date": "2025-03-07T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 3-2",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013a3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d9"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007da"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 3-3",
+    "DoiThu2": "Player 4-1",
+    "ThoiGianThiDau": {
+      "$date": "2025-03-08T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 3-3",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013a4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007db"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007dc"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 4-2",
+    "DoiThu2": "Player 4-3",
+    "ThoiGianThiDau": {
+      "$date": "2025-03-09T00:00:00.000Z"
+    },
+    "TySo1": 3,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 4-2",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013a5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007dd"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007de"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 5-1",
+    "DoiThu2": "Player 5-2",
+    "ThoiGianThiDau": {
+      "$date": "2025-03-10T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 5-2",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013a6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007df"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007e0"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 5-3",
+    "DoiThu2": "Player 6-1",
+    "ThoiGianThiDau": {
+      "$date": "2025-03-11T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": "Player 6-1",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013a7"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007e1"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007e2"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 6-2",
+    "DoiThu2": "Player 6-3",
+    "ThoiGianThiDau": {
+      "$date": "2026-06-02T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013a8"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007e3"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007e4"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 7-1",
+    "DoiThu2": "Player 7-2",
+    "ThoiGianThiDau": {
+      "$date": "2026-06-03T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013a9"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007e5"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007e6"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 7-3",
+    "DoiThu2": "Player 8-1",
+    "ThoiGianThiDau": {
+      "$date": "2026-06-04T00:00:00.000Z"
+    },
+    "TySo1": 3,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013aa"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007e7"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007e8"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 8-2",
+    "DoiThu2": "Player 8-3",
+    "ThoiGianThiDau": {
+      "$date": "2026-06-05T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013ab"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007e9"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007ea"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 9-1",
+    "DoiThu2": "Player 9-2",
+    "ThoiGianThiDau": {
+      "$date": "2026-06-06T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013ac"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007eb"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007ec"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 9-3",
+    "DoiThu2": "Player 10-1",
+    "ThoiGianThiDau": {
+      "$date": "2026-06-07T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013ad"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 1",
+    "DoiThu2": "Solo Player 2",
+    "ThoiGianThiDau": {
+      "$date": "2026-08-02T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013ae"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 3",
+    "DoiThu2": "Solo Player 4",
+    "ThoiGianThiDau": {
+      "$date": "2026-08-03T00:00:00.000Z"
+    },
+    "TySo1": 3,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013af"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007ff"
+    },
+    "DoiThu2Id": {
+      "$oid": "000000000000000000000800"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 5",
+    "DoiThu2": "Solo Player 6",
+    "ThoiGianThiDau": {
+      "$date": "2026-08-04T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013b0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "000000000000000000000801"
+    },
+    "DoiThu2Id": {
+      "$oid": "000000000000000000000802"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Solo Player 7",
+    "DoiThu2": "Solo Player 8",
+    "ThoiGianThiDau": {
+      "$date": "2026-08-05T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013b1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d1"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007d2"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 1-1",
+    "DoiThu2": "Player 1-2",
+    "ThoiGianThiDau": {
+      "$date": "2026-08-06T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013b2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "LoaiTran": "1vs1",
+    "LoaiDoiTuongThiDau": "NguoiChoi",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000007d3"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000007d4"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Player 1-3",
+    "DoiThu2": "Player 2-1",
+    "ThoiGianThiDau": {
+      "$date": "2026-08-07T00:00:00.000Z"
+    },
+    "TySo1": 3,
+    "TySo2": 3,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013b3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003ea"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Seven TV",
+    "DoiThu2": "NK FC Online",
+    "ThoiGianThiDau": {
+      "$date": "2023-04-03T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hoa",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013b4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "EFC Academy",
+    "DoiThu2": "SGLX Esports",
+    "ThoiGianThiDau": {
+      "$date": "2023-04-04T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hoa",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013b5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "FPT Play Club",
+    "DoiThu2": "Sai Gon Legends",
+    "ThoiGianThiDau": {
+      "$date": "2023-04-05T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hoa",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013b6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Ha Noi Wolves",
+    "DoiThu2": "Seven TV",
+    "ThoiGianThiDau": {
+      "$date": "2023-04-06T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hoa",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013b7"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "FPT Play Club",
+    "DoiThu2": "Sai Gon Legends",
+    "ThoiGianThiDau": {
+      "$date": "2024-04-03T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "FPT Play Club",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013b8"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003f0"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Ha Noi Wolves",
+    "DoiThu2": "Da Nang Phoenix",
+    "ThoiGianThiDau": {
+      "$date": "2024-04-04T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "Da Nang Phoenix",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013b9"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Can Tho Warriors",
+    "DoiThu2": "Hue Imperial",
+    "ThoiGianThiDau": {
+      "$date": "2024-04-05T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": "Can Tho Warriors",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013ba"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003f3"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "T1 Vietnam",
+    "DoiThu2": "FPT Play Club",
+    "ThoiGianThiDau": {
+      "$date": "2024-04-06T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "T1 Vietnam",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013bb"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Can Tho Warriors",
+    "DoiThu2": "Hue Imperial",
+    "ThoiGianThiDau": {
+      "$date": "2025-04-03T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "Hue Imperial",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013bc"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003f3"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003f4"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "T1 Vietnam",
+    "DoiThu2": "ProG Arena",
+    "ThoiGianThiDau": {
+      "$date": "2025-04-04T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": "ProG Arena",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013bd"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003f5"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003f6"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Storm FC",
+    "DoiThu2": "Blue Shark",
+    "ThoiGianThiDau": {
+      "$date": "2025-04-05T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": "Storm FC",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013be"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Seven TV",
+    "DoiThu2": "Can Tho Warriors",
+    "ThoiGianThiDau": {
+      "$date": "2025-04-06T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": "Can Tho Warriors",
+    "TrangThai": "Da thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013bf"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003f5"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003f6"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Storm FC",
+    "DoiThu2": "Blue Shark",
+    "ThoiGianThiDau": {
+      "$date": "2026-04-22T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013c0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003ea"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Seven TV",
+    "DoiThu2": "NK FC Online",
+    "ThoiGianThiDau": {
+      "$date": "2026-04-23T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013c1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "EFC Academy",
+    "DoiThu2": "SGLX Esports",
+    "ThoiGianThiDau": {
+      "$date": "2026-04-24T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013c2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003f5"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "FPT Play Club",
+    "DoiThu2": "Storm FC",
+    "ThoiGianThiDau": {
+      "$date": "2026-04-25T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013c3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "EFC Academy",
+    "DoiThu2": "SGLX Esports",
+    "ThoiGianThiDau": {
+      "$date": "2026-05-17T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013c4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "FPT Play Club",
+    "DoiThu2": "Sai Gon Legends",
+    "ThoiGianThiDau": {
+      "$date": "2026-05-18T00:00:00.000Z"
+    },
+    "TySo1": 0,
+    "TySo2": 2,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013c5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003f0"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Ha Noi Wolves",
+    "DoiThu2": "Da Nang Phoenix",
+    "ThoiGianThiDau": {
+      "$date": "2026-05-19T00:00:00.000Z"
+    },
+    "TySo1": 1,
+    "TySo2": 0,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000013c6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "LoaiTran": "doi",
+    "LoaiDoiTuongThiDau": "DoiTuyen",
+    "DoiThu1Id": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "DoiThu2Id": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "VongDau": "Vong bang",
+    "DoiThu1": "Can Tho Warriors",
+    "DoiThu2": "EFC Academy",
+    "ThoiGianThiDau": {
+      "$date": "2026-05-20T00:00:00.000Z"
+    },
+    "TySo1": 2,
+    "TySo2": 1,
+    "ChiTietTySo": [],
+    "NguoiThang": null,
+    "TrangThai": "Chua thi dau",
+    "NguoiTao": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiCapNhat": {
+      "$oid": "000000000000000000000001"
+    },
+    "KetQuaXacNhan": false,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  }
+]

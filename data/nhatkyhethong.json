@@ -1,0 +1,692 @@
+[
+  {
+    "_id": {
+      "$oid": "000000000000000000001f41"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000001"
+    },
+    "HanhDong": "Dang nhap",
+    "DoiTuong": "TaiKhoan",
+    "ChiTiet": "Nhat ky nghiep vu #1",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 1
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Canh bao",
+    "createdAt": {
+      "$date": "2026-03-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f42"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000002"
+    },
+    "HanhDong": "Them giai dau",
+    "DoiTuong": "GiaiDau",
+    "ChiTiet": "Nhat ky nghiep vu #2",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 2
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-02T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-02T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f43"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000003"
+    },
+    "HanhDong": "Them tran dau",
+    "DoiTuong": "TranDau",
+    "ChiTiet": "Nhat ky nghiep vu #3",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 3
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-03T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-03T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f44"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000001"
+    },
+    "HanhDong": "Cap nhat ket qua",
+    "DoiTuong": "BangXepHang",
+    "ChiTiet": "Nhat ky nghiep vu #4",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 4
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-04T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-04T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f45"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000002"
+    },
+    "HanhDong": "Xoa doi tuyen",
+    "DoiTuong": "DoiTuyen",
+    "ChiTiet": "Nhat ky nghiep vu #5",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 5
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Canh bao",
+    "createdAt": {
+      "$date": "2026-03-05T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-05T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f46"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000003"
+    },
+    "HanhDong": "Dang nhap",
+    "DoiTuong": "TaiKhoan",
+    "ChiTiet": "Nhat ky nghiep vu #6",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 6
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-06T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-06T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f47"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000001"
+    },
+    "HanhDong": "Them giai dau",
+    "DoiTuong": "GiaiDau",
+    "ChiTiet": "Nhat ky nghiep vu #7",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 7
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-07T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f48"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000002"
+    },
+    "HanhDong": "Them tran dau",
+    "DoiTuong": "TranDau",
+    "ChiTiet": "Nhat ky nghiep vu #8",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 8
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-08T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-08T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f49"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000003"
+    },
+    "HanhDong": "Cap nhat ket qua",
+    "DoiTuong": "BangXepHang",
+    "ChiTiet": "Nhat ky nghiep vu #9",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 9
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Canh bao",
+    "createdAt": {
+      "$date": "2026-03-09T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-09T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f4a"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000001"
+    },
+    "HanhDong": "Xoa doi tuyen",
+    "DoiTuong": "DoiTuyen",
+    "ChiTiet": "Nhat ky nghiep vu #10",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 10
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-10T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f4b"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000002"
+    },
+    "HanhDong": "Dang nhap",
+    "DoiTuong": "TaiKhoan",
+    "ChiTiet": "Nhat ky nghiep vu #11",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 11
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-11T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-11T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f4c"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000003"
+    },
+    "HanhDong": "Them giai dau",
+    "DoiTuong": "GiaiDau",
+    "ChiTiet": "Nhat ky nghiep vu #12",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 12
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-12T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-12T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f4d"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000001"
+    },
+    "HanhDong": "Them tran dau",
+    "DoiTuong": "TranDau",
+    "ChiTiet": "Nhat ky nghiep vu #13",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 13
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Canh bao",
+    "createdAt": {
+      "$date": "2026-03-13T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-13T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f4e"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000002"
+    },
+    "HanhDong": "Cap nhat ket qua",
+    "DoiTuong": "BangXepHang",
+    "ChiTiet": "Nhat ky nghiep vu #14",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 14
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-14T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-14T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f4f"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000003"
+    },
+    "HanhDong": "Xoa doi tuyen",
+    "DoiTuong": "DoiTuyen",
+    "ChiTiet": "Nhat ky nghiep vu #15",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 15
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-15T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-15T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f50"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000001"
+    },
+    "HanhDong": "Dang nhap",
+    "DoiTuong": "TaiKhoan",
+    "ChiTiet": "Nhat ky nghiep vu #16",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 16
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-16T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-16T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f51"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000002"
+    },
+    "HanhDong": "Them giai dau",
+    "DoiTuong": "GiaiDau",
+    "ChiTiet": "Nhat ky nghiep vu #17",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 17
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Canh bao",
+    "createdAt": {
+      "$date": "2026-03-17T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-17T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f52"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000003"
+    },
+    "HanhDong": "Them tran dau",
+    "DoiTuong": "TranDau",
+    "ChiTiet": "Nhat ky nghiep vu #18",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 18
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-18T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-18T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f53"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000001"
+    },
+    "HanhDong": "Cap nhat ket qua",
+    "DoiTuong": "BangXepHang",
+    "ChiTiet": "Nhat ky nghiep vu #19",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 19
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-19T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-19T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f54"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000002"
+    },
+    "HanhDong": "Xoa doi tuyen",
+    "DoiTuong": "DoiTuyen",
+    "ChiTiet": "Nhat ky nghiep vu #20",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 20
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-20T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-20T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f55"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000003"
+    },
+    "HanhDong": "Dang nhap",
+    "DoiTuong": "TaiKhoan",
+    "ChiTiet": "Nhat ky nghiep vu #21",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 21
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Canh bao",
+    "createdAt": {
+      "$date": "2026-03-21T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-21T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f56"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000001"
+    },
+    "HanhDong": "Them giai dau",
+    "DoiTuong": "GiaiDau",
+    "ChiTiet": "Nhat ky nghiep vu #22",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 22
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-22T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-22T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f57"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000002"
+    },
+    "HanhDong": "Them tran dau",
+    "DoiTuong": "TranDau",
+    "ChiTiet": "Nhat ky nghiep vu #23",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 23
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-23T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-23T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f58"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000003"
+    },
+    "HanhDong": "Cap nhat ket qua",
+    "DoiTuong": "BangXepHang",
+    "ChiTiet": "Nhat ky nghiep vu #24",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 24
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-24T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-24T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f59"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000001"
+    },
+    "HanhDong": "Xoa doi tuyen",
+    "DoiTuong": "DoiTuyen",
+    "ChiTiet": "Nhat ky nghiep vu #25",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 25
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Canh bao",
+    "createdAt": {
+      "$date": "2026-03-25T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-25T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f5a"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000002"
+    },
+    "HanhDong": "Dang nhap",
+    "DoiTuong": "TaiKhoan",
+    "ChiTiet": "Nhat ky nghiep vu #26",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 26
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-26T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-26T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f5b"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000003"
+    },
+    "HanhDong": "Them giai dau",
+    "DoiTuong": "GiaiDau",
+    "ChiTiet": "Nhat ky nghiep vu #27",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 27
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-27T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-27T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f5c"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000001"
+    },
+    "HanhDong": "Them tran dau",
+    "DoiTuong": "TranDau",
+    "ChiTiet": "Nhat ky nghiep vu #28",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 28
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f5d"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000002"
+    },
+    "HanhDong": "Cap nhat ket qua",
+    "DoiTuong": "BangXepHang",
+    "ChiTiet": "Nhat ky nghiep vu #29",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 29
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Canh bao",
+    "createdAt": {
+      "$date": "2026-03-02T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-02T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001f5e"
+    },
+    "TaiKhoan": {
+      "$oid": "000000000000000000000003"
+    },
+    "HanhDong": "Xoa doi tuyen",
+    "DoiTuong": "DoiTuyen",
+    "ChiTiet": "Nhat ky nghiep vu #30",
+    "DuLieuCu": null,
+    "DuLieuMoi": {
+      "index": 30
+    },
+    "Ip": "127.0.0.1",
+    "MucDo": "Thong tin",
+    "createdAt": {
+      "$date": "2026-03-03T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-03-03T00:00:00.000Z"
+    }
+  }
+]

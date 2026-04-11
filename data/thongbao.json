@@ -1,0 +1,792 @@
+[
+  {
+    "_id": {
+      "$oid": "000000000000000000001b59"
+    },
+    "TieuDe": "Cap nhat lich thi dau",
+    "NoiDung": "Tran dau moi vua duoc tao (#1).",
+    "LoaiThongBao": "TranDau",
+    "MucDo": "Canh bao",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b5a"
+    },
+    "TieuDe": "Thong bao he thong",
+    "NoiDung": "He thong da cap nhat du lieu dot 2.",
+    "LoaiThongBao": "HeThong",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-02T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-02T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b5b"
+    },
+    "TieuDe": "Cap nhat lich thi dau",
+    "NoiDung": "Tran dau moi vua duoc tao (#3).",
+    "LoaiThongBao": "TranDau",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-03T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-03T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b5c"
+    },
+    "TieuDe": "Thong bao he thong",
+    "NoiDung": "He thong da cap nhat du lieu dot 4.",
+    "LoaiThongBao": "HeThong",
+    "MucDo": "Canh bao",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-04T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-04T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b5d"
+    },
+    "TieuDe": "Cap nhat lich thi dau",
+    "NoiDung": "Tran dau moi vua duoc tao (#5).",
+    "LoaiThongBao": "TranDau",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-05T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-05T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b5e"
+    },
+    "TieuDe": "Thong bao he thong",
+    "NoiDung": "He thong da cap nhat du lieu dot 6.",
+    "LoaiThongBao": "HeThong",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-06T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-06T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b5f"
+    },
+    "TieuDe": "Cap nhat lich thi dau",
+    "NoiDung": "Tran dau moi vua duoc tao (#7).",
+    "LoaiThongBao": "TranDau",
+    "MucDo": "Canh bao",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-07T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b60"
+    },
+    "TieuDe": "Thong bao he thong",
+    "NoiDung": "He thong da cap nhat du lieu dot 8.",
+    "LoaiThongBao": "HeThong",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-08T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-08T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b61"
+    },
+    "TieuDe": "Cap nhat lich thi dau",
+    "NoiDung": "Tran dau moi vua duoc tao (#9).",
+    "LoaiThongBao": "TranDau",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-09T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-09T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b62"
+    },
+    "TieuDe": "Thong bao he thong",
+    "NoiDung": "He thong da cap nhat du lieu dot 10.",
+    "LoaiThongBao": "HeThong",
+    "MucDo": "Canh bao",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-10T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-10T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b63"
+    },
+    "TieuDe": "Cap nhat lich thi dau",
+    "NoiDung": "Tran dau moi vua duoc tao (#11).",
+    "LoaiThongBao": "TranDau",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-11T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-11T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b64"
+    },
+    "TieuDe": "Thong bao he thong",
+    "NoiDung": "He thong da cap nhat du lieu dot 12.",
+    "LoaiThongBao": "HeThong",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-12T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-12T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b65"
+    },
+    "TieuDe": "Cap nhat lich thi dau",
+    "NoiDung": "Tran dau moi vua duoc tao (#13).",
+    "LoaiThongBao": "TranDau",
+    "MucDo": "Canh bao",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-13T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-13T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b66"
+    },
+    "TieuDe": "Thong bao he thong",
+    "NoiDung": "He thong da cap nhat du lieu dot 14.",
+    "LoaiThongBao": "HeThong",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-14T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-14T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b67"
+    },
+    "TieuDe": "Cap nhat lich thi dau",
+    "NoiDung": "Tran dau moi vua duoc tao (#15).",
+    "LoaiThongBao": "TranDau",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-15T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-15T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b68"
+    },
+    "TieuDe": "Thong bao he thong",
+    "NoiDung": "He thong da cap nhat du lieu dot 16.",
+    "LoaiThongBao": "HeThong",
+    "MucDo": "Canh bao",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-16T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-16T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b69"
+    },
+    "TieuDe": "Cap nhat lich thi dau",
+    "NoiDung": "Tran dau moi vua duoc tao (#17).",
+    "LoaiThongBao": "TranDau",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-17T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-17T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b6a"
+    },
+    "TieuDe": "Thong bao he thong",
+    "NoiDung": "He thong da cap nhat du lieu dot 18.",
+    "LoaiThongBao": "HeThong",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-18T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-18T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b6b"
+    },
+    "TieuDe": "Cap nhat lich thi dau",
+    "NoiDung": "Tran dau moi vua duoc tao (#19).",
+    "LoaiThongBao": "TranDau",
+    "MucDo": "Canh bao",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-19T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-19T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001b6c"
+    },
+    "TieuDe": "Thong bao he thong",
+    "NoiDung": "He thong da cap nhat du lieu dot 20.",
+    "LoaiThongBao": "HeThong",
+    "MucDo": "Thong tin",
+    "NguoiGui": {
+      "$oid": "000000000000000000000001"
+    },
+    "NguoiNhan": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      },
+      {
+        "$oid": "000000000000000000000003"
+      }
+    ],
+    "DaDoc": [
+      {
+        "$oid": "000000000000000000000001"
+      },
+      {
+        "$oid": "000000000000000000000002"
+      }
+    ],
+    "KichHoat": true,
+    "NgayHetHan": {
+      "$date": "2027-01-01T00:00:00.000Z"
+    },
+    "createdAt": {
+      "$date": "2026-02-20T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-02-20T00:00:00.000Z"
+    }
+  }
+]

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title><%= title %> - FC Online</title>
+</head>
+<body>
+    <%- include('partials/sidebar', { active: 'nguoichoi' }) %>
+    <div class="container mt-4">
+        <h2 class="mb-4">Sửa người chơi</h2>
+
+        <form action="/nguoichoi/sua/<%= nguoichoi._id %>" method="post">
+            <div class="mb-3">
+                <label for="HoVaTen" class="form-label">Họ và tên</label>
+                <input type="text" class="form-control" id="HoVaTen" name="HoVaTen" value="<%= nguoichoi.HoVaTen %>" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="NickName" class="form-label">Nickname</label>
+                <input type="text" class="form-control" id="NickName" name="NickName" value="<%= nguoichoi.NickName %>" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="Email" name="Email" value="<%= nguoichoi.Email %>" />
+            </div>
+
+            <div class="mb-3">
+                <label for="SoDienThoai" class="form-label">Số điện thoại</label>
+                <input type="text" class="form-control" id="SoDienThoai" name="SoDienThoai" value="<%= nguoichoi.SoDienThoai %>" />
+            </div>
+
+            <div class="mb-3">
+                <label for="Rank" class="form-label">Rank</label>
+                <input type="text" class="form-control" id="Rank" name="Rank" value="<%= nguoichoi.Rank %>" />
+            </div>
+
+            <div class="mb-3">
+                <label for="DoiTuyen" class="form-label">Đội tuyển</label>
+                <select class="form-select" id="DoiTuyen" name="DoiTuyen">
+                    <option value="">-- Không thuộc đội nào --</option>
+                    <% (doituyen || []).forEach(function(item) { %>
+                        <option value="<%= item._id %>" <%= nguoichoi.DoiTuyen && nguoichoi.DoiTuyen.toString() === item._id.toString() ? 'selected' : '' %>><%= item.TenDoi %></option>
+                    <% }) %>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="HinhAnh" class="form-label">Hình ảnh</label>
+                <input type="text" class="form-control" id="HinhAnh" name="HinhAnh" value="<%= nguoichoi.HinhAnh %>" />
+            </div>
+
+            <div class="mb-3">
+                <label for="GhiChu" class="form-label">Ghi chú</label>
+                <textarea class="form-control" id="GhiChu" name="GhiChu" rows="3"><%= nguoichoi.GhiChu %></textarea>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="KichHoat" name="KichHoat" <%= nguoichoi.KichHoat ? 'checked' : '' %> />
+                <label class="form-check-label" for="KichHoat">Kích hoạt</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Cập nhật</button>
+            <a href="/nguoichoi" class="btn btn-secondary">Quay lại</a>
+        </form>
+    </div>
+</body>
+</html>

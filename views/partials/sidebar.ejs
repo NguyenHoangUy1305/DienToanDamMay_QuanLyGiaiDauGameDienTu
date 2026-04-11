@@ -1,0 +1,60 @@
+<%
+    var role = (typeof role !== 'undefined' ? role : '') || (session && (session.VaiTro || session.QuyenHan)) || '';
+    var current = active || 'home';
+    var loggedIn = typeof isLoggedIn !== 'undefined' ? isLoggedIn : !!(session && session.MaNguoiDung);
+    var admin = typeof isAdmin !== 'undefined' ? isAdmin : role === 'admin';
+    function activeClass(name) { return current === name ? 'active' : ''; }
+%>
+<style>
+body{margin:0;padding-left:308px;background:#f5f7fb;font-family:"Segoe UI",Tahoma,Arial,sans-serif}
+.app-sidebar{position:fixed;inset:18px auto 18px 18px;width:270px;border-radius:22px;background:linear-gradient(180deg,#080808 0%,#121212 100%);color:#fff;box-shadow:0 20px 45px rgba(0,0,0,.28);padding:20px 18px;display:flex;flex-direction:column;z-index:1030}
+.app-sidebar .brand{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:#fff;text-decoration:none;margin-bottom:16px}
+.app-sidebar .brand-badge{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#2563eb,#60a5fa);color:#fff;flex:0 0 auto}
+.app-sidebar .nav-section{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);margin:18px 10px 10px}
+.app-sidebar .nav-link{border-radius:14px;color:rgba(255,255,255,.82);padding:11px 14px;margin-bottom:6px;display:flex;align-items:center;gap:10px;text-decoration:none;transition:all .18s ease}
+.app-sidebar .nav-link:hover,.app-sidebar .nav-link.active{background:rgba(37,99,235,.18);color:#fff;transform:translateX(2px)}
+.app-sidebar .nav-link i{width:20px;text-align:center}
+.app-sidebar .sidebar-footer{margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}
+.app-sidebar .sidebar-logout{
+    margin-top:10px;
+    background:rgba(255,255,255,.02);
+    border:1px solid rgba(255,255,255,.12);
+    color:rgba(255,255,255,.84);
+    font-weight:700;
+    justify-content:flex-start;
+    width:100%;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.03);
+    opacity:.96
+}
+.app-sidebar .sidebar-logout:hover{
+    background:rgba(255,255,255,.06);
+    border-color:rgba(255,255,255,.18);
+    color:#fff;
+    transform:translateX(2px)
+}
+.app-sidebar .sidebar-logout i{width:20px;text-align:center;color:rgba(255,255,255,.66)}
+@media (max-width:991.98px){body{padding-left:0}.app-sidebar{position:static;width:auto;inset:auto;border-radius:0 0 20px 20px;margin:0}}
+</style>
+<aside class="app-sidebar">
+    <a href="/" class="brand"><span class="brand-badge"><i class="bi bi-trophy-fill"></i></span><span>FC Online</span></a>
+    <div class="nav-section">Tổng quan</div>
+    <a class="nav-link <%= activeClass('home') %>" href="/"><i class="bi bi-house-door"></i>Trang chủ</a>
+    <% if (loggedIn) { %>
+        <div class="nav-section">Quản lý dữ liệu</div>
+        <a class="nav-link <%= activeClass('nguoichoi') %>" href="/nguoichoi"><i class="bi bi-person-vcard"></i>Người chơi</a>
+        <a class="nav-link <%= activeClass('doituyen') %>" href="/doituyen"><i class="bi bi-people"></i>Đội tuyển</a>
+        <a class="nav-link <%= activeClass('giaidau') %>" href="/giaidau"><i class="bi bi-award"></i>Giải đấu</a>
+        <a class="nav-link <%= activeClass('trandau') %>" href="/trandau"><i class="bi bi-controller"></i>Trận đấu</a>
+        <a class="nav-link <%= activeClass('dangkygiaidau') %>" href="/dangkygiaidau"><i class="bi bi-journal-plus"></i>Đăng ký giải đấu</a>
+        <a class="nav-link <%= activeClass('bangxephang') %>" href="/bangxephang"><i class="bi bi-bar-chart"></i>Bảng xếp hạng</a>
+        <a class="nav-link <%= activeClass('thongbao') %>" href="/thongbao"><i class="bi bi-megaphone"></i>Thông báo</a>
+        <% if (admin) { %><a class="nav-link <%= activeClass('nhatkyhethong') %>" href="/nhatkyhethong"><i class="bi bi-journal-text"></i>Nhật ký hệ thống</a><% } %>
+    <% } %>
+    <div class="sidebar-footer">
+        <% if (loggedIn) { %>
+            <a class="nav-link sidebar-logout" href="/dangxuat"><i class="bi bi-box-arrow-right"></i>Đăng xuất</a>
+        <% } else { %>
+            <a class="nav-link sidebar-logout" href="/dangnhap"><i class="bi bi-box-arrow-in-right"></i>Đăng nhập</a>
+        <% } %>
+    </div>
+</aside>

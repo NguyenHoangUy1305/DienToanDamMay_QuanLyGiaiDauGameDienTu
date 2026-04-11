@@ -1,0 +1,3346 @@
+[
+  {
+    "_id": {
+      "$oid": "000000000000000000000fa1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-09T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fa2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-10T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fa3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-11T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fa4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-12T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fa5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007ff"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-13T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fa6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "000000000000000000000800"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-14T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fa7"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "000000000000000000000801"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-15T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fa8"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "000000000000000000000802"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-16T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fa9"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d1"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-17T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000faa"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d2"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-18T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fab"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d3"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-19T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fac"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d4"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-20T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fad"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d5"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-21T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fae"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d6"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-22T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000faf"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d7"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-23T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fb0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d8"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-02-24T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fb1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d5"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-12T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fb2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d6"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-13T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fb3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d7"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-14T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fb4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d8"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-15T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fb5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d9"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-16T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fb6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007da"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-17T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fb7"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007db"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-18T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fb8"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007dc"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-19T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fb9"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007dd"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-20T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fba"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007de"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-21T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fbb"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007df"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-22T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fbc"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e0"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-23T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fbd"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e1"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-24T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fbe"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e2"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-25T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fbf"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e3"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-26T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fc0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e4"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2023-05-27T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fc1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e1"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-12T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fc2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e2"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-13T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fc3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e3"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-14T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fc4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e4"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-15T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fc5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e5"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-16T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fc6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e6"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-17T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fc7"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e7"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-18T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fc8"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e8"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-19T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fc9"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e9"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-20T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fca"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007ea"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-21T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fcb"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007eb"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-22T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fcc"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007ec"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-23T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fcd"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-24T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fce"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-25T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fcf"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-26T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fd0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-08-27T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fd1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-15T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fd2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-16T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fd3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-17T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fd4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-18T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fd5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007ff"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-19T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fd6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "000000000000000000000800"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-20T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fd7"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "000000000000000000000801"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-21T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fd8"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "000000000000000000000802"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-22T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fd9"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d1"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-23T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fda"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d2"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-24T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fdb"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d3"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-25T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fdc"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d4"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-26T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fdd"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d5"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-27T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fde"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d6"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-28T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fdf"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d7"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-29T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fe0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d8"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2024-11-30T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fe1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d5"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-13T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fe2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d6"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-14T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fe3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d7"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-15T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fe4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d8"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-16T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fe5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d9"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-17T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fe6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007da"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-18T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fe7"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007db"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-19T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fe8"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007dc"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-20T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fe9"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007dd"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-21T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fea"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007de"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-22T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000feb"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007df"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-23T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fec"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e0"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-24T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fed"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e1"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-25T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fee"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e2"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-26T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fef"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e3"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-27T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ff0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e4"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2025-02-28T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ff1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e1"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-12T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ff2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e2"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-13T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ff3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e3"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-14T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ff4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e4"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-15T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ff5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e5"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-16T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ff6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e6"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-17T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ff7"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e7"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-18T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ff8"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e8"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-19T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ff9"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007e9"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-20T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ffa"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007ea"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-21T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ffb"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007eb"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-22T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ffc"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007ec"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-23T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ffd"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-24T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000ffe"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-25T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000fff"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-26T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001000"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbe"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-05-27T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001001"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-12T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001002"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-13T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001003"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-14T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001004"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-15T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001005"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007ff"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-16T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001006"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "000000000000000000000800"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-17T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001007"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "000000000000000000000801"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-18T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001008"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "000000000000000000000802"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-19T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001009"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d1"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-20T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000100a"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d2"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-21T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000100b"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d3"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-22T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000100c"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d4"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-23T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000100d"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d5"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-24T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000100e"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d6"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-25T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000100f"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d7"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-26T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001010"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc4"
+    },
+    "NguoiChoi": {
+      "$oid": "0000000000000000000007d8"
+    },
+    "DoiTuyen": null,
+    "NgayDangKy": {
+      "$date": "2026-07-27T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001011"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "NgayDangKy": {
+      "$date": "2023-03-14T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001012"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ea"
+    },
+    "NgayDangKy": {
+      "$date": "2023-03-15T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001013"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "NgayDangKy": {
+      "$date": "2023-03-16T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001014"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "NgayDangKy": {
+      "$date": "2023-03-17T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001015"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "NgayDangKy": {
+      "$date": "2023-03-18T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001016"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "NgayDangKy": {
+      "$date": "2023-03-19T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001017"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "NgayDangKy": {
+      "$date": "2023-03-20T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001018"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f0"
+    },
+    "NgayDangKy": {
+      "$date": "2023-03-21T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001019"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "NgayDangKy": {
+      "$date": "2024-03-14T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000101a"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "NgayDangKy": {
+      "$date": "2024-03-15T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000101b"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "NgayDangKy": {
+      "$date": "2024-03-16T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000101c"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f0"
+    },
+    "NgayDangKy": {
+      "$date": "2024-03-17T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000101d"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "NgayDangKy": {
+      "$date": "2024-03-18T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000101e"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "NgayDangKy": {
+      "$date": "2024-03-19T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000101f"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f3"
+    },
+    "NgayDangKy": {
+      "$date": "2024-03-20T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001020"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f4"
+    },
+    "NgayDangKy": {
+      "$date": "2024-03-21T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001021"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "NgayDangKy": {
+      "$date": "2025-03-14T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001022"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "NgayDangKy": {
+      "$date": "2025-03-15T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001023"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f3"
+    },
+    "NgayDangKy": {
+      "$date": "2025-03-16T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001024"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f4"
+    },
+    "NgayDangKy": {
+      "$date": "2025-03-17T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001025"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f5"
+    },
+    "NgayDangKy": {
+      "$date": "2025-03-18T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001026"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f6"
+    },
+    "NgayDangKy": {
+      "$date": "2025-03-19T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001027"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "NgayDangKy": {
+      "$date": "2025-03-20T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001028"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ea"
+    },
+    "NgayDangKy": {
+      "$date": "2025-03-21T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001029"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f5"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-02T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000102a"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f6"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-03T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000102b"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-04T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000102c"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ea"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-05T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000102d"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-06T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000102e"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-07T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000102f"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-08T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001030"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc2"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-09T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001031"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-27T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001032"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-28T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001033"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-29T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001034"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "NgayDangKy": {
+      "$date": "2026-04-30T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001035"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "NgayDangKy": {
+      "$date": "2026-05-01T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001036"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f0"
+    },
+    "NgayDangKy": {
+      "$date": "2026-05-02T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001037"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "NgayDangKy": {
+      "$date": "2026-05-03T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Da duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001038"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc3"
+    },
+    "NguoiChoi": null,
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "NgayDangKy": {
+      "$date": "2026-05-04T00:00:00.000Z"
+    },
+    "TrangThaiDuyet": "Cho duyet",
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  }
+]

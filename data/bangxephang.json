@@ -1,0 +1,2189 @@
+[
+  {
+    "_id": {
+      "$oid": "000000000000000000001771"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 1,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 1,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001772"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "000000000000000000000801"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 1,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 2,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001773"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d4"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 1,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 3,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001774"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 0,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 4,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001775"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007ff"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 0,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 5,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001776"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d2"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 0,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 6,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001777"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 3,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 7,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001778"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "000000000000000000000802"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 3,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 8,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001779"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d3"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 3,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 9,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000177a"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 2,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 10,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000177b"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "000000000000000000000800"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 2,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 11,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000177c"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bb9"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d1"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 2,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 12,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000177d"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d9"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 0,
+    "HieuSo": 3,
+    "Diem": 3,
+    "XepHang": 1,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000177e"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d8"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 2,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 2,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000177f"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e0"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 2,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 3,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001780"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d6"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 1,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 4,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001781"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007de"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 1,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 5,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001782"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007dc"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 1,
+    "BanThua": 0,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 6,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001783"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d7"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 2,
+    "BanThua": 3,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 7,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001784"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007df"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 2,
+    "BanThua": 3,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 8,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001785"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d5"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 2,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 9,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001786"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007dd"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 2,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 10,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001787"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007db"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 1,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 11,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001788"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bba"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007da"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 3,
+    "HieuSo": -3,
+    "Diem": 0,
+    "XepHang": 12,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001789"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e3"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 3,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 1,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000178a"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e4"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 3,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 2,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000178b"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007eb"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 3,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 3,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000178c"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007ec"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 3,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 4,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000178d"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e1"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 2,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 5,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000178e"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e2"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 2,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 6,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000178f"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e9"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 2,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 7,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001790"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007ea"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 2,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 8,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001791"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e7"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 1,
+    "BanThua": 1,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 9,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001792"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e8"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 1,
+    "BanThua": 1,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 10,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001793"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e5"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 0,
+    "BanThua": 0,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 11,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001794"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbb"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e6"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 0,
+    "BanThua": 0,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 12,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001795"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 0,
+    "HieuSo": 3,
+    "Diem": 3,
+    "XepHang": 1,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001796"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d4"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 0,
+    "HieuSo": 3,
+    "Diem": 3,
+    "XepHang": 2,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001797"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 2,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 3,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001798"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d1"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 2,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 4,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000001799"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "000000000000000000000801"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 1,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 5,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000179a"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007ff"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 1,
+    "BanThua": 0,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 6,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000179b"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 2,
+    "BanThua": 3,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 7,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000179c"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d2"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 2,
+    "BanThua": 3,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 8,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000179d"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "000000000000000000000802"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 2,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 9,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000179e"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "000000000000000000000800"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 1,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 10,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "00000000000000000000179f"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 3,
+    "HieuSo": -3,
+    "Diem": 0,
+    "XepHang": 11,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017a0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbc"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d3"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 3,
+    "HieuSo": -3,
+    "Diem": 0,
+    "XepHang": 12,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017a1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d8"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 1,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 1,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017a2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007db"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 1,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 2,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017a3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007e0"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 3,
+    "BanThua": 1,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 3,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017a4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d6"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 0,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 4,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017a5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d9"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 0,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 5,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017a6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007de"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 0,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 6,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017a7"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d7"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 3,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 7,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017a8"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007dc"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 3,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 8,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017a9"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007df"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 3,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 9,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017aa"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007d5"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 2,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 10,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017ab"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007da"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 2,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 11,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017ac"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbd"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000007dd"
+    },
+    "LoaiDoiTuong": "NguoiChoi",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 2,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 12,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017ad"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 2,
+    "Thang": 0,
+    "Hoa": 2,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 2,
+    "HieuSo": 0,
+    "Diem": 2,
+    "XepHang": 1,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017ae"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 2,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 2,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017af"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 2,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 3,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017b0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003ea"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 1,
+    "BanThua": 1,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 4,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017b1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 1,
+    "BanThua": 1,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 5,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017b2"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 0,
+    "BanThua": 0,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 6,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017b3"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bbf"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 1,
+    "Thua": 0,
+    "BanThang": 0,
+    "BanThua": 0,
+    "HieuSo": 0,
+    "Diem": 1,
+    "XepHang": 7,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017b4"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003f0"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 0,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 1,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017b5"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003f3"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 1,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 2,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017b6"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 1,
+    "BanThua": 0,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 3,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017b7"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 2,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 3,
+    "BanThua": 3,
+    "HieuSo": 0,
+    "Diem": 3,
+    "XepHang": 4,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017b8"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 2,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 5,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017b9"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 1,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 6,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017ba"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc0"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 2,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 7,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017bb"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003f5"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 0,
+    "HieuSo": 2,
+    "Diem": 3,
+    "XepHang": 1,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017bc"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003f4"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 2,
+    "BanThua": 1,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 2,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017bd"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 0,
+    "BanThang": 1,
+    "BanThua": 0,
+    "HieuSo": 1,
+    "Diem": 3,
+    "XepHang": 3,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017be"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 2,
+    "Thang": 1,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 1,
+    "HieuSo": 0,
+    "Diem": 3,
+    "XepHang": 4,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017bf"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003f3"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 1,
+    "BanThua": 2,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 5,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017c0"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 1,
+    "HieuSo": -1,
+    "Diem": 0,
+    "XepHang": 6,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000017c1"
+    },
+    "GiaiDau": {
+      "$oid": "000000000000000000000bc1"
+    },
+    "DoiTuongThiDau": {
+      "$oid": "0000000000000000000003f6"
+    },
+    "LoaiDoiTuong": "DoiTuyen",
+    "SoTran": 1,
+    "Thang": 0,
+    "Hoa": 0,
+    "Thua": 1,
+    "BanThang": 0,
+    "BanThua": 2,
+    "HieuSo": -2,
+    "Diem": 0,
+    "XepHang": 7,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "_id": {
+      "$oid": "000000000000000000000001"
+    },
+    "HoVaTen": "Nguyen Hoang Uy",
+    "Email": "admin@fconline.vn",
+    "TenDangNhap": "admin",
+    "MatKhau": "$2b$10$gj64LyYLA9SFARQnQUBMReYgyVMmqIkUUQvTcTHbW/Usi2kgDT4Wq",
+    "VaiTro": "admin",
+    "QuyenHan": "admin",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000002"
+    },
+    "HoVaTen": "Le Trung Thanh",
+    "Email": "staff1@fconline.vn",
+    "TenDangNhap": "nhanvien1",
+    "MatKhau": "$2b$10$gj64LyYLA9SFARQnQUBMReYgyVMmqIkUUQvTcTHbW/Usi2kgDT4Wq",
+    "VaiTro": "nhanvien",
+    "QuyenHan": "nhanvien",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000003"
+    },
+    "HoVaTen": "Pham Quoc Bao",
+    "Email": "staff2@fconline.vn",
+    "TenDangNhap": "nhanvien2",
+    "MatKhau": "$2b$10$gj64LyYLA9SFARQnQUBMReYgyVMmqIkUUQvTcTHbW/Usi2kgDT4Wq",
+    "VaiTro": "nhanvien",
+    "QuyenHan": "nhanvien",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000004"
+    },
+    "HoVaTen": "Tran Minh Khoa",
+    "Email": "modkhoa@fconline.vn",
+    "TenDangNhap": "modkhoa",
+    "MatKhau": "$2b$10$gj64LyYLA9SFARQnQUBMReYgyVMmqIkUUQvTcTHbW/Usi2kgDT4Wq",
+    "VaiTro": "nhanvien",
+    "QuyenHan": "nhanvien",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000005"
+    },
+    "HoVaTen": "Doan Van An",
+    "Email": "viewer1@fconline.vn",
+    "TenDangNhap": "viewer1",
+    "MatKhau": "$2b$10$gj64LyYLA9SFARQnQUBMReYgyVMmqIkUUQvTcTHbW/Usi2kgDT4Wq",
+    "VaiTro": "khach",
+    "QuyenHan": "khach",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000006"
+    },
+    "HoVaTen": "Nguyen Thi Lan",
+    "Email": "viewer2@fconline.vn",
+    "TenDangNhap": "viewer2",
+    "MatKhau": "$2b$10$gj64LyYLA9SFARQnQUBMReYgyVMmqIkUUQvTcTHbW/Usi2kgDT4Wq",
+    "VaiTro": "khach",
+    "QuyenHan": "khach",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  }
+]

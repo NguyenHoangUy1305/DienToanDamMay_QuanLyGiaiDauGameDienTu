@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <%- include('partials/sidebar', { active: 'thongbao' }) %>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="mb-0"><i class="bi bi-megaphone me-2"></i>Thông báo</h3>
+            <a href="/" class="btn btn-outline-primary btn-sm">Về trang chủ</a>
+        </div>
+        <div class="card shadow-sm border-0"><div class="card-body">
+            <% if (thongbao && thongbao.length) { %>
+                <% thongbao.forEach(function(item) { %>
+                    <div class="border-bottom pb-3 mb-3">
+                        <div class="d-flex justify-content-between flex-wrap gap-2"><h5 class="mb-1"><%= item.TieuDe %></h5><span class="badge text-bg-primary"><%= item.MucDo %></span></div>
+                        <div class="text-muted mb-2"><%= item.LoaiThongBao %> | <%= item.NguoiGui && item.NguoiGui.HoVaTen ? item.NguoiGui.HoVaTen : 'Hệ thống' %></div>
+                        <p class="mb-0"><%= item.NoiDung %></p>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p class="mb-0 text-muted">Chưa có thông báo nào.</p>
+            <% } %>
+        </div></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

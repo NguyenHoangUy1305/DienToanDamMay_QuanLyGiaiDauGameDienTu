@@ -1,0 +1,240 @@
+[
+  {
+    "_id": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "TenDoi": "Seven TV",
+    "TruongDoi": "Nguyen Hoang Hiep",
+    "SoDienThoai": "0909100000",
+    "Email": "team1@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003ea"
+    },
+    "TenDoi": "NK FC Online",
+    "TruongDoi": "Le Trung Thanh",
+    "SoDienThoai": "0909100001",
+    "Email": "team2@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "TenDoi": "EFC Academy",
+    "TruongDoi": "Pham Quoc Bao",
+    "SoDienThoai": "0909100002",
+    "Email": "team3@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "TenDoi": "SGLX Esports",
+    "TruongDoi": "Tran Minh Khoa",
+    "SoDienThoai": "0909100003",
+    "Email": "team4@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "TenDoi": "FPT Play Club",
+    "TruongDoi": "Vo Thanh Dat",
+    "SoDienThoai": "0909100004",
+    "Email": "team5@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "TenDoi": "Sai Gon Legends",
+    "TruongDoi": "Bui Duy Khang",
+    "SoDienThoai": "0909100005",
+    "Email": "team6@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "TenDoi": "Ha Noi Wolves",
+    "TruongDoi": "Nguyen Minh Huy",
+    "SoDienThoai": "0909100006",
+    "Email": "team7@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003f0"
+    },
+    "TenDoi": "Da Nang Phoenix",
+    "TruongDoi": "Phan Van Dat",
+    "SoDienThoai": "0909100007",
+    "Email": "team8@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "TenDoi": "Can Tho Warriors",
+    "TruongDoi": "Tran Duc Minh",
+    "SoDienThoai": "0909100008",
+    "Email": "team9@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "TenDoi": "Hue Imperial",
+    "TruongDoi": "Doan Quoc Viet",
+    "SoDienThoai": "0909100009",
+    "Email": "team10@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003f3"
+    },
+    "TenDoi": "T1 Vietnam",
+    "TruongDoi": "Le Anh Tuan",
+    "SoDienThoai": "0909100010",
+    "Email": "team11@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003f4"
+    },
+    "TenDoi": "ProG Arena",
+    "TruongDoi": "Nguyen Tien Dat",
+    "SoDienThoai": "0909100011",
+    "Email": "team12@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003f5"
+    },
+    "TenDoi": "Storm FC",
+    "TruongDoi": "Pham Duc Long",
+    "SoDienThoai": "0909100012",
+    "Email": "team13@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000003f6"
+    },
+    "TenDoi": "Blue Shark",
+    "TruongDoi": "Nguyen Gia Han",
+    "SoDienThoai": "0909100013",
+    "Email": "team14@fconline.vn",
+    "GhiChu": "Doi tuyen thi dau FC Online",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  }
+]

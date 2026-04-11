@@ -1,0 +1,44 @@
+<table class="table table-bordered table-hover align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>Giải đấu</th>
+            <th>Vòng đấu</th>
+            <th>Đối thủ 1</th>
+            <th>Đối thủ 2</th>
+            <th>Thời gian</th>
+            <th>Tỷ số</th>
+            <th>Người thắng</th>
+            <th>Trạng thái</th>
+            <th width="390">Chức năng</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (data && data.length > 0) { %>
+            <% data.forEach(function(item) { %>
+                <tr>
+                    <td><%= item.GiaiDau ? item.GiaiDau.TenGiaiDau : '' %></td>
+                    <td><%= item.VongDau %></td>
+                    <td><%= item.DoiThu1 %></td>
+                    <td><%= item.DoiThu2 %></td>
+                    <td><%= item.ThoiGianThiDau ? new Date(item.ThoiGianThiDau).toLocaleString('vi-VN') : '' %></td>
+                    <td><%= item.TySo1 %> - <%= item.TySo2 %></td>
+                    <td><%= item.NguoiThang || '' %></td>
+                    <td><%= (typeof statusUtil !== 'undefined' && statusUtil.toVietnameseStatus) ? statusUtil.toVietnameseStatus(item.TrangThai) : (item.TrangThai || '') %></td>
+                    <td>
+                        <% if (canManage) { %>
+                            <a href="/trandau/sua/<%= item._id %>" class="btn btn-warning btn-sm">Sửa</a>
+                            <a href="/trandau/nhap-ket-qua/<%= item._id %>" class="btn btn-primary btn-sm">Nhập kết quả</a>
+                            <% if (isAdmin) { %>
+                                <a href="/trandau/xoa/<%= item._id %>" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa?');">Xóa</a>
+                            <% } %>
+                            <a href="/trandau/xuat-lich/<%= item._id %>" target="_blank" rel="noopener noreferrer" class="btn btn-info btn-sm text-white">Xuất lịch</a>
+                            <a href="/trandau/mo-lich/<%= item._id %>" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm">Mở lịch</a>
+                        <% } %>
+                    </td>
+                </tr>
+            <% }) %>
+        <% } else { %>
+            <tr><td colspan="9" class="text-center"><%= emptyText %></td></tr>
+        <% } %>
+    </tbody>
+</table>

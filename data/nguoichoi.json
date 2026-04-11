@@ -1,0 +1,1086 @@
+[
+  {
+    "_id": {
+      "$oid": "0000000000000000000007d1"
+    },
+    "HoVaTen": "Player 1-1",
+    "NickName": "Team1P1",
+    "Email": "team1p1@gmail.com",
+    "SoDienThoai": "0911202001",
+    "Rank": "Chuyen Nghiep",
+    "HinhAnh": "team1_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007d2"
+    },
+    "HoVaTen": "Player 1-2",
+    "NickName": "Team1P2",
+    "Email": "team1p2@gmail.com",
+    "SoDienThoai": "0911202002",
+    "Rank": "Huyen Thoai",
+    "HinhAnh": "team1_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007d3"
+    },
+    "HoVaTen": "Player 1-3",
+    "NickName": "Team1P3",
+    "Email": "team1p3@gmail.com",
+    "SoDienThoai": "0911202003",
+    "Rank": "The Gioi",
+    "HinhAnh": "team1_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003e9"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007d4"
+    },
+    "HoVaTen": "Player 2-1",
+    "NickName": "Team2P1",
+    "Email": "team2p1@gmail.com",
+    "SoDienThoai": "0911202004",
+    "Rank": "Huyen Thoai",
+    "HinhAnh": "team2_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ea"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007d5"
+    },
+    "HoVaTen": "Player 2-2",
+    "NickName": "Team2P2",
+    "Email": "team2p2@gmail.com",
+    "SoDienThoai": "0911202005",
+    "Rank": "The Gioi",
+    "HinhAnh": "team2_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ea"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007d6"
+    },
+    "HoVaTen": "Player 2-3",
+    "NickName": "Team2P3",
+    "Email": "team2p3@gmail.com",
+    "SoDienThoai": "0911202006",
+    "Rank": "Sieu Sao",
+    "HinhAnh": "team2_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ea"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007d7"
+    },
+    "HoVaTen": "Player 3-1",
+    "NickName": "Team3P1",
+    "Email": "team3p1@gmail.com",
+    "SoDienThoai": "0911202007",
+    "Rank": "The Gioi",
+    "HinhAnh": "team3_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007d8"
+    },
+    "HoVaTen": "Player 3-2",
+    "NickName": "Team3P2",
+    "Email": "team3p2@gmail.com",
+    "SoDienThoai": "0911202008",
+    "Rank": "Sieu Sao",
+    "HinhAnh": "team3_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007d9"
+    },
+    "HoVaTen": "Player 3-3",
+    "NickName": "Team3P3",
+    "Email": "team3p3@gmail.com",
+    "SoDienThoai": "0911202009",
+    "Rank": "Tinh Anh",
+    "HinhAnh": "team3_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003eb"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007da"
+    },
+    "HoVaTen": "Player 4-1",
+    "NickName": "Team4P1",
+    "Email": "team4p1@gmail.com",
+    "SoDienThoai": "0911202010",
+    "Rank": "Sieu Sao",
+    "HinhAnh": "team4_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007db"
+    },
+    "HoVaTen": "Player 4-2",
+    "NickName": "Team4P2",
+    "Email": "team4p2@gmail.com",
+    "SoDienThoai": "0911202011",
+    "Rank": "Tinh Anh",
+    "HinhAnh": "team4_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007dc"
+    },
+    "HoVaTen": "Player 4-3",
+    "NickName": "Team4P3",
+    "Email": "team4p3@gmail.com",
+    "SoDienThoai": "0911202012",
+    "Rank": "Chuyen Nghiep",
+    "HinhAnh": "team4_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ec"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007dd"
+    },
+    "HoVaTen": "Player 5-1",
+    "NickName": "Team5P1",
+    "Email": "team5p1@gmail.com",
+    "SoDienThoai": "0911202013",
+    "Rank": "Tinh Anh",
+    "HinhAnh": "team5_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007de"
+    },
+    "HoVaTen": "Player 5-2",
+    "NickName": "Team5P2",
+    "Email": "team5p2@gmail.com",
+    "SoDienThoai": "0911202014",
+    "Rank": "Chuyen Nghiep",
+    "HinhAnh": "team5_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007df"
+    },
+    "HoVaTen": "Player 5-3",
+    "NickName": "Team5P3",
+    "Email": "team5p3@gmail.com",
+    "SoDienThoai": "0911202015",
+    "Rank": "Huyen Thoai",
+    "HinhAnh": "team5_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ed"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007e0"
+    },
+    "HoVaTen": "Player 6-1",
+    "NickName": "Team6P1",
+    "Email": "team6p1@gmail.com",
+    "SoDienThoai": "0911202016",
+    "Rank": "Chuyen Nghiep",
+    "HinhAnh": "team6_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007e1"
+    },
+    "HoVaTen": "Player 6-2",
+    "NickName": "Team6P2",
+    "Email": "team6p2@gmail.com",
+    "SoDienThoai": "0911202017",
+    "Rank": "Huyen Thoai",
+    "HinhAnh": "team6_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007e2"
+    },
+    "HoVaTen": "Player 6-3",
+    "NickName": "Team6P3",
+    "Email": "team6p3@gmail.com",
+    "SoDienThoai": "0911202018",
+    "Rank": "The Gioi",
+    "HinhAnh": "team6_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ee"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007e3"
+    },
+    "HoVaTen": "Player 7-1",
+    "NickName": "Team7P1",
+    "Email": "team7p1@gmail.com",
+    "SoDienThoai": "0911202019",
+    "Rank": "Huyen Thoai",
+    "HinhAnh": "team7_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007e4"
+    },
+    "HoVaTen": "Player 7-2",
+    "NickName": "Team7P2",
+    "Email": "team7p2@gmail.com",
+    "SoDienThoai": "0911202020",
+    "Rank": "The Gioi",
+    "HinhAnh": "team7_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007e5"
+    },
+    "HoVaTen": "Player 7-3",
+    "NickName": "Team7P3",
+    "Email": "team7p3@gmail.com",
+    "SoDienThoai": "0911202021",
+    "Rank": "Sieu Sao",
+    "HinhAnh": "team7_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003ef"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007e6"
+    },
+    "HoVaTen": "Player 8-1",
+    "NickName": "Team8P1",
+    "Email": "team8p1@gmail.com",
+    "SoDienThoai": "0911202022",
+    "Rank": "The Gioi",
+    "HinhAnh": "team8_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f0"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007e7"
+    },
+    "HoVaTen": "Player 8-2",
+    "NickName": "Team8P2",
+    "Email": "team8p2@gmail.com",
+    "SoDienThoai": "0911202023",
+    "Rank": "Sieu Sao",
+    "HinhAnh": "team8_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f0"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007e8"
+    },
+    "HoVaTen": "Player 8-3",
+    "NickName": "Team8P3",
+    "Email": "team8p3@gmail.com",
+    "SoDienThoai": "0911202024",
+    "Rank": "Tinh Anh",
+    "HinhAnh": "team8_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f0"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007e9"
+    },
+    "HoVaTen": "Player 9-1",
+    "NickName": "Team9P1",
+    "Email": "team9p1@gmail.com",
+    "SoDienThoai": "0911202025",
+    "Rank": "Sieu Sao",
+    "HinhAnh": "team9_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007ea"
+    },
+    "HoVaTen": "Player 9-2",
+    "NickName": "Team9P2",
+    "Email": "team9p2@gmail.com",
+    "SoDienThoai": "0911202026",
+    "Rank": "Tinh Anh",
+    "HinhAnh": "team9_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007eb"
+    },
+    "HoVaTen": "Player 9-3",
+    "NickName": "Team9P3",
+    "Email": "team9p3@gmail.com",
+    "SoDienThoai": "0911202027",
+    "Rank": "Chuyen Nghiep",
+    "HinhAnh": "team9_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f1"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007ec"
+    },
+    "HoVaTen": "Player 10-1",
+    "NickName": "Team10P1",
+    "Email": "team10p1@gmail.com",
+    "SoDienThoai": "0911202028",
+    "Rank": "Tinh Anh",
+    "HinhAnh": "team10_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007ed"
+    },
+    "HoVaTen": "Player 10-2",
+    "NickName": "Team10P2",
+    "Email": "team10p2@gmail.com",
+    "SoDienThoai": "0911202029",
+    "Rank": "Chuyen Nghiep",
+    "HinhAnh": "team10_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007ee"
+    },
+    "HoVaTen": "Player 10-3",
+    "NickName": "Team10P3",
+    "Email": "team10p3@gmail.com",
+    "SoDienThoai": "0911202030",
+    "Rank": "Huyen Thoai",
+    "HinhAnh": "team10_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f2"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007ef"
+    },
+    "HoVaTen": "Player 11-1",
+    "NickName": "Team11P1",
+    "Email": "team11p1@gmail.com",
+    "SoDienThoai": "0911202031",
+    "Rank": "Chuyen Nghiep",
+    "HinhAnh": "team11_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f3"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007f0"
+    },
+    "HoVaTen": "Player 11-2",
+    "NickName": "Team11P2",
+    "Email": "team11p2@gmail.com",
+    "SoDienThoai": "0911202032",
+    "Rank": "Huyen Thoai",
+    "HinhAnh": "team11_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f3"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007f1"
+    },
+    "HoVaTen": "Player 11-3",
+    "NickName": "Team11P3",
+    "Email": "team11p3@gmail.com",
+    "SoDienThoai": "0911202033",
+    "Rank": "The Gioi",
+    "HinhAnh": "team11_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f3"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007f2"
+    },
+    "HoVaTen": "Player 12-1",
+    "NickName": "Team12P1",
+    "Email": "team12p1@gmail.com",
+    "SoDienThoai": "0911202034",
+    "Rank": "Huyen Thoai",
+    "HinhAnh": "team12_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f4"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007f3"
+    },
+    "HoVaTen": "Player 12-2",
+    "NickName": "Team12P2",
+    "Email": "team12p2@gmail.com",
+    "SoDienThoai": "0911202035",
+    "Rank": "The Gioi",
+    "HinhAnh": "team12_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f4"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007f4"
+    },
+    "HoVaTen": "Player 12-3",
+    "NickName": "Team12P3",
+    "Email": "team12p3@gmail.com",
+    "SoDienThoai": "0911202036",
+    "Rank": "Sieu Sao",
+    "HinhAnh": "team12_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f4"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007f5"
+    },
+    "HoVaTen": "Player 13-1",
+    "NickName": "Team13P1",
+    "Email": "team13p1@gmail.com",
+    "SoDienThoai": "0911202037",
+    "Rank": "The Gioi",
+    "HinhAnh": "team13_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f5"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007f6"
+    },
+    "HoVaTen": "Player 13-2",
+    "NickName": "Team13P2",
+    "Email": "team13p2@gmail.com",
+    "SoDienThoai": "0911202038",
+    "Rank": "Sieu Sao",
+    "HinhAnh": "team13_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f5"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007f7"
+    },
+    "HoVaTen": "Player 13-3",
+    "NickName": "Team13P3",
+    "Email": "team13p3@gmail.com",
+    "SoDienThoai": "0911202039",
+    "Rank": "Tinh Anh",
+    "HinhAnh": "team13_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f5"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007f8"
+    },
+    "HoVaTen": "Player 14-1",
+    "NickName": "Team14P1",
+    "Email": "team14p1@gmail.com",
+    "SoDienThoai": "0911202040",
+    "Rank": "Sieu Sao",
+    "HinhAnh": "team14_p1.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f6"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007f9"
+    },
+    "HoVaTen": "Player 14-2",
+    "NickName": "Team14P2",
+    "Email": "team14p2@gmail.com",
+    "SoDienThoai": "0911202041",
+    "Rank": "Tinh Anh",
+    "HinhAnh": "team14_p2.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f6"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007fa"
+    },
+    "HoVaTen": "Player 14-3",
+    "NickName": "Team14P3",
+    "Email": "team14p3@gmail.com",
+    "SoDienThoai": "0911202042",
+    "Rank": "Chuyen Nghiep",
+    "HinhAnh": "team14_p3.jpg",
+    "DoiTuyen": {
+      "$oid": "0000000000000000000003f6"
+    },
+    "GhiChu": "Thanh vien doi tuyen",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007fb"
+    },
+    "HoVaTen": "Solo Player 1",
+    "NickName": "Solo1",
+    "Email": "solo1@gmail.com",
+    "SoDienThoai": "0933300001",
+    "Rank": "Chuyen Nghiep",
+    "HinhAnh": "solo_1.jpg",
+    "DoiTuyen": null,
+    "GhiChu": "Nguoi choi ca nhan",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007fc"
+    },
+    "HoVaTen": "Solo Player 2",
+    "NickName": "Solo2",
+    "Email": "solo2@gmail.com",
+    "SoDienThoai": "0933300002",
+    "Rank": "Huyen Thoai",
+    "HinhAnh": "solo_2.jpg",
+    "DoiTuyen": null,
+    "GhiChu": "Nguoi choi ca nhan",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007fd"
+    },
+    "HoVaTen": "Solo Player 3",
+    "NickName": "Solo3",
+    "Email": "solo3@gmail.com",
+    "SoDienThoai": "0933300003",
+    "Rank": "The Gioi",
+    "HinhAnh": "solo_3.jpg",
+    "DoiTuyen": null,
+    "GhiChu": "Nguoi choi ca nhan",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007fe"
+    },
+    "HoVaTen": "Solo Player 4",
+    "NickName": "Solo4",
+    "Email": "solo4@gmail.com",
+    "SoDienThoai": "0933300004",
+    "Rank": "Sieu Sao",
+    "HinhAnh": "solo_4.jpg",
+    "DoiTuyen": null,
+    "GhiChu": "Nguoi choi ca nhan",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "0000000000000000000007ff"
+    },
+    "HoVaTen": "Solo Player 5",
+    "NickName": "Solo5",
+    "Email": "solo5@gmail.com",
+    "SoDienThoai": "0933300005",
+    "Rank": "Tinh Anh",
+    "HinhAnh": "solo_5.jpg",
+    "DoiTuyen": null,
+    "GhiChu": "Nguoi choi ca nhan",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000800"
+    },
+    "HoVaTen": "Solo Player 6",
+    "NickName": "Solo6",
+    "Email": "solo6@gmail.com",
+    "SoDienThoai": "0933300006",
+    "Rank": "Chuyen Nghiep",
+    "HinhAnh": "solo_6.jpg",
+    "DoiTuyen": null,
+    "GhiChu": "Nguoi choi ca nhan",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000801"
+    },
+    "HoVaTen": "Solo Player 7",
+    "NickName": "Solo7",
+    "Email": "solo7@gmail.com",
+    "SoDienThoai": "0933300007",
+    "Rank": "Huyen Thoai",
+    "HinhAnh": "solo_7.jpg",
+    "DoiTuyen": null,
+    "GhiChu": "Nguoi choi ca nhan",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "000000000000000000000802"
+    },
+    "HoVaTen": "Solo Player 8",
+    "NickName": "Solo8",
+    "Email": "solo8@gmail.com",
+    "SoDienThoai": "0933300008",
+    "Rank": "The Gioi",
+    "HinhAnh": "solo_8.jpg",
+    "DoiTuyen": null,
+    "GhiChu": "Nguoi choi ca nhan",
+    "KichHoat": true,
+    "createdAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2026-01-01T00:00:00.000Z"
+    }
+  }
+]

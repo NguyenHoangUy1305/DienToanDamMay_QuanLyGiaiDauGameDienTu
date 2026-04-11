@@ -1,0 +1,34 @@
+﻿<table class="table table-bordered table-hover align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>Giải đấu</th>
+            <th>Đối tượng thi đấu</th>
+            <th>Số trận</th>
+            <th>Thắng</th>
+            <th>Hòa</th>
+            <th>Thua</th>
+            <th>Hiệu số</th>
+            <th>Điểm</th>
+            <th>Xếp hạng</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (data && data.length > 0) { %>
+            <% data.forEach(function(item) { %>
+                <tr>
+                    <td><%= item.GiaiDau ? item.GiaiDau.TenGiaiDau : '' %></td>
+                    <td><%= item.DoiTuongThiDau %></td>
+                    <td><%= item.SoTran || 0 %></td>
+                    <td><%= item.Thang || 0 %></td>
+                    <td><%= item.Hoa || 0 %></td>
+                    <td><%= item.Thua || 0 %></td>
+                    <td><%= item.HieuSo || 0 %></td>
+                    <td><%= item.Diem || 0 %></td>
+                    <td><%= item.XepHang || 0 %></td>
+                </tr>
+            <% }) %>
+        <% } else { %>
+            <tr><td colspan="9" class="text-center"><%= emptyText %></td></tr>
+        <% } %>
+    </tbody>
+</table>
