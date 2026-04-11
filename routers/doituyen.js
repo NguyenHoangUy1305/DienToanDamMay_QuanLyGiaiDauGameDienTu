@@ -122,8 +122,8 @@ router.post('/sua/:id', auth.yeuCauStaffHoacAdmin, async function (req, res) {
     }
 });
 
-// GET: Xóa đội tuyển
-router.get('/xoa/:id', auth.yeuCauAdmin, async function (req, res) {
+// POST: Xóa đội tuyển (Đã sửa từ router.get thành router.post)
+router.post('/xoa/:id', auth.yeuCauAdmin, async function (req, res) {
     try {
         var id = req.params.id;
         var doiTuyen = await DoiTuyen.findById(id).exec();

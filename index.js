@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const session = require('express-session');
-
+const silentPaths = ['/trandau', '/doituyen', '/nguoichoi', '/bangxephang', '/nhatkyhethong', '/thongbao', '/gcal', '/giaidau', '/dangkygiaidau'];
 const app = express();
 
 const uri = process.env.MONGODB_URI || 'mongodb://13hoanguy_db_user:123@ac-63dmeyd-shard-00-00.b8ir9xx.mongodb.net:27017/qlgiaigame?ssl=true&authSource=admin';
@@ -79,6 +79,12 @@ app.use('/doituyen', require('./routers/doituyen'));
 app.use('/nhatkyhethong', require('./routers/nhatkyhethong'));
 app.use('/thongbao', require('./routers/thongbao'));
 app.use('/gcal', require('./routers/gcal'));
+app.use((req, res, next) => {
+  if (!silentPaths.some(p => req.path.startsWith(p))) {
+    console.log(new Date().toISOString(), req.method, req.url);
+  }
+  next();
+});
 
 app.get('/health', (req, res) => res.send('OK'));
 
