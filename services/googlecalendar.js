@@ -62,8 +62,12 @@ function buildCreateEventUrl(tranDau, tenGiaiDau) {
     return 'https://calendar.google.com/calendar/render?' + params.toString();
 }
 
+function envText(name) {
+    return (process.env[name] || '').toString().trim();
+}
+
 function hasEnvOAuthConfig() {
-    return !!(process.env.GCAL_CLIENT_ID && process.env.GCAL_CLIENT_SECRET && process.env.GCAL_REFRESH_TOKEN);
+    return !!(envText('GCAL_CLIENT_ID') && envText('GCAL_CLIENT_SECRET') && envText('GCAL_REFRESH_TOKEN'));
 }
 
 function shouldUseEnvOAuth() {
@@ -95,12 +99,12 @@ function buildEventPayload(tranDau, tenGiaiDau) {
 function createEnvOAuthClient() {
     // FIX: Bắt buộc phải có 'http://localhost' thì API nó mới chịu chạy
     var authClient = new google.auth.OAuth2(
-        process.env.GCAL_CLIENT_ID,
-        process.env.GCAL_CLIENT_SECRET,
+        envText('GCAL_CLIENT_ID'),
+        envText('GCAL_CLIENT_SECRET'),
         'http://localhost' 
     );
     authClient.setCredentials({
-        refresh_token: process.env.GCAL_REFRESH_TOKEN
+        refresh_token: envText('GCAL_REFRESH_TOKEN')
     });
     return authClient;
 }

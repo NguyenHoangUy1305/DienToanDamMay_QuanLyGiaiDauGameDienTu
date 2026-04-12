@@ -366,6 +366,11 @@ router.get('/mo-lich/:id', auth.yeuCauStaffHoacAdmin, async function (req, res) 
             return res.redirect('/trandau');
         }
 
+        // Trên Render: luôn mở link tạo sự kiện để tránh lỗi OAuth invalid_client.
+        if (process.env.RENDER === 'true') {
+            return res.redirect(googleCalendar.buildCreateEventUrl(td, td.GiaiDau ? td.GiaiDau.TenGiaiDau : null));
+        }
+
         if (!td.GoogleCalendarLink) {
             try {
                 var evt = await googleCalendar.taoSuKienTranDau(td, td.GiaiDau ? td.GiaiDau.TenGiaiDau : null);
@@ -374,7 +379,6 @@ router.get('/mo-lich/:id', auth.yeuCauStaffHoacAdmin, async function (req, res) 
                 await td.save();
             } catch (apiErr) {
                 console.error('ERROR mo-lich:', apiErr && apiErr.message ? apiErr.message : apiErr);
-                console.error('Fallback mo-lich -> open create event URL');
                 return res.redirect(googleCalendar.buildCreateEventUrl(td, td.GiaiDau ? td.GiaiDau.TenGiaiDau : null));
             }
         }
@@ -401,6 +405,11 @@ router.get('/xuat-lich/:id', auth.yeuCauStaffHoacAdmin, async function (req, res
             return res.redirect('/trandau');
         }
 
+        // Trên Render: luôn mở link tạo sự kiện để tránh lỗi OAuth invalid_client.
+        if (process.env.RENDER === 'true') {
+            return res.redirect(googleCalendar.buildCreateEventUrl(td, td.GiaiDau ? td.GiaiDau.TenGiaiDau : null));
+        }
+
         if (td.GoogleCalendarLink || td.GoogleCalendarEventId) {
             req.session.success = 'Tran dau nay da duoc xuat lich truoc do.';
             return res.redirect(googleCalendar.buildDayViewUrl(td.ThoiGianThiDau));
@@ -416,7 +425,6 @@ router.get('/xuat-lich/:id', auth.yeuCauStaffHoacAdmin, async function (req, res
             return res.redirect(googleCalendar.buildDayViewUrl(td.ThoiGianThiDau));
         } catch (apiErr) {
             console.error('ERROR xuat-lich:', apiErr && apiErr.message ? apiErr.message : apiErr);
-            console.error('Fallback xuat-lich -> open create event URL');
             return res.redirect(googleCalendar.buildCreateEventUrl(td, td.GiaiDau ? td.GiaiDau.TenGiaiDau : null));
         }
     }
@@ -426,7 +434,6 @@ router.get('/xuat-lich/:id', auth.yeuCauStaffHoacAdmin, async function (req, res
         return res.redirect('/trandau');
     }
 });
-
 // ================================================================
 
 router.get('/nhap-ket-qua/:id', auth.yeuCauStaffHoacAdmin, async function (req, res) {
@@ -465,6 +472,7 @@ router.post('/nhap-ket-qua/:id', auth.yeuCauStaffHoacAdmin, async function (req,
 });
 
 module.exports = router;
+
 
 
 
