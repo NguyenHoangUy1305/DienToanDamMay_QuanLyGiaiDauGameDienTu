@@ -374,8 +374,8 @@ router.get('/mo-lich/:id', auth.yeuCauStaffHoacAdmin, async function (req, res) 
                 await td.save();
             } catch (apiErr) {
                 console.error('ERROR mo-lich:', apiErr && apiErr.message ? apiErr.message : apiErr);
-                req.session.error = 'Khong the mo lich do OAuth Google Calendar dang loi.';
-                return res.redirect('/trandau');
+                console.error('Fallback mo-lich -> open create event URL');
+                return res.redirect(googleCalendar.buildCreateEventUrl(td, td.GiaiDau ? td.GiaiDau.TenGiaiDau : null));
             }
         }
 
@@ -416,8 +416,8 @@ router.get('/xuat-lich/:id', auth.yeuCauStaffHoacAdmin, async function (req, res
             return res.redirect(googleCalendar.buildDayViewUrl(td.ThoiGianThiDau));
         } catch (apiErr) {
             console.error('ERROR xuat-lich:', apiErr && apiErr.message ? apiErr.message : apiErr);
-            req.session.error = 'Khong the xuat lich do OAuth Google Calendar dang loi.';
-            return res.redirect('/trandau');
+            console.error('Fallback xuat-lich -> open create event URL');
+            return res.redirect(googleCalendar.buildCreateEventUrl(td, td.GiaiDau ? td.GiaiDau.TenGiaiDau : null));
         }
     }
     catch (err) {
@@ -465,6 +465,7 @@ router.post('/nhap-ket-qua/:id', auth.yeuCauStaffHoacAdmin, async function (req,
 });
 
 module.exports = router;
+
 
 
 
