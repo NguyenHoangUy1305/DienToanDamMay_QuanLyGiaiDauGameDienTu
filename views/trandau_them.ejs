@@ -4,125 +4,165 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
     <title><%= title %> - FC Online</title>
 </head>
-<body>
+<body class="bg-light">
     <%- include('partials/sidebar', { active: 'trandau' }) %>
     <div class="container mt-4">
-        <h2 class="mb-4">Thêm trận đấu</h2>
+        <h2 class="mb-4 fw-bold text-primary"><i class="bi bi-controller me-2"></i>Thêm trận đấu</h2>
 
-        <form action="/trandau/them" method="post">
-            <div class="mb-3">
-                <label for="GiaiDau" class="form-label">Giải đấu</label>
-                <select class="form-select" id="GiaiDau" name="GiaiDau" required>
-                    <option value="">-- Chọn giải đấu --</option>
-                    <% giaidau.forEach(function(item) { %>
-                        <option value="<%= item._id %>"><%= item.TenGiaiDau %> (<%= item.TheThuc %>)</option>
-                    <% }) %>
-                </select>
-            </div>
+        <% if (typeof session !== 'undefined' && session.error) { %>
+            <div class="alert alert-danger"><%= session.error %></div>
+            <% delete session.error; %>
+        <% } %>
 
-            <div class="mb-3">
-                <label for="LoaiDoiTuongThiDau" class="form-label">Kiểu đối tượng</label>
-                <select class="form-select" id="LoaiDoiTuongThiDau" name="LoaiDoiTuongThiDau">
-                    <option value="NguoiChoi">Cá nhân</option>
-                    <option value="DoiTuyen">Đội tuyển</option>
-                </select>
-            </div>
+        <div class="card border-0 shadow-sm p-4">
+            <form action="/trandau/them" method="post">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Giải đấu</label>
+                    <select class="form-select" id="GiaiDau" name="GiaiDau" required>
+                        <option value="">-- Chọn giải đấu --</option>
+                        <% giaidau.forEach(function(item) { %>
+                            <option value="<%= item._id %>"><%= item.TenGiaiDau %> (<%= item.TheThuc %>)</option>
+                        <% }) %>
+                    </select>
+                </div>
 
-            <div class="mb-3">
-                <label for="VongDau" class="form-label">Vòng đấu</label>
-                <input type="text" class="form-control" id="VongDau" name="VongDau" required />
-            </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Kiểu đối tượng thi đấu</label>
+                    <select class="form-select bg-secondary-subtle" id="LoaiDoiTuongThiDau" name="LoaiDoiTuongThiDau" style="pointer-events: none;">
+                        <option value="NguoiChoi">Cá nhân (1vs1)</option>
+                        <option value="DoiTuyen">Đội tuyển (TEAM)</option>
+                    </select>
+                    <small class="text-muted fst-italic">Hệ thống tự nhận diện thể thức theo Giải đấu.</small>
+                </div>
 
-            <div class="mb-3">
-                <label for="DoiThu1Id" class="form-label">Đối thủ 1 (từ danh sách đã duyệt)</label>
-                <select class="form-select" id="DoiThu1Id" name="DoiThu1Id" required>
-                    <option value="">-- Chọn đối thủ 1 --</option>
-                </select>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Vòng đấu</label>
+                    <input type="text" class="form-control" id="VongDau" name="VongDau" placeholder="VD: Tứ kết, Bán kết..." required />
+                </div>
 
-            <div class="mb-3">
-                <label for="DoiThu2Id" class="form-label">Đối thủ 2 (từ danh sách đã duyệt)</label>
-                <select class="form-select" id="DoiThu2Id" name="DoiThu2Id" required>
-                    <option value="">-- Chọn đối thủ 2 --</option>
-                </select>
-            </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold text-danger">Đối thủ 1 (Từ Đơn đăng ký)</label>
+                        <select class="form-select border-danger" id="DoiThu1Id" name="DoiThu1Id" required>
+                            <option value="">-- Chọn đối thủ 1 --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold text-primary">Đối thủ 2 (Từ Đơn đăng ký)</label>
+                        <select class="form-select border-primary" id="DoiThu2Id" name="DoiThu2Id" required>
+                            <option value="">-- Chọn đối thủ 2 --</option>
+                        </select>
+                    </div>
+                </div>
 
-            <div class="mb-3">
-                <label for="ThoiGianThiDau" class="form-label">Thời gian thi đấu</label>
-                <input type="datetime-local" class="form-control" id="ThoiGianThiDau" name="ThoiGianThiDau" required />
-            </div>
+                <div id="KhuVucXepKeo" class="mb-3 d-none border border-warning p-3 bg-warning-subtle rounded shadow-sm">
+                </div>
 
-            <div class="mb-3">
-                <label for="TySo1" class="form-label">Tỷ số đối thủ 1 (nếu đã có kết quả)</label>
-                <input type="number" class="form-control" id="TySo1" name="TySo1" value="0" min="0" />
-            </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Thời gian thi đấu</label>
+                    <input type="datetime-local" class="form-control" id="ThoiGianThiDau" name="ThoiGianThiDau" required />
+                </div>
 
-            <div class="mb-3">
-                <label for="TySo2" class="form-label">Tỷ số đối thủ 2 (nếu đã có kết quả)</label>
-                <input type="number" class="form-control" id="TySo2" name="TySo2" value="0" min="0" />
-            </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Tỷ số đối thủ 1 (nhập sau)</label>
+                        <input type="number" class="form-control" id="TySo1" name="TySo1" value="0" min="0" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Tỷ số đối thủ 2 (nhập sau)</label>
+                        <input type="number" class="form-control" id="TySo2" name="TySo2" value="0" min="0" />
+                    </div>
+                </div>
 
-            <div class="mb-3">
-                <label for="TrangThai" class="form-label">Trạng thái</label>
-                <select class="form-select" id="TrangThai" name="TrangThai">
-                    <option value="Chua thi dau">Chưa thi đấu</option>
-                    <option value="Dang thi dau">Đang thi đấu</option>
-                    <option value="Da thi dau">Đã thi đấu</option>
-                    <option value="Tam hoan">Tạm hoãn</option>
-                    <option value="Huy">Hủy</option>
-                </select>
-            </div>
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Trạng thái</label>
+                    <select class="form-select" id="TrangThai" name="TrangThai">
+                        <option value="Chua thi dau" selected>Chưa thi đấu</option>
+                        <option value="Da thi dau">Đã thi đấu</option>
+                    </select>
+                </div>
 
-            <button type="submit" class="btn btn-success">Lưu</button>
-            <a href="/trandau" class="btn btn-secondary">Quay lại</a>
-        </form>
+                <hr>
+                <button type="submit" class="btn btn-success px-4 fw-bold"><i class="bi bi-save me-1"></i>Tạo trận đấu</button>
+                <a href="/trandau" class="btn btn-secondary px-4">Quay lại</a>
+            </form>
+        </div>
     </div>
 
     <script id="giaiDauMetaData" type="application/json"><%- JSON.stringify(giaiDauMeta || []) %></script>
+    <script id="teamMembersMapData" type="application/json"><%- JSON.stringify(teamMembersMap || {}) %></script>
     <script id="defaultLoaiData" type="application/json"><%- JSON.stringify(defaultLoaiDoiTuong || '') %></script>
+    
     <script>
         const giaiDauMeta = JSON.parse(document.getElementById('giaiDauMetaData').textContent || '[]');
+        const teamMembersMap = JSON.parse(document.getElementById('teamMembersMapData').textContent || '{}');
         const giaiDauSelect = document.getElementById('GiaiDau');
         const doiThu1Select = document.getElementById('DoiThu1Id');
         const doiThu2Select = document.getElementById('DoiThu2Id');
         const selectLoai = document.getElementById('LoaiDoiTuongThiDau');
-        const initialLoai = JSON.parse(document.getElementById('defaultLoaiData').textContent || '""');
+        const khuVucKeoDau = document.getElementById('KhuVucXepKeo');
 
         function renderOptions(selectedTournamentId, type) {
             const tournament = giaiDauMeta.find(x => x.id === selectedTournamentId);
             const participants = tournament ? tournament.participants : [];
             const filtered = type ? participants.filter(p => p.type === type) : participants;
 
-            const html = ['<option value="">-- Chọn --</option>']
+            const html = ['<option value="">-- Chọn đối thủ --</option>']
                 .concat(filtered.map(p => `<option value="${p.id}">${p.name}</option>`))
                 .join('');
 
             doiThu1Select.innerHTML = html;
             doiThu2Select.innerHTML = html;
+            updateKeoDau(); 
+        }
+
+        function updateKeoDau() {
+            const loai = selectLoai.value;
+            const t1 = doiThu1Select.value;
+            const t2 = doiThu2Select.value;
+
+            if (loai === 'DoiTuyen' && t1 && t2 && t1 !== t2) {
+                const mems1 = teamMembersMap[t1] || [];
+                const mems2 = teamMembersMap[t2] || [];
+
+                let html = '<h5 class="fw-bold text-dark mb-3"><i class="bi bi-people-fill text-warning me-2"></i>Phân cặp 4 Game thi đấu (1vs1)</h5>';
+
+                if (mems1.length === 0 || mems2.length === 0) {
+                    html += '<div class="alert alert-danger mb-0">Lỗi: Đội tuyển chưa có thành viên. Hãy vào Quản lý Đội tuyển thêm người!</div>';
+                } else {
+                    for (let i = 1; i <= 4; i++) {
+                        let opt1 = '<option value="">-- Chọn thành viên Đội 1 --</option>' + mems1.map(m => `<option value="${m.id}">${m.name}</option>`).join('');
+                        let opt2 = '<option value="">-- Chọn thành viên Đội 2 --</option>' + mems2.map(m => `<option value="${m.id}">${m.name}</option>`).join('');
+
+                        html += `
+                        <div class="row mb-2 align-items-center bg-white p-2 rounded shadow-sm border mx-1">
+                            <div class="col-md-2 fw-bold text-center">Game ${i}</div>
+                            <div class="col-md-4"><select class="form-select border-danger" name="NguoiChoi1_Game${i}" required>${opt1}</select></div>
+                            <div class="col-md-2 text-center text-danger fw-bold fs-5">VS</div>
+                            <div class="col-md-4"><select class="form-select border-primary" name="NguoiChoi2_Game${i}" required>${opt2}</select></div>
+                        </div>`;
+                    }
+                }
+                khuVucKeoDau.innerHTML = html;
+                khuVucKeoDau.classList.remove('d-none');
+            } else {
+                khuVucKeoDau.innerHTML = '';
+                khuVucKeoDau.classList.add('d-none');
+            }
         }
 
         giaiDauSelect.addEventListener('change', function() {
             const tournament = giaiDauMeta.find(x => x.id === this.value);
-            const defaultType = initialLoai || (tournament && tournament.isTeam ? 'DoiTuyen' : 'NguoiChoi');
+            const defaultType = (tournament && tournament.isTeam) ? 'DoiTuyen' : 'NguoiChoi';
             selectLoai.value = defaultType;
             renderOptions(this.value, selectLoai.value);
         });
 
-        selectLoai.addEventListener('change', function() {
-            renderOptions(giaiDauSelect.value, this.value);
-        });
-
-        // initialize if already selected
-        (function init() {
-            if (giaiDauSelect.value) {
-                const tournament = giaiDauMeta.find(x => x.id === giaiDauSelect.value);
-                const defaultType = initialLoai || (tournament && tournament.isTeam ? 'DoiTuyen' : 'NguoiChoi');
-                selectLoai.value = defaultType;
-                renderOptions(giaiDauSelect.value, selectLoai.value);
-            }
-        })();
+        doiThu1Select.addEventListener('change', updateKeoDau);
+        doiThu2Select.addEventListener('change', updateKeoDau);
     </script>
 </body>
 </html>

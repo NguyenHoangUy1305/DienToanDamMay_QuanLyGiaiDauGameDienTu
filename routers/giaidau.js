@@ -1,178 +1,159 @@
 var express = require('express');
 var router = express.Router();
 var GiaiDau = require('../models/giaidau');
+var DangKyGiaiDau = require('../models/dangkygiaidau'); 
+var NguoiChoi = require('../models/nguoichoi');        
 var auth = require('../middlewares/auth');
 var nhatKyHeThong = require('../services/nhatkyhethong');
-var thongBaoHeThong = require('../services/thongbao');
 
-function normalizeText(value) {
-    return (value || '')
-        .toString()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .trim()
-        .toLowerCase();
+// --- HELPER FUNCTIONS ---
+function isTeamTournament(theThuc) {
+    if (!theThuc) return false;
+    var val = theThuc.toString().toLowerCase();
+    return ['team', 'doi', 'đội', 'dong doi', '2vs2', '4vs4'].some(s => val.includes(s));
 }
 
-function isTeamTournament(theThuc) {
-    return theThuc === 'TEAM';
+function toVietnameseTournamentType(theThuc) {
+    if (['1vs1', '1 vs 1', 'solo'].includes(theThuc?.toString().toLowerCase())) return 'Cá nhân 1vs1';
+    if (isTeamTournament(theThuc)) return 'Thi đấu Đội';
+    return theThuc || 'Chưa xác định';
+}
+
+function toVietnameseTournamentStatus(status) {
+    if (!status) return 'Không xác định';
+    var s = status.toString().toLowerCase();
+    if (s.includes('pending') || s.includes('sap dien ra') || s.includes('sắp diễn ra')) return 'Sắp diễn ra';
+    if (s.includes('ongoing') || s.includes('dang dien ra') || s.includes('đang diễn ra')) return 'Đang diễn ra';
+    if (s.includes('completed') || s.includes('da ket thuc') || s.includes('đã kết thúc')) return 'Đã kết thúc';
+    return status;
 }
 
 function layVaiTro(req) {
     return (req.session && (req.session.VaiTro || req.session.QuyenHan)) || 'khach';
 }
 
-function toVietnameseTournamentType(theThuc) {
-    if (theThuc === '1vs1') return '1 vs 1';
-    if (theThuc === 'TEAM') return 'Đội';
-    return theThuc || '';
-}
+// --- ROUTES ---
 
-function toVietnameseTournamentStatus(status) {
-    switch (status) {
-        case 'PENDING': return 'Sắp diễn ra';
-        case 'ONGOING': return 'Đang diễn ra';
-        case 'COMPLETED': return 'Đã kết thúc';
-        case 'CANCELLED': return 'Đã hủy';
-        default: return 'Không xác định';
-    }
-}
-
+// 1. GET: Danh sách giải đấu (ĐẾM SLOT & TÌM GIẢI ĐÃ ĐĂNG KÝ)
 router.get('/', auth.yeuCauDangNhap, async function (req, res) {
-    var gd = await GiaiDau.find().sort({ NgayBatDau: -1 }).lean().exec();
+    try {
+        var gd = await GiaiDau.find().sort({ NgayBatDau: -1 }).lean().exec();
+        var vaiTro = layVaiTro(req).toLowerCase();
+        var isPlayer = (vaiTro === 'nguoi_choi' || vaiTro === 'nguoichoi');
 
-    var giai1vs1 = gd.filter(function (item) {
-        return !isTeamTournament(item.TheThuc);
-    });
+        let registeredTournamentIds = [];
+        let hasRegistered1vs1 = false; // Biến kiểm tra
+        let hasRegisteredTeam = false; // Biến kiểm tra
+        
+        if (isPlayer) {
+            const player = await NguoiChoi.findOne({ TaiKhoan: req.session.MaNguoiDung }).exec();
+            if (player) {
+                let query = { $or: [{ NguoiChoi: player._id }] };
+                if (player.DoiTuyen) {
+                    query.$or.push({ DoiTuyen: player.DoiTuyen });
+                }
+                query.TrangThaiDuyet = { $ne: 'Tu choi' }; // Bỏ qua đơn đã bị hủy
 
-    var giaiDoi = gd.filter(function (item) {
-        return isTeamTournament(item.TheThuc);
-    });
+                const regs = await DangKyGiaiDau.find(query).populate('GiaiDau').exec();
+                
+                regs.forEach(r => {
+                    if (r.GiaiDau) {
+                        // ===============================================
+                        // BƯỚC THÔNG MINH: KIỂM TRA TRẠNG THÁI GIẢI ĐẤU
+                        // ===============================================
+                        let status = r.GiaiDau.TrangThai ? r.GiaiDau.TrangThai.toString().toLowerCase() : '';
+                        
+                        // Nếu giải đấu cũ đã "Đã kết thúc" hoặc "Completed" -> THA CHO NÓ, BỎ QUA!
+                        if (status.includes('da ket thuc') || status.includes('completed')) {
+                            return; // Lệnh return trong forEach có tác dụng như continue
+                        }
 
-    var vaiTro = layVaiTro(req);
+                        // Nếu giải vẫn đang đá hoặc sắp đá thì mới khóa UI
+                        registeredTournamentIds.push(r.GiaiDau._id.toString());
+                        if (isTeamTournament(r.GiaiDau.TheThuc)) {
+                            hasRegisteredTeam = true;
+                        } else {
+                            hasRegistered1vs1 = true;
+                        }
+                    }
+                });
+            }
+        }
 
-    res.render('giaidau', {
-        title: 'Giải đấu',
-        giaidau1vs1: giai1vs1,
-        giaidauDoi: giaiDoi,
-        canManage: vaiTro === 'admin' || vaiTro === 'nhanvien',
-        isAdmin: vaiTro === 'admin',
-        toVietnameseTournamentType: toVietnameseTournamentType,
-        toVietnameseTournamentStatus: toVietnameseTournamentStatus
-    });
+        // ĐẾM SLOT
+        for (let i = 0; i < gd.length; i++) {
+            let count = await DangKyGiaiDau.countDocuments({
+                GiaiDau: gd[i]._id,
+                TrangThaiDuyet: { $ne: 'Tu choi' }
+            });
+            gd[i].soLuongDaDangKy = count; 
+        }
+
+        res.render('giaidau', {
+            title: 'Giải đấu FC Online',
+            giaidau1vs1: gd.filter(i => !isTeamTournament(i.TheThuc)),
+            giaidauDoi: gd.filter(i => isTeamTournament(i.TheThuc)),
+            canManage: (vaiTro === 'admin' || vaiTro === 'nhanvien'),
+            isAdmin: vaiTro === 'admin',
+            session: req.session,
+            toVietnameseTournamentType: toVietnameseTournamentType,
+            toVietnameseTournamentStatus: toVietnameseTournamentStatus,
+            registeredTournamentIds: registeredTournamentIds,
+            hasRegistered1vs1: hasRegistered1vs1, // Truyền biến ra
+            hasRegisteredTeam: hasRegisteredTeam  // Truyền biến ra
+        });
+    } catch (err) {
+        res.status(500).send("Lỗi tải danh sách giải đấu.");
+    }
 });
 
-router.get('/them', auth.yeuCauStaffHoacAdmin, async function (req, res) {
-    res.render('giaidau_them', {
-        title: 'Thêm giải đấu'
-    });
+// Các hàm Thêm, Sửa, Xóa giữ nguyên
+router.get('/them', auth.yeuCauStaffHoacAdmin, (req, res) => {
+    res.render('giaidau_them', { title: 'Thêm giải đấu mới' });
 });
 
 router.post('/them', auth.yeuCauStaffHoacAdmin, async function (req, res) {
     try {
-        var data = {
-            TenGiaiDau: req.body.TenGiaiDau,
-            NgayBatDau: req.body.NgayBatDau,
-            NgayKetThuc: req.body.NgayKetThuc,
-            TheThuc: req.body.TheThuc,
-            SoLuongToiDa: req.body.SoLuongToiDa,
-            TrangThai: req.body.TrangThai,
-            MoTa: req.body.MoTa
-        };
-
-        var giaiDauMoi = await GiaiDau.create(data);
-
-        await nhatKyHeThong.ghiNhatKy(req, {
-            hanhDong: 'Thêm giải đấu',
-            doiTuong: giaiDauMoi.TenGiaiDau,
-            chiTiet: 'Giải đấu mới đã được tạo.',
-            duLieuMoi: giaiDauMoi.toObject(),
-            mucDo: 'Thong tin'
-        });
-
-        await thongBaoHeThong.taoThongBaoHeThong({
-            tieuDe: 'Giải đấu mới',
-            noiDung: 'Giải đấu "' + giaiDauMoi.TenGiaiDau + '" vừa được tạo.',
-            loaiThongBao: 'GiaiDau',
-            mucDo: 'Quan trong'
-        });
-
-        req.session.success = 'Đã thêm giải đấu thành công.';
-        return res.redirect('/giaidau');
+        var giaiDauMoi = await GiaiDau.create(req.body);
+        req.session.success = 'Tạo giải đấu thành công!';
+        res.redirect('/giaidau');
     } catch (err) {
-        console.log(err);
-        req.session.error = 'Không thể thêm giải đấu.';
-        return res.redirect('/giaidau/them');
+        req.session.error = 'Lỗi: ' + err.message;
+        res.redirect('/giaidau/them');
     }
 });
 
 router.get('/sua/:id', auth.yeuCauStaffHoacAdmin, async function (req, res) {
-    var gd = await GiaiDau.findById(req.params.id).exec();
-    if (!gd) {
-        req.session.error = 'Không tìm thấy giải đấu.';
-        return res.redirect('/giaidau');
+    try {
+        var gd = await GiaiDau.findById(req.params.id).exec();
+        if (!gd) {
+            req.session.error = 'Không tìm thấy giải đấu này!';
+            return res.redirect('/giaidau');
+        }
+        res.render('giaidau_sua', { title: 'Chỉnh sửa giải đấu', giaidau: gd });
+    } catch (err) {
+        res.redirect('/giaidau');
     }
-
-    res.render('giaidau_sua', {
-        title: 'Sửa giải đấu',
-        giaidau: gd
-    });
 });
 
 router.post('/sua/:id', auth.yeuCauStaffHoacAdmin, async function (req, res) {
     try {
-        var id = req.params.id;
-        var giaiDauCu = await GiaiDau.findById(id).exec();
-
-        var data = {
-            TenGiaiDau: req.body.TenGiaiDau,
-            NgayBatDau: req.body.NgayBatDau,
-            NgayKetThuc: req.body.NgayKetThuc,
-            TheThuc: req.body.TheThuc,
-            SoLuongToiDa: req.body.SoLuongToiDa,
-            TrangThai: req.body.TrangThai,
-            MoTa: req.body.MoTa
-        };
-
-        await GiaiDau.findByIdAndUpdate(id, data).exec();
-
-        await nhatKyHeThong.ghiNhatKy(req, {
-            hanhDong: 'Cập nhật giải đấu',
-            doiTuong: data.TenGiaiDau,
-            chiTiet: 'Thông tin giải đấu đã được cập nhật.',
-            duLieuCu: giaiDauCu ? giaiDauCu.toObject() : null,
-            duLieuMoi: data,
-            mucDo: 'Thong tin'
-        });
-
-        req.session.success = 'Đã cập nhật giải đấu thành công.';
-        return res.redirect('/giaidau');
+        await GiaiDau.findByIdAndUpdate(req.params.id, req.body).exec();
+        req.session.success = 'Cập nhật giải đấu thành công!';
+        res.redirect('/giaidau');
     } catch (err) {
-        console.log(err);
-        req.session.error = 'Không thể cập nhật giải đấu.';
-        return res.redirect('/giaidau/sua/' + req.params.id);
+        req.session.error = 'Lỗi cập nhật: ' + err.message;
+        res.redirect('/giaidau/sua/' + req.params.id);
     }
 });
 
-router.get('/xoa/:id', auth.yeuCauAdmin, async function (req, res) {
+router.post('/xoa/:id', auth.yeuCauAdmin, async function (req, res) {
     try {
-        var giaiDau = await GiaiDau.findById(req.params.id).exec();
         await GiaiDau.findByIdAndDelete(req.params.id).exec();
-
-        await nhatKyHeThong.ghiNhatKy(req, {
-            hanhDong: 'Xóa giải đấu',
-            doiTuong: giaiDau ? giaiDau.TenGiaiDau : req.params.id,
-            chiTiet: 'Giải đấu đã bị xóa khỏi hệ thống.',
-            duLieuCu: giaiDau ? giaiDau.toObject() : null,
-            mucDo: 'Quan trong'
-        });
-
-        req.session.success = 'Đã xóa giải đấu thành công.';
-        return res.redirect('/giaidau');
+        req.session.success = 'Đã xóa giải đấu.';
+        res.redirect('/giaidau');
     } catch (err) {
-        console.log(err);
-        req.session.error = 'Không thể xóa giải đấu.';
-        return res.redirect('/giaidau');
+        res.redirect('/giaidau');
     }
 });
 

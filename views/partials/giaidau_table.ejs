@@ -1,37 +1,114 @@
-﻿<table class="table table-bordered table-hover align-middle">
+﻿<table class="table table-bordered table-hover align-middle shadow-sm">
     <thead class="table-dark">
         <tr>
-            <th>Tên giải đấu</th>
-            <th>Ngày bắt đầu</th>
-            <th>Ngày kết thúc</th>
-            <th>Thể thức</th>
-            <th>Số lượng tối đa</th>
-            <th>Trạng thái</th>
-            <th width="170">Chức năng</th>
+            <th class="ps-3">Tên giải đấu</th>
+            <th class="text-center">Bắt đầu</th>
+            <th class="text-center">Kết thúc</th>
+            <th class="text-center">Thể thức</th>
+            <th class="text-center">Slot (Đã đ.ký/Max)</th>
+            <th class="text-center">Trạng thái</th>
+            <th class="text-end pe-3" width="180">Hành động</th>
         </tr>
     </thead>
     <tbody>
         <% if (data && data.length > 0) { %>
-            <% data.forEach(function(item) { %>
+            <% data.forEach(function(item) { 
+                // CHỐNG CRASH Ở ĐÂY: Nếu không có trạng thái thì mặc định là chuỗi rỗng
+                var status = item.TrangThai ? item.TrangThai.toString() : '';
+                var canRegister = (status === 'Sap dien ra' || status === 'PENDING' || status === 'Dang dien ra' || status === 'ONGOING');
+                
+                // KIỂM TRA XEM GIẢI ĐÃ FULL CHƯA
+                var isFull = (item.soLuongDaDangKy || 0) >= item.SoLuongToiDa;
+            %>
                 <tr>
-                    <td><%= item.TenGiaiDau %></td>
-                    <td><%= new Date(item.NgayBatDau).toLocaleDateString('vi-VN') %></td>
-                    <td><%= new Date(item.NgayKetThuc).toLocaleDateString('vi-VN') %></td>
-                    <td><%= toVietnameseTournamentType(item.TheThuc) %></td>
-                    <td><%= item.SoLuongToiDa %></td>
-                    <td><%= toVietnameseTournamentStatus(item.TrangThai) %></td>
-                    <td>
-                        <% if (canManage) { %>
-                            <a href="/giaidau/sua/<%= item._id %>" class="btn btn-warning btn-sm">Sửa</a>
-                            <% if (isAdmin) { %>
-                                <a href="/giaidau/xoa/<%= item._id %>" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa?');">Xóa</a>
-                            <% } %>
+                    <td class="ps-3 fw-bold text-primary"><%= item.TenGiaiDau %></td>
+                    <td class="text-center"><%= new Date(item.NgayBatDau).toLocaleDateString('vi-VN') %></td>
+                    <td class="text-center"><%= new Date(item.NgayKetThuc).toLocaleDateString('vi-VN') %></td>
+                    <td class="text-center">
+                        <span class="badge bg-info text-dark">
+                            <%= typeof toVietnameseTournamentType !== 'undefined' ? toVietnameseTournamentType(item.TheThuc) : (item.TheThuc || 'Chưa rõ') %>
+                        </span>
+                    </td>
+                    
+                    <td class="text-center">
+                        <span class="fw-bold <%= isFull ? 'text-danger' : 'text-primary' %> fs-6">
+                            <%= item.soLuongDaDangKy || 0 %>
+                        </span> 
+                        <span class="text-muted">/ <%= item.SoLuongToiDa || 0 %></span>
+                        
+                        <% if (isFull) { %>
+                            <div class="small text-danger fw-bold mt-1">Đã đầy</div>
                         <% } %>
+                    </td>
+
+                    <td class="text-center">
+                        <% 
+                            var badgeClass = 'bg-secondary';
+                            if (canRegister) badgeClass = 'bg-success';
+                            if (status.includes('Da ket thuc') || status === 'COMPLETED') badgeClass = 'bg-danger';
+                        %>
+                        <span class="badge <%= badgeClass %>">
+                            <%= typeof toVietnameseTournamentStatus !== 'undefined' ? toVietnameseTournamentStatus(status) : status %>
+                        </span>
+                    </td>
+                    <td class="text-end pe-3">
+                        <div class="d-flex justify-content-end gap-1">
+                            <% if (!canManage && canRegister) { %>
+                                <% 
+                                    let isRegistered = false;
+                                    if (typeof registeredTournamentIds !== 'undefined') {
+                                        isRegistered = registeredTournamentIds.includes(item._id.toString());
+                                    }
+                                    
+                                    let hasAnyTourney = (typeof hasRegisteredTeam !== 'undefined' && hasRegisteredTeam) || 
+                                                        (typeof hasRegistered1vs1 !== 'undefined' && hasRegistered1vs1);
+                                    let khoaGiaiKhac = !isRegistered && hasAnyTourney;
+
+                                    // CHỐNG CRASH Ở ĐÂY: Thêm (item.TheThuc || '')
+                                    let isTeamTourney = ['team', 'doi', 'đội', 'dong doi', '2vs2', '4vs4'].some(s => (item.TheThuc || '').toString().toLowerCase().includes(s));
+                                    let mode = isTeamTourney ? 'doi' : '1vs1';
+                                    let dangKyUrl = `/dangkygiaidau/them?tournament=${item._id}&mode=${mode}`;
+                                %>
+
+                                <% if (isRegistered) { %>
+                                    <button class="btn btn-secondary btn-sm shadow-sm" disabled>
+                                        <i class="bi bi-check-circle-fill me-1"></i>Đã đăng ký
+                                    </button>
+                                
+                                <% } else if (khoaGiaiKhac) { %>
+                                    <button class="btn btn-outline-secondary btn-sm shadow-sm" disabled title="Bạn đang tham gia một giải đấu khác. Không thể đăng ký thêm!">
+                                        <i class="bi bi-lock-fill me-1"></i>Khóa (Đang có giải)
+                                    </button>
+                                
+                                <% } else if (isFull) { %>
+                                    <button class="btn btn-danger btn-sm shadow-sm" disabled>
+                                        <i class="bi bi-x-circle-fill me-1"></i>Hết slot
+                                    </button>
+                                <% } else { %>
+                                    <a href="<%= dangKyUrl %>" class="btn btn-primary btn-sm shadow-sm">
+                                        <i class="bi bi-pencil-square me-1"></i>Đăng ký
+                                    </a>
+                                <% } %>
+                            <% } %>
+
+                            <% if (canManage) { %>
+                                <a href="/giaidau/sua/<%= item._id %>" class="btn btn-warning btn-sm" title="Sửa">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <% if (isAdmin) { %>
+                                    <form action="/giaidau/xoa/<%= item._id %>" method="post" onsubmit="return confirm('Xóa giải này?');" style="display:inline">
+                                        <button type="submit" class="btn btn-danger btn-sm" title="Xóa">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
+                                <% } %>
+                            <% } %>
+                        </div>
                     </td>
                 </tr>
             <% }) %>
         <% } else { %>
-            <tr><td colspan="7" class="text-center"><%= emptyText %></td></tr>
+            <tr><td colspan="7" class="text-center py-4 text-muted"><%= emptyText %></td></tr>
         <% } %>
     </tbody>
 </table>

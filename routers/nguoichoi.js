@@ -10,7 +10,7 @@ function layVaiTro(req) {
     return (req.session && (req.session.VaiTro || req.session.QuyenHan)) || 'khach';
 }
 
-router.get('/', auth.yeuCauDangNhap, async function (req, res) {
+router.get('/', auth.yeuCauStaffHoacAdmin, async function (req, res) {
     var ds = await NguoiChoi.find().populate('DoiTuyen').sort({ HoVaTen: 1 }).exec();
 
     var nguoichoiCaNhan = ds.filter(function (item) {

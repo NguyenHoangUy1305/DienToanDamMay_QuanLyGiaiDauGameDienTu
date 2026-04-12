@@ -4,60 +4,72 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <title><%= title %> - FC Online</title>
+    <title><%= title %></title>
 </head>
-<body>
+<body class="bg-light">
     <%- include('partials/sidebar', { active: 'giaidau' }) %>
     <div class="container mt-4">
-        <h2 class="mb-4">Sửa giải đấu</h2>
-
-        <form action="/giaidau/sua/<%= giaidau._id %>" method="post">
-            <div class="mb-3">
-                <label for="TenGiaiDau" class="form-label">Tên giải đấu</label>
-                <input type="text" class="form-control" id="TenGiaiDau" name="TenGiaiDau" value="<%= giaidau.TenGiaiDau %>" required />
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-warning text-dark">
+                <h4 class="mb-0 fw-bold">CHỈNH SỬA GIẢI ĐẤU</h4>
             </div>
+            <div class="card-body bg-white">
+                <form action="/giaidau/sua/<%= giaidau._id %>" method="post">
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <label class="form-label fw-bold">Tên giải đấu</label>
+                            <input type="text" class="form-control" name="TenGiaiDau" value="<%= giaidau.TenGiaiDau %>" required />
+                        </div>
+                        
+                        <% 
+                            // Hàm định dạng ngày chuẩn cho Input Date
+                            function formatDate(d) {
+                                if(!d) return '';
+                                let date = new Date(d);
+                                return date.toISOString().split('T')[0];
+                            }
+                        %>
 
-            <div class="mb-3">
-                <label for="NgayBatDau" class="form-label">Ngày bắt đầu</label>
-                <input type="date" class="form-control" id="NgayBatDau" name="NgayBatDau" value="<%= new Date(giaidau.NgayBatDau).toISOString().split('T')[0] %>" required />
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Ngày bắt đầu</label>
+                            <input type="date" class="form-control" name="NgayBatDau" value="<%= formatDate(giaidau.NgayBatDau) %>" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Ngày kết thúc</label>
+                            <input type="date" class="form-control" name="NgayKetThuc" value="<%= formatDate(giaidau.NgayKetThuc) %>" required />
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <label class="form-label fw-bold">Thể thức</label>
+                            <select class="form-select" name="TheThuc" required>
+                                <option value="1vs1" <%= giaidau.TheThuc === '1vs1' ? 'selected' : '' %>>1vs1</option>
+                                <option value="doi" <%= ['doi','Đội','team'].includes(giaidau.TheThuc) ? 'selected' : '' %>>Đội</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label fw-bold">Số lượng</label>
+                            <input type="number" class="form-control" name="SoLuongToiDa" value="<%= giaidau.SoLuongToiDa %>" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label fw-bold">Trạng thái</label>
+                            <select class="form-select" name="TrangThai">
+                                <option value="Sap dien ra" <%= giaidau.TrangThai === 'Sap dien ra' ? 'selected' : '' %>>Sắp diễn ra</option>
+                                <option value="Dang dien ra" <%= giaidau.TrangThai === 'Dang dien ra' ? 'selected' : '' %>>Đang diễn ra</option>
+                                <option value="Da ket thuc" <%= giaidau.TrangThai === 'Da ket thuc' ? 'selected' : '' %>>Đã kết thúc</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label fw-bold">Mô tả</label>
+                            <textarea class="form-control" name="MoTa" rows="3"><%= giaidau.MoTa %></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-warning fw-bold">Cập nhật thay đổi</button>
+                        <a href="/giaidau" class="btn btn-secondary">Quay lại danh sách</a>
+                    </div>
+                </form>
             </div>
-
-            <div class="mb-3">
-                <label for="NgayKetThuc" class="form-label">Ngày kết thúc</label>
-                <input type="date" class="form-control" id="NgayKetThuc" name="NgayKetThuc" value="<%= new Date(giaidau.NgayKetThuc).toISOString().split('T')[0] %>" required />
-            </div>
-
-            <div class="mb-3">
-                <label for="TheThuc" class="form-label">Thể thức</label>
-                <select class="form-select" id="TheThuc" name="TheThuc" required>
-                    <option value="1vs1" <%= giaidau.TheThuc === '1vs1' ? 'selected' : '' %>>1vs1</option>
-                    <option value="doi" <%= ['doi','Đồng đội','đội','team','Team','2vs2'].includes(giaidau.TheThuc) ? 'selected' : '' %>>Đội</option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="SoLuongToiDa" class="form-label">Số lượng tối đa</label>
-                <input type="number" class="form-control" id="SoLuongToiDa" name="SoLuongToiDa" value="<%= giaidau.SoLuongToiDa %>" min="2" />
-            </div>
-
-            <div class="mb-3">
-                <label for="TrangThai" class="form-label">Trạng thái</label>
-                <select class="form-select" id="TrangThai" name="TrangThai" required>
-                    <option value="Sap dien ra" <%= ['Sap dien ra','Sắp diễn ra'].includes(giaidau.TrangThai) ? 'selected' : '' %>>Sắp diễn ra</option>
-                    <option value="Dang dien ra" <%= ['Dang dien ra','Đang diễn ra'].includes(giaidau.TrangThai) ? 'selected' : '' %>>Đang diễn ra</option>
-                    <option value="Da ket thuc" <%= ['Da ket thuc','Đã kết thúc'].includes(giaidau.TrangThai) ? 'selected' : '' %>>Đã kết thúc</option>
-                    <option value="Tam dung" <%= ['Tam dung','Tạm dừng'].includes(giaidau.TrangThai) ? 'selected' : '' %>>Tạm dừng</option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="MoTa" class="form-label">Mô tả</label>
-                <textarea class="form-control" id="MoTa" name="MoTa" rows="3"><%= giaidau.MoTa %></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Cập nhật</button>
-            <a href="/giaidau" class="btn btn-secondary">Quay lại</a>
-        </form>
+        </div>
     </div>
 </body>
 </html>

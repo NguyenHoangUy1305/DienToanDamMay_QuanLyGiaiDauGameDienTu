@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><%= title %> - FC Online</title>
+    <title>Đăng nhập Game thủ - FC Online</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
     <style>
@@ -11,7 +11,7 @@
             min-height: 100vh;
             margin: 0;
             font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-            background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
         }
         .auth-wrap {
             min-height: 100vh;
@@ -22,48 +22,72 @@
         }
         .auth-card {
             width: 100%;
-            max-width: 480px;
-            border: 1px solid #dbe2ea;
-            border-radius: 6px;
-            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+            max-width: 420px;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             background: #fff;
         }
         .auth-head {
             background: #2563eb;
             color: #fff;
-            padding: 18px 22px;
+            padding: 25px;
+            text-align: center;
         }
         .auth-body {
-            padding: 24px 22px 22px;
+            padding: 30px;
         }
+        .form-control { padding: 12px; border-radius: 8px; }
+        .btn-primary { background-color: #2563eb; border: none; padding: 12px; font-weight: 700; border-radius: 8px; }
+        .btn-primary:hover { background-color: #1d4ed8; }
     </style>
 </head>
 <body>
     <div class="auth-wrap">
         <div class="auth-card">
             <div class="auth-head">
-                <h4 class="mb-1 fw-bold"><i class="bi bi-box-arrow-in-right me-2"></i>Đăng nhập</h4>
-                <div class="small text-white-50">Hệ thống quản lý giải đấu FC Online</div>
+                <h3 class="mb-1 fw-bold"><i class="bi bi-shield-lock-fill me-2"></i>ĐĂNG NHẬP</h3>
+                <div class="small text-white-75">Dành cho Người chơi tham gia giải đấu</div>
             </div>
             <div class="auth-body">
-                <div class="mb-3"><%- message %></div>
+                <div class="mb-3"><%- typeof message !== 'undefined' ? message : '' %></div>
                 <form action="/dangnhap" method="post">
                     <div class="mb-3">
-                        <label for="TenDangNhap" class="form-label">Tên đăng nhập</label>
-                        <input type="text" class="form-control" id="TenDangNhap" name="TenDangNhap" required />
+                        <label for="TenDangNhap" class="form-label fw-bold small text-uppercase">Tên đăng nhập</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                            <input type="text" class="form-control" id="TenDangNhap" name="TenDangNhap" required />
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="MatKhau" class="form-label">Mật khẩu</label>
-                        <input type="password" class="form-control" id="MatKhau" name="MatKhau" required />
+                    <div class="mb-4">
+                        <label for="MatKhau" class="form-label fw-bold small text-uppercase">Mật khẩu</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="bi bi-key"></i></span>
+                            <input type="password" class="form-control" id="MatKhau" name="MatKhau" required />
+                        </div>
                     </div>
-                    <div class="d-flex gap-2">
-                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
-                        <a href="/dangky" class="btn btn-outline-secondary">Đăng ký</a>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">ĐĂNG NHẬP HỆ THỐNG</button>
+                        <a href="/dangky" class="btn btn-outline-secondary py-2 fw-bold">ĐĂNG KÝ TÀI KHOẢN MỚI</a>
+                    </div>
+                    
+                    <div class="text-center mt-4 border-top pt-3">
+                        <small class="text-muted">Bạn là Admin/Nhân viên? Nhấn <strong>Ctrl+Shift+A</strong></small>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Cửa sau bí mật cho Admin / Staff để vào quản lý cho nhanh
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+                e.preventDefault();
+                window.location = '/dangnhap_admin'; // Hoặc đường dẫn login admin của ní
+            }
+        });
+    </script>
 </body>
 </html>

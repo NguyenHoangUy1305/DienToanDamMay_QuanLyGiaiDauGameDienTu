@@ -3,7 +3,6 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const session = require('express-session');
-const silentPaths = ['/trandau', '/doituyen', '/nguoichoi', '/bangxephang', '/nhatkyhethong', '/thongbao', '/gcal', '/giaidau', '/dangkygiaidau'];
 const app = express();
 
 const uri = process.env.MONGODB_URI || 'mongodb://13hoanguy_db_user:123@ac-63dmeyd-shard-00-00.b8ir9xx.mongodb.net:27017/qlgiaigame?ssl=true&authSource=admin';
@@ -21,10 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use((req, res, next) => {
-    console.log(new Date().toISOString(), req.method, req.path);
-    next();
-});
 
 app.use(session({
     secret: process.env.SESSION_SECRET || 'FCOnline-Secret-Key',
@@ -68,8 +63,13 @@ app.use((req, res, next) => {
     next();
 });
 
+// ĐÃ DỌN SẠCH ĐOẠN CODE GÂY TRẮNG MÀN HÌNH Ở ĐÂY!
+// BÂY GIỜ LUỒNG CHẠY SẼ THÔNG SUỐT THẲNG XUỐNG DƯỚI:
+
 app.use('/', require('./routers/auth'));
 app.use('/', require('./routers/index'));
+app.use('/admin', require('./routers/admin'));
+app.use('/taikhoan', require('./routers/taikhoan'));
 app.use('/giaidau', require('./routers/giaidau'));
 app.use('/trandau', require('./routers/trandau'));
 app.use('/nguoichoi', require('./routers/nguoichoi'));
@@ -79,12 +79,7 @@ app.use('/doituyen', require('./routers/doituyen'));
 app.use('/nhatkyhethong', require('./routers/nhatkyhethong'));
 app.use('/thongbao', require('./routers/thongbao'));
 app.use('/gcal', require('./routers/gcal'));
-app.use((req, res, next) => {
-  if (!silentPaths.some(p => req.path.startsWith(p))) {
-    console.log(new Date().toISOString(), req.method, req.url);
-  }
-  next();
-});
+
 
 app.get('/health', (req, res) => res.send('OK'));
 

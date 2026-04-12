@@ -4,97 +4,146 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <title><%= title %> - FC Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <title><%= typeof title !== 'undefined' ? title : 'Đăng ký' %> - FC Online</title>
 </head>
-<body>
+<body class="bg-light">
     <%- include('partials/sidebar', { active: 'dangkygiaidau' }) %>
     <div class="container mt-4">
-        <h2 class="mb-4">Thêm đăng ký giải đấu</h2>
-
-        <form action="/dangkygiaidau/them" method="post">
-            <div class="mb-3">
-                <label for="GiaiDau" class="form-label">Giải đấu</label>
-                <select class="form-select" id="GiaiDau" name="GiaiDau" required>
-                    <option value="">-- Chọn giải đấu --</option>
-                    <% giaidau.forEach(function(item) { %>
-                        <option value="<%= item._id %>"><%= item.TenGiaiDau %> (<%= item.TheThuc %>)</option>
-                    <% }) %>
-                </select>
+        
+        <% if (typeof session !== 'undefined' && session.error) { %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i> <%= session.error %> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
+            <% delete session.error; %>
+        <% } %>
 
-            <div class="mb-3" id="groupNguoiChoi">
-                <label for="NguoiChoi" class="form-label">Người chơi (chỉ dùng cho giải 1vs1)</label>
-                <select class="form-select" id="NguoiChoi" name="NguoiChoi">
-                    <option value="">-- Không chọn --</option>
-                    <% nguoichoi.forEach(function(item) { %>
-                        <option value="<%= item._id %>"><%= item.HoVaTen %></option>
-                    <% }) %>
-                </select>
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">Thêm Đăng Ký Giải Đấu</h4>
             </div>
+            <div class="card-body">
+                <% if (typeof isPlayer !== 'undefined' && isPlayer) { %>
+                    <div class="alert alert-info">
+                        Bạn đang đăng ký với tư cách <strong><%= (typeof currentPlayer !== 'undefined' && currentPlayer) ? currentPlayer.HoVaTen : 'Người chơi' %></strong>.
+                    </div>
+                    <form action="/dangkygiaidau/them" method="post" id="playerRegForm">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Chọn giải đấu muốn tham gia</label>
+                            <select class="form-select" id="GiaiDau" name="GiaiDau" required>
+                                <option value="">-- Chọn giải đấu --</option>
+                                <% (typeof giaidau !== 'undefined' ? giaidau : []).forEach(function(item) { %>
+                                    <option value="<%= item._id %>" <%= (typeof tournamentId !== 'undefined' && tournamentId === item._id.toString()) ? 'selected' : '' %>>
+                                        <%= item.TenGiaiDau %> (<%= item.TheThuc %>)
+                                    </option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        <div class="mb-3 text-danger fw-bold" id="playerWarning" style="display:none"></div>
+                        <button type="submit" class="btn btn-primary px-4" id="playerSubmit">Gửi đơn đăng ký</button>
+                        <a href="/giaidau" class="btn btn-secondary">Quay lại</a>
+                    </form>
 
-            <div class="mb-3" id="groupDoiTuyen">
-                <label for="DoiTuyen" class="form-label">Đội tuyển (chỉ dùng cho giải đội)</label>
-                <select class="form-select" id="DoiTuyen" name="DoiTuyen">
-                    <option value="">-- Không chọn --</option>
-                    <% doituyen.forEach(function(item) { %>
-                        <option value="<%= item._id %>"><%= item.TenDoi %></option>
-                    <% }) %>
-                </select>
+                <% } else { %>
+                    <form action="/dangkygiaidau/them" method="post">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Giải đấu</label>
+                            <select class="form-select" id="GiaiDau" name="GiaiDau" required>
+                                <option value="">-- Chọn giải đấu --</option>
+                                <% (typeof giaidau !== 'undefined' ? giaidau : []).forEach(function(item) { %>
+                                    <option value="<%= item._id %>" <%= (typeof tournamentId !== 'undefined' && tournamentId === item._id.toString()) ? 'selected' : '' %>>
+                                        <%= item.TenGiaiDau %> (<%= item.TheThuc %>)
+                                    </option>
+                                <% }) %>
+                            </select>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3" id="groupNguoiChoi">
+                                <label class="form-label fw-bold">Người chơi (1vs1)</label>
+                                <select class="form-select" id="NguoiChoi" name="NguoiChoi">
+                                    <option value="">-- Không chọn --</option>
+                                    <% (typeof nguoichoi !== 'undefined' ? nguoichoi : []).forEach(function(item) { %>
+                                        <option value="<%= item._id %>"><%= item.HoVaTen %></option>
+                                    <% }) %>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3" id="groupDoiTuyen">
+                                <label class="form-label fw-bold">Đội tuyển (Giải Đội)</label>
+                                <select class="form-select" id="DoiTuyen" name="DoiTuyen">
+                                    <option value="">-- Không chọn --</option>
+                                    <% (typeof doituyen !== 'undefined' ? doituyen : []).forEach(function(item) { %>
+                                        <option value="<%= item._id %>"><%= item.TenDoi %></option>
+                                    <% }) %>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Trạng thái duyệt ban đầu</label>
+                            <select class="form-select w-50" name="TrangThaiDuyet">
+                                <option value="Cho duyet">Chờ duyệt</option>
+                                <option value="Da duyet">Đã duyệt (Vào thẳng)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-success px-4">Tạo đơn ngay</button>
+                        <a href="/dangkygiaidau" class="btn btn-secondary">Quay lại</a>
+                    </form>
+                <% } %>
             </div>
+        </div>
 
-            <div class="mb-3">
-                <label for="NgayDangKy" class="form-label">Ngày đăng ký</label>
-                <input type="date" class="form-control" id="NgayDangKy" name="NgayDangKy" required />
-            </div>
+        <script id="server-data" type="application/json">
+            <%- JSON.stringify({
+                giaiDauMeta: typeof giaiDauMeta !== 'undefined' ? giaiDauMeta : [],
+                currentPlayer: typeof currentPlayer !== 'undefined' ? currentPlayer : null,
+                isPlayerMode: typeof isPlayer !== 'undefined' ? !!isPlayer : false,
+                initialMode: typeof mode !== 'undefined' ? mode : ''
+            }) %>
+        </script>
+        
+        <script>
+            const serverData = JSON.parse(document.getElementById('server-data').textContent);
+            const { giaiDauMeta, currentPlayer, isPlayerMode, initialMode } = serverData;
 
-            <div class="mb-3">
-                <label for="TrangThaiDuyet" class="form-label">Trạng thái duyệt</label>
-                <select class="form-select" id="TrangThaiDuyet" name="TrangThaiDuyet">
-                    <option value="Cho duyet">Chờ duyệt</option>
-                    <option value="Da duyet">Đã duyệt</option>
-                    <option value="Tu choi">Từ chối</option>
-                </select>
-            </div>
+            const gdSelect = document.getElementById('GiaiDau');
+            const ncSelect = document.getElementById('NguoiChoi');
+            const dtSelect = document.getElementById('DoiTuyen');
+            const grNC = document.getElementById('groupNguoiChoi');
+            const grDT = document.getElementById('groupDoiTuyen');
+            const warn = document.getElementById('playerWarning');
+            const btnSub = document.getElementById('playerSubmit');
 
-            <button type="submit" class="btn btn-success">Lưu</button>
-            <a href="/dangkygiaidau" class="btn btn-secondary">Quay lại</a>
-        </form>
-    </div>
+            function applyMode() {
+                if (!gdSelect || !gdSelect.value) return;
+                const selected = giaiDauMeta.find(x => x.id === gdSelect.value);
+                const isTeam = selected ? selected.isTeam : false;
 
-    <script id="giaiDauMetaData" type="application/json"><%- JSON.stringify(giaiDauMeta || []) %></script>
-    <script>
-        const giaiDauMeta = JSON.parse(document.getElementById('giaiDauMetaData').textContent || '[]');
-        const giaiDauSelect = document.getElementById('GiaiDau');
-        const nguoiChoiSelect = document.getElementById('NguoiChoi');
-        const doiTuyenSelect = document.getElementById('DoiTuyen');
-        const groupNguoiChoi = document.getElementById('groupNguoiChoi');
-        const groupDoiTuyen = document.getElementById('groupDoiTuyen');
-        const initialMode = '<%= mode || '' %>';
-
-        function applyMode() {
-            const selected = giaiDauMeta.find(x => x.id === giaiDauSelect.value);
-            const isTeamByMeta = selected ? selected.isTeam : false;
-            var effectiveIsTeam = isTeamByMeta;
-
-            if (initialMode === '1vs1') effectiveIsTeam = false;
-            else if (initialMode === 'doi' || initialMode === 'team' || initialMode === 'dongdoi') effectiveIsTeam = true;
-
-            // show/hide groups
-            groupNguoiChoi.style.display = effectiveIsTeam ? 'none' : '';
-            groupDoiTuyen.style.display = effectiveIsTeam ? '' : 'none';
-
-            nguoiChoiSelect.disabled = !!effectiveIsTeam;
-            doiTuyenSelect.disabled = !effectiveIsTeam;
-
-            if (effectiveIsTeam) {
-                nguoiChoiSelect.value = '';
-            } else {
-                doiTuyenSelect.value = '';
+                if (isPlayerMode) {
+                    if (isTeam && (!currentPlayer || !currentPlayer.DoiTuyen)) {
+                        warn.style.display = 'block';
+                        warn.textContent = '❌ Giải đấu này yêu cầu Đội. Bạn chưa gia nhập đội tuyển nào!';
+                        btnSub.disabled = true;
+                    } else {
+                        warn.style.display = 'none';
+                        btnSub.disabled = false;
+                    }
+                } else {
+                    const effectiveTeam = (['doi', 'team', '2vs2'].includes(initialMode)) ? true : (initialMode === '1vs1' ? false : isTeam);
+                    if (grNC) grNC.style.display = effectiveTeam ? 'none' : 'block';
+                    if (grDT) grDT.style.display = effectiveTeam ? 'block' : 'none';
+                    if (ncSelect) ncSelect.disabled = effectiveTeam;
+                    if (dtSelect) dtSelect.disabled = !effectiveTeam;
+                }
             }
-        }
 
-        giaiDauSelect.addEventListener('change', applyMode);
-        applyMode();
-    </script>
+            if (gdSelect) {
+                gdSelect.addEventListener('change', applyMode);
+                applyMode();
+            }
+        </script>
+    </div>
 </body>
 </html>

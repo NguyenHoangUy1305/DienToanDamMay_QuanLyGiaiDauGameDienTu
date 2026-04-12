@@ -9,13 +9,13 @@
 <body>
     <%- include('partials/sidebar', { active: 'trandau' }) %>
     <div class="container mt-4">
-        <h2 class="mb-4">Sửa trận đấu</h2>
+        <h2 class="mb-4">Chỉnh sửa trận đấu</h2>
 
         <form action="/trandau/sua/<%= trandau._id %>" method="post">
             <div class="mb-3">
-                <label for="GiaiDau" class="form-label">Giải đấu</label>
-                <select class="form-select" id="GiaiDau" name="GiaiDau" required>
-                    <% giaidau.forEach(function(item) { %>
+                <label class="form-label fw-bold">Giải đấu</label>
+                <select class="form-select bg-light" name="GiaiDau" id="GiaiDau" required>
+                    <% (giaidau || []).forEach(function(item) { %>
                         <option value="<%= item._id %>" <%= trandau.GiaiDau && trandau.GiaiDau.toString() === item._id.toString() ? 'selected' : '' %>>
                             <%= item.TenGiaiDau %> (<%= item.TheThuc %>)
                         </option>
@@ -24,111 +24,94 @@
             </div>
 
             <div class="mb-3">
-                <label for="LoaiDoiTuongThiDau" class="form-label">Kiểu đối tượng</label>
-                <select class="form-select" id="LoaiDoiTuongThiDau" name="LoaiDoiTuongThiDau">
-                    <option value="NguoiChoi">Cá nhân</option>
-                    <option value="DoiTuyen">Đội tuyển</option>
+                <label class="form-label fw-bold">Kiểu đối tượng</label>
+                <select class="form-select bg-light" id="LoaiDoiTuongThiDau" name="LoaiDoiTuongThiDau">
+                    <option value="NguoiChoi" <%= trandau.LoaiDoiTuongThiDau === 'NguoiChoi' ? 'selected' : '' %>>Cá nhân</option>
+                    <option value="DoiTuyen" <%= trandau.LoaiDoiTuongThiDau === 'DoiTuyen' ? 'selected' : '' %>>Đội tuyển</option>
                 </select>
             </div>
 
-            <div class="mb-3">
-                <label for="VongDau" class="form-label">Vòng đấu</label>
-                <input type="text" class="form-control" id="VongDau" name="VongDau" value="<%= trandau.VongDau %>" required />
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold text-primary">Đối thủ 1</label>
+                    <select class="form-select border-primary" id="DoiThu1Id" name="DoiThu1Id" required></select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label fw-bold text-danger">Đối thủ 2</label>
+                    <select class="form-select border-danger" id="DoiThu2Id" name="DoiThu2Id" required></select>
+                </div>
             </div>
 
             <div class="mb-3">
-                <label for="DoiThu1Id" class="form-label">Đối thủ 1</label>
-                <select class="form-select" id="DoiThu1Id" name="DoiThu1Id" required></select>
+                <label class="form-label fw-bold">Thời gian thi đấu</label>
+                <% 
+                    var d = new Date(trandau.ThoiGianThiDau);
+                    var dateStr = new Date(d.getTime() - (d.getTimezoneOffset() * 60000)).toISOString().slice(0, 16);
+                %>
+                <input type="datetime-local" class="form-control" name="ThoiGianThiDau" value="<%= dateStr %>" required />
             </div>
 
-            <div class="mb-3">
-                <label for="DoiThu2Id" class="form-label">Đối thủ 2</label>
-                <select class="form-select" id="DoiThu2Id" name="DoiThu2Id" required></select>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Tỷ số đối thủ 1</label>
+                    <input type="number" class="form-control" name="TySo1" value="<%= trandau.TySo1 %>" min="0" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Tỷ số đối thủ 2</label>
+                    <input type="number" class="form-control" name="TySo2" value="<%= trandau.TySo2 %>" min="0" />
+                </div>
             </div>
 
-            <div class="mb-3">
-                <label for="ThoiGianThiDau" class="form-label">Thời gian thi đấu</label>
-                <input type="datetime-local" class="form-control" id="ThoiGianThiDau" name="ThoiGianThiDau"
-                       value="<%= new Date(new Date(trandau.ThoiGianThiDau).getTime() - new Date(trandau.ThoiGianThiDau).getTimezoneOffset() * 60000).toISOString().slice(0, 16) %>" required />
-            </div>
-
-            <div class="mb-3">
-                <label for="TySo1" class="form-label">Tỷ số đối thủ 1</label>
-                <input type="number" class="form-control" id="TySo1" name="TySo1" value="<%= trandau.TySo1 %>" min="0" />
-            </div>
-
-            <div class="mb-3">
-                <label for="TySo2" class="form-label">Tỷ số đối thủ 2</label>
-                <input type="number" class="form-control" id="TySo2" name="TySo2" value="<%= trandau.TySo2 %>" min="0" />
-            </div>
-
-            <div class="mb-3">
-                <label for="TrangThai" class="form-label">Trạng thái</label>
-                <select class="form-select" id="TrangThai" name="TrangThai">
-                    <option value="<%= statusUtil.STATUS.CHUA_THI_DAU %>" <%= statusUtil.normalizeStatus(trandau.TrangThai) === statusUtil.STATUS.CHUA_THI_DAU ? 'selected' : '' %>>Chưa thi đấu</option>
-                    <option value="<%= statusUtil.STATUS.DANG_THI_DAU %>" <%= statusUtil.normalizeStatus(trandau.TrangThai) === statusUtil.STATUS.DANG_THI_DAU ? 'selected' : '' %>>Đang thi đấu</option>
-                    <option value="<%= statusUtil.STATUS.DA_THI_DAU %>" <%= statusUtil.normalizeStatus(trandau.TrangThai) === statusUtil.STATUS.DA_THI_DAU ? 'selected' : '' %>>Đã thi đấu</option>
-                    <option value="<%= statusUtil.STATUS.TAM_HOAN %>" <%= statusUtil.normalizeStatus(trandau.TrangThai) === statusUtil.STATUS.TAM_HOAN ? 'selected' : '' %>>Tạm hoãn</option>
-                    <option value="<%= statusUtil.STATUS.HUY %>" <%= statusUtil.normalizeStatus(trandau.TrangThai) === statusUtil.STATUS.HUY ? 'selected' : '' %>>Hủy</option>
+            <div class="mb-4">
+                <label class="form-label fw-bold">Trạng thái</label>
+                <select class="form-select" name="TrangThai">
+                    <option value="Chua thi dau" <%= (trandau.TrangThai === 'Chua thi dau' || trandau.TrangThai === 'SCHEDULED' || trandau.TrangThai === 'Chưa thi đấu') ? 'selected' : '' %>>Chưa thi đấu</option>
+                    <option value="Da thi dau" <%= (trandau.TrangThai === 'Da thi dau' || trandau.TrangThai === 'FINISHED' || trandau.TrangThai === 'Đã thi đấu') ? 'selected' : '' %>>Đã thi đấu</option>
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Cập nhật</button>
+            <button type="submit" class="btn btn-primary">Cập nhật trận đấu</button>
             <a href="/trandau" class="btn btn-secondary">Quay lại</a>
         </form>
     </div>
 
-    <script id="giaiDauMetaData" type="application/json"><%- JSON.stringify({ giaiDauMeta: giaiDauMeta || [], selectedDoiThu1: trandau.DoiThu1Id ? trandau.DoiThu1Id.toString() : '', selectedDoiThu2: trandau.DoiThu2Id ? trandau.DoiThu2Id.toString() : '', selectedLoai: trandau.LoaiDoiTuongThiDau || '' }) %></script>
+    <script id="edit-data" type="application/json">
+        <%- JSON.stringify({
+            giaiDauMeta: giaiDauMeta || [],
+            sDoi1: trandau.DoiThu1Id ? trandau.DoiThu1Id.toString() : '',
+            sDoi2: trandau.DoiThu2Id ? trandau.DoiThu2Id.toString() : '',
+            sLoai: trandau.LoaiDoiTuongThiDau || ''
+        }) %>
+    </script>
+
     <script>
-        const _giaiDauData = JSON.parse(document.getElementById('giaiDauMetaData').textContent || '{}');
-        const giaiDauMeta = _giaiDauData.giaiDauMeta || [];
-        const selectedDoiThu1 = _giaiDauData.selectedDoiThu1 || '';
-        const selectedDoiThu2 = _giaiDauData.selectedDoiThu2 || '';
-        const initialLoai = _giaiDauData.selectedLoai || '';
+        const editData = JSON.parse(document.getElementById('edit-data').textContent);
+        const { giaiDauMeta, sDoi1, sDoi2, sLoai } = editData;
 
-        const giaiDauSelect = document.getElementById('GiaiDau');
-        const doiThu1Select = document.getElementById('DoiThu1Id');
-        const doiThu2Select = document.getElementById('DoiThu2Id');
-        const selectLoai = document.getElementById('LoaiDoiTuongThiDau');
+        const gdSelect = document.getElementById('GiaiDau');
+        const d1Select = document.getElementById('DoiThu1Id');
+        const d2Select = document.getElementById('DoiThu2Id');
+        const lSelect = document.getElementById('LoaiDoiTuongThiDau');
 
-        function renderSelect(select, participants, selectedValue) {
-            const html = ['<option value="">-- Chọn --</option>']
-                .concat(participants.map(p => `<option value="${p.id}" ${p.id === selectedValue ? 'selected' : ''}>${p.name}</option>`))
+        function applyData() {
+            const meta = giaiDauMeta.find(g => g.id === gdSelect.value);
+            if(!meta) return;
+
+            const currentLoai = lSelect.value;
+            const participants = meta.participants.filter(p => p.type === currentLoai);
+
+            const options = ['<option value="">-- Chọn --</option>']
+                .concat(participants.map(p => `<option value="${p.id}" ${p.id === sDoi1 || p.id === sDoi2 ? 'selected' : ''}>${p.name}</option>`))
                 .join('');
-            select.innerHTML = html;
+            
+            // Render d1 và d2 với giá trị đã chọn
+            d1Select.innerHTML = ['<option value="">-- Chọn --</option>'].concat(participants.map(p => `<option value="${p.id}" ${p.id === sDoi1 ? 'selected' : ''}>${p.name}</option>`)).join('');
+            d2Select.innerHTML = ['<option value="">-- Chọn --</option>'].concat(participants.map(p => `<option value="${p.id}" ${p.id === sDoi2 ? 'selected' : ''}>${p.name}</option>`)).join('');
         }
 
-        function applyParticipants() {
-            const tournament = giaiDauMeta.find(x => x.id === giaiDauSelect.value);
-            const participants = tournament ? tournament.participants : [];
-            const defaultType = initialLoai || (tournament && tournament.isTeam ? 'DoiTuyen' : 'NguoiChoi');
-            selectLoai.value = defaultType;
-            const filtered = participants.filter(p => p.type === selectLoai.value);
-            renderSelect(doiThu1Select, filtered, selectedDoiThu1);
-            renderSelect(doiThu2Select, filtered, selectedDoiThu2);
-        }
-
-        giaiDauSelect.addEventListener('change', function() {
-            renderSelect(doiThu1Select, [], '');
-            renderSelect(doiThu2Select, [], '');
-            const tournament = giaiDauMeta.find(x => x.id === this.value);
-            const participants = tournament ? tournament.participants : [];
-            const defaultType = initialLoai || (tournament && tournament.isTeam ? 'DoiTuyen' : 'NguoiChoi');
-            selectLoai.value = defaultType;
-            const filtered = participants.filter(p => p.type === selectLoai.value);
-            renderSelect(doiThu1Select, filtered, '');
-            renderSelect(doiThu2Select, filtered, '');
-        });
-
-        selectLoai.addEventListener('change', function() {
-            const tournament = giaiDauMeta.find(x => x.id === giaiDauSelect.value);
-            const participants = tournament ? tournament.participants : [];
-            const filtered = participants.filter(p => p.type === selectLoai.value);
-            renderSelect(doiThu1Select, filtered, '');
-            renderSelect(doiThu2Select, filtered, '');
-        });
-
-        applyParticipants();
+        gdSelect.addEventListener('change', applyData);
+        lSelect.addEventListener('change', applyData);
+        applyData();
     </script>
 </body>
 </html>

@@ -9,6 +9,7 @@ const NguoiChoiSchema = new Schema({
   Rank: { type: String },
   HinhAnh: { type: String },
   DoiTuyen: { type: Schema.Types.ObjectId, ref: 'DoiTuyen', default: null },
+  TaiKhoan: { type: Schema.Types.ObjectId, ref: 'TaiKhoan', default: null },
   GhiChu: { type: String },
   KichHoat: { type: Boolean, default: true }
 }, { timestamps: true, collection: 'nguoichoi' });

@@ -1,4 +1,28 @@
-﻿<!DOCTYPE html>
+﻿<% 
+    // --- 1. KHAI BÁO AN TOÀN (CHẶN LỖI UNDEFINED) ---
+    if (typeof session === 'undefined' || !session) { var session = {}; }
+    var loggedIn = !!session.MaNguoiDung;
+    var hoTen = session.HoVaTen || 'Bạn';
+    var role = (session.VaiTro || session.QuyenHan || 'khách').toLowerCase();
+
+    // Mấy con số thống kê (Mặc định là 0 nếu Router chưa gửi qua)
+    var stats = {
+        tongGiaiDau: typeof tongGiaiDau !== 'undefined' ? tongGiaiDau : 0,
+        tongTranDau: typeof tongTranDau !== 'undefined' ? tongTranDau : 0,
+        tongDangKy: typeof tongDangKy !== 'undefined' ? tongDangKy : 0,
+        tongNguoiChoi: typeof tongNguoiChoi !== 'undefined' ? tongNguoiChoi : 0,
+        tongBangXepHang: typeof tongBangXepHang !== 'undefined' ? tongBangXepHang : 0,
+        tongDaDuyet: typeof tongDaDuyet !== 'undefined' ? tongDaDuyet : 0,
+        tongChoDuyet: typeof tongChoDuyet !== 'undefined' ? tongChoDuyet : 0,
+        tongTranDaThiDau: typeof tongTranDaThiDau !== 'undefined' ? tongTranDaThiDau : 0,
+        tongTranSapDienRa: typeof tongTranSapDienRa !== 'undefined' ? tongTranSapDienRa : 0
+    };
+    
+    // Danh sách hiển thị
+    var dsGiaiDau = typeof giaiDauSapDienRa !== 'undefined' ? giaiDauSapDienRa : [];
+    var dsTranDau = typeof tranDauSapToi !== 'undefined' ? tranDauSapToi : [];
+%>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
@@ -7,394 +31,142 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
     <style>
-        :root {
-            --bg: #eef3fb;
-            --panel: #fff;
-            --ink: #0f172a;
-            --muted: #64748b;
-            --line: #e5e7eb;
-        }
-
-        body {
-            margin: 0;
-            background:
-                radial-gradient(circle at top left, rgba(37, 99, 235, .14), transparent 28%),
-                radial-gradient(circle at top right, rgba(16, 185, 129, .12), transparent 24%),
-                var(--bg);
-            color: var(--ink);
-            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-        }
-
-        .page-wrap {
-            padding: 20px 20px 32px;
-        }
-
-        .hero,
-        .panel {
-            background: linear-gradient(135deg, rgba(255, 255, 255, .96), rgba(248, 250, 252, .9));
-            border: 1px solid rgba(255, 255, 255, .9);
-            border-radius: 28px;
-            box-shadow: 0 20px 50px rgba(15, 23, 42, .08);
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: .5rem;
-            padding: .45rem .9rem;
-            border-radius: 999px;
-            background: rgba(37, 99, 235, .1);
-            color: #2563eb;
-            font-weight: 700;
-            font-size: .9rem;
-        }
-
-        .hero-title {
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            line-height: 1.05;
-            font-weight: 800;
-            margin: .9rem 0 1rem;
-        }
-
-        .hero-copy {
-            color: var(--muted);
-            font-size: 1.02rem;
-            max-width: 62ch;
-        }
-
-        .hero-actions .btn {
-            border-radius: 14px;
-            padding: .8rem 1.15rem;
-            font-weight: 700;
-        }
-
-        .stat-card {
-            background: var(--panel);
-            border: 1px solid var(--line);
-            border-radius: 20px;
-            box-shadow: 0 12px 24px rgba(15, 23, 42, .05);
-        }
-
-        .stat-num {
-            font-size: 1.85rem;
-            font-weight: 800;
-            line-height: 1;
-        }
-
-        .small-muted {
-            color: var(--muted);
-            font-size: .93rem;
-        }
-
-        .section-title {
-            font-size: 1.05rem;
-            font-weight: 800;
-            margin-bottom: .9rem;
-        }
-
-        .clip-card {
-            background: #0b1220;
-            color: #fff;
-            border-radius: 18px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, .08);
-        }
-
-        .clip-head {
-            padding: 14px 16px;
-            display: flex;
-            justify-content: space-between;
-            gap: 12px;
-            align-items: center;
-            background: linear-gradient(135deg, rgba(37, 99, 235, .95), rgba(17, 24, 39, .95));
-        }
-
-        .clip-head .clip-label {
-            font-weight: 800;
-        }
-
-        .clip-body {
-            background: #000;
-            aspect-ratio: 16 / 9;
-        }
-
-        .clip-body iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .list-row {
-            padding: 14px 0;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .list-row:last-child {
-            border-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .tag {
-            display: inline-flex;
-            align-items: center;
-            gap: .35rem;
-            padding: .35rem .75rem;
-            border-radius: 999px;
-            background: #eef4ff;
-            color: #1d4ed8;
-            font-size: .82rem;
-            font-weight: 700;
-        }
+        :root { --bg: #eef3fb; --panel: #fff; --ink: #0f172a; --muted: #64748b; --line: #e5e7eb; }
+        body { margin: 0; background: radial-gradient(circle at top left, rgba(37, 99, 235, .14), transparent 28%), var(--bg); color: var(--ink); font-family: "Segoe UI", sans-serif; }
+        .page-wrap { padding: 20px 20px 32px; }
+        .hero, .panel { background: linear-gradient(135deg, rgba(255, 255, 255, .96), rgba(248, 250, 252, .9)); border: 1px solid rgba(255, 255, 255, .9); border-radius: 28px; box-shadow: 0 20px 50px rgba(15, 23, 42, .08); }
+        .hero-badge { display: inline-flex; align-items: center; gap: .5rem; padding: .45rem .9rem; border-radius: 999px; background: rgba(37, 99, 235, .1); color: #2563eb; font-weight: 700; font-size: .9rem; }
+        .hero-title { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.1; margin: 1rem 0; }
+        .stat-card { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 12px 24px rgba(15, 23, 42, .05); transition: transform 0.3s; }
+        .stat-card:hover { transform: translateY(-5px); }
+        .stat-num { font-size: 1.85rem; font-weight: 800; line-height: 1; }
+        .clip-card { background: #0b1220; color: #fff; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255, 255, 255, .08); }
+        .clip-head { padding: 14px 16px; background: linear-gradient(135deg, rgba(37, 99, 235, .95), rgba(17, 24, 39, .95)); }
+        .tag { display: inline-flex; align-items: center; gap: .35rem; padding: .35rem .75rem; border-radius: 999px; background: #eef4ff; color: #1d4ed8; font-size: .82rem; font-weight: 700; }
+        .list-row { padding: 14px 0; border-bottom: 1px solid var(--line); }
+        .list-row:last-child { border-bottom: 0; }
     </style>
 </head>
 <body>
-    <% 
-        if (typeof isLoggedIn === 'undefined') { var isLoggedIn = false; }
-        if (typeof session === 'undefined' || !session) { var session = {}; }
-        if (typeof role === 'undefined') { var role = session.VaiTro || session.QuyenHan || 'khách'; }
-        var loggedIn = isLoggedIn || (session && session.MaNguoiDung);
-    %>
-
-    <% if (loggedIn) { %>
-        <%- include('partials/sidebar', { active: 'home' }) %>
-    <% } %>
+    <% if (loggedIn) { %> <%- include('partials/sidebar', { active: 'home' }) %> <% } %>
 
     <div class="page-wrap">
         <div class="container-fluid px-0">
+            
+            <% if (session.error) { %>
+                <div class="alert alert-danger alert-dismissible fade show rounded-4 shadow-sm border-0 mb-4" role="alert">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-shield-lock-fill fs-4 me-3"></i>
+                        <div>
+                            <strong class="d-block">Từ chối truy cập!</strong>
+                            <%= session.error %>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <% delete session.error; // Hiện 1 lần rồi xóa để không bị lặp %>
+            <% } %>
+
             <div class="hero p-4 p-lg-5 mb-4">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-8">
-                        <span class="hero-badge">
-                            <i class="bi bi-trophy-fill"></i>
-                            FC Online Tournament Hub
-                        </span>
-
-                        <h1 class="hero-title">
-                            Hệ thống quản lý giải đấu FC Online, lịch thi đấu và bảng xếp hạng
-                        </h1>
-
-                        <p class="hero-copy mb-4">
-                            Giao diện đồng bộ cho bài thực hành: quản lý giải đấu, trận đấu, đăng ký và thông báo.
-                            Staff có thể cập nhật dữ liệu nghiệp vụ, còn admin quản lý phần quan trọng của hệ thống.
-                        </p>
-
+                        <span class="hero-badge"><i class="bi bi-trophy-fill text-warning"></i> FC Online Tournament Hub</span>
+                        <h1 class="hero-title">Hệ thống quản lý giải đấu, lịch thi đấu & xếp hạng</h1>
+                        <p class="text-muted mb-4 fs-5">
+                            Chào <strong><%= hoTen %></strong>! Bạn đang truy cập hệ thống quản lý giải đấu FC Online.</p>
+                        
                         <div class="hero-actions d-flex flex-wrap gap-2">
                             <% if (loggedIn) { %>
-                                <a href="/giaidau" class="btn btn-primary">
-                                    <i class="bi bi-award me-1"></i>Quản lý giải đấu
-                                </a>
-                                <a href="/trandau" class="btn btn-outline-primary">
-                                    <i class="bi bi-controller me-1"></i>Quản lý trận đấu
-                                </a>
-                            <% } else { %>
-                                <a href="/dangnhap" class="btn btn-primary">
-                                    <i class="bi bi-box-arrow-in-right me-1"></i>Đăng nhập
-                                </a>
-                                <a href="/dangky" class="btn btn-outline-primary">
-                                    <i class="bi bi-person-plus me-1"></i>Đăng ký
-                                </a>
+<% } else { %>
+                                <a href="/dangnhap" class="btn btn-primary btn-lg px-4 rounded-3 shadow-sm">Đăng nhập ngay</a>
                             <% } %>
                         </div>
                     </div>
-
                     <div class="col-lg-4">
                         <div class="panel p-4">
-                            <div class="section-title mb-2">Tổng quan nhanh</div>
-                            <div class="small-muted mb-2">
-                                Người dùng: <strong><%= loggedIn ? (session.HoVaTen || 'Đăng nhập') : 'Khách' %></strong>
-                            </div>
-                            <div class="small-muted mb-2">
-                                Vai trò: <strong><%= role %></strong>
-                            </div>
-                            <div class="small-muted">Tổng giải đấu: <strong><%= tongGiaiDau %></strong></div>
-                            <div class="small-muted">Tổng trận đấu: <strong><%= tongTranDau %></strong></div>
-                            <div class="small-muted">Tổng đăng ký: <strong><%= tongDangKy %></strong></div>
-                            <div class="small-muted">Tổng người chơi: <strong><%= tongNguoiChoi %></strong></div>
-                            <div class="small-muted">Tổng bảng xếp hạng: <strong><%= tongBangXepHang %></strong></div>
+                            <div class="section-title mb-3">Thông tin nhanh</div>
+                            <div class="small-muted mb-2"><i class="bi bi-person-badge me-2"></i>Hoạt động: <strong><%= hoTen %></strong></div>
+                            <div class="small-muted mb-3"><i class="bi bi-calendar-check me-2"></i>Hôm nay: <%= new Date().toLocaleDateString('vi-VN') %></div>
+                            <hr>
+                            <div class="small-muted">Tổng giải đấu: <strong><%= stats.tongGiaiDau %></strong></div>
+                            <div class="small-muted">Tổng trận đấu: <strong><%= stats.tongTranDau %></strong></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-3 mb-4">
-                <div class="col">
-                    <div class="stat-card p-3 h-100">
-                        <div class="small-muted">Giải đấu</div>
-                        <div class="stat-num text-dark"><%= tongGiaiDau %></div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="stat-card p-3 h-100">
-                        <div class="small-muted">Trận đấu</div>
-                        <div class="stat-num text-info"><%= tongTranDau %></div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="stat-card p-3 h-100">
-                        <div class="small-muted">Đăng ký</div>
-                        <div class="stat-num text-warning"><%= tongDangKy %></div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="stat-card p-3 h-100">
-                        <div class="small-muted">Người chơi</div>
-                        <div class="stat-num text-success"><%= tongNguoiChoi %></div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="stat-card p-3 h-100">
-                        <div class="small-muted">Bảng xếp hạng</div>
-                        <div class="stat-num text-danger"><%= tongBangXepHang %></div>
-                    </div>
-                </div>
+                <div class="col"><div class="stat-card p-3 h-100"><div class="small-muted">Giải đấu</div><div class="stat-num"><%= stats.tongGiaiDau %></div></div></div>
+                <div class="col"><div class="stat-card p-3 h-100"><div class="small-muted">Trận đấu</div><div class="stat-num text-info"><%= stats.tongTranDau %></div></div></div>
+                <div class="col"><div class="stat-card p-3 h-100"><div class="small-muted">Đăng ký</div><div class="stat-num text-warning"><%= stats.tongDangKy %></div></div></div>
+                <div class="col"><div class="stat-card p-3 h-100"><div class="small-muted">Người chơi</div><div class="stat-num text-success"><%= stats.tongNguoiChoi %></div></div></div>
+                <div class="col"><div class="stat-card p-3 h-100"><div class="small-muted">Xếp hạng</div><div class="stat-num text-danger"><%= stats.tongBangXepHang %></div></div></div>
             </div>
 
-            <div class="panel p-4 mb-4" id="clip-noi-bat">
-                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
-                    <div>
-                        <div class="section-title mb-1">Clip nổi bật FC Online</div>
-                        <div class="small-muted">Kênh uploads của Việt Nam, Thái Lan và Hàn Quốc.</div>
-                    </div>
-                    <span class="tag">
-                        <i class="bi bi-play-btn-fill"></i>
-                        YouTube
-                    </span>
+            <div class="panel p-4 mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="section-title mb-0">Clip nổi bật FC Online</div>
+                    <span class="tag"><i class="bi bi-play-circle-fill"></i> Kênh Quốc Tế</span>
                 </div>
-
                 <div class="row g-3">
-                    <div class="col-lg-4">
-                        <div class="clip-card">
-                            <div class="clip-head">
-                                <div>
-                                    <div class="clip-label">Việt Nam</div>
-                                    <div class="small text-white-50">EA Sports FC Online Vietnam</div>
+                    <% var regions = [{n:'Việt Nam', id:'UUrCqu1n0H52uGETAoSmgNdQ'}, {n:'Thái Lan', id:'UU4iJRId3Dcp18uTIRpYSAzQ'}, {n:'Hàn Quốc', id:'UUKd2rI7xVJm86kav7okWC6A'}]; %>
+                    <% regions.forEach(r => { %>
+                        <div class="col-lg-4">
+                            <div class="clip-card shadow-sm">
+                                <div class="clip-head small fw-bold">EA Sports FC Online <%= r.n %></div>
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/videoseries?list=<%= r.id %>" allowfullscreen></iframe>
                                 </div>
                             </div>
-                            <div class="clip-body">
-                                <iframe src="https://www.youtube.com/embed/videoseries?list=UUrCqu1n0H52uGETAoSmgNdQ" title="FC Online Vietnam clips" allowfullscreen></iframe>
-                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="clip-card">
-                            <div class="clip-head">
-                                <div>
-                                    <div class="clip-label">Thái Lan</div>
-                                    <div class="small text-white-50">FC Online Thailand highlights</div>
-                                </div>
-                            </div>
-                            <div class="clip-body">
-                                <iframe src="https://www.youtube.com/embed/videoseries?list=UU4iJRId3Dcp18uTIRpYSAzQ" title="FC Online Thailand clips" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="clip-card">
-                            <div class="clip-head">
-                                <div>
-                                    <div class="clip-label">Hàn Quốc</div>
-                                    <div class="small text-white-50">FConline KOR community clips</div>
-                                </div>
-                            </div>
-                            <div class="clip-body">
-                                <iframe src="https://www.youtube.com/embed/videoseries?list=UUKd2rI7xVJm86kav7okWC6A" title="FC Online Korea clips" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
+                    <% }) %>
                 </div>
             </div>
 
             <div class="row g-4 mb-4">
                 <div class="col-lg-6">
                     <div class="panel p-4 h-100">
-                        <div class="section-title">
-                            <i class="bi bi-calendar-event me-2"></i>Giải đấu sắp diễn ra
-                        </div>
-
-                        <% if (giaiDauSapDienRa && giaiDauSapDienRa.length) { %>
-                            <% giaiDauSapDienRa.forEach(function(item) { %>
+                        <div class="section-title"><i class="bi bi-calendar-event me-2 text-primary"></i>Giải đấu mới</div>
+                        <% if (dsGiaiDau.length) { %>
+                            <% dsGiaiDau.forEach(item => { %>
                                 <div class="list-row">
-                                    <div class="fw-semibold"><%= item.TenGiaiDau %></div>
-                                    <div class="small-muted"><%= item.TheThuc %> | <%= item.TrangThai %></div>
-                                    <div class="small-muted">Bắt đầu: <%= new Date(item.NgayBatDau).toLocaleDateString('vi-VN') %></div>
+                                    <div class="fw-bold text-dark"><%= item.TenGiaiDau %></div>
+                                    <div class="small-muted"><%= item.TheThuc %> • Bắt đầu: <%= new Date(item.NgayBatDau).toLocaleDateString('vi-VN') %></div>
                                 </div>
                             <% }) %>
-                        <% } else { %>
-                            <div class="small-muted">Chưa có giải đấu sắp diễn ra.</div>
-                        <% } %>
+                        <% } else { %><div class="text-muted small py-3">Chưa có giải đấu mới nào sắp diễn ra.</div><% } %>
                     </div>
                 </div>
-
                 <div class="col-lg-6">
                     <div class="panel p-4 h-100">
-                        <div class="section-title">
-                            <i class="bi bi-controller me-2"></i>Trận đấu sắp tới
-                        </div>
-
-                        <% if (tranDauSapToi && tranDauSapToi.length) { %>
-                            <% tranDauSapToi.forEach(function(item) { %>
+                        <div class="section-title"><i class="bi bi-lightning-fill me-2 text-warning"></i>Trận đấu sắp tới</div>
+                        <% if (dsTranDau.length) { %>
+                            <% dsTranDau.forEach(item => { %>
                                 <div class="list-row">
-                                    <div class="fw-semibold"><%= item.DoiThu1 %> vs <%= item.DoiThu2 %></div>
-                                    <div class="small-muted"><%= item.VongDau %> | <%= item.SanThiDau || 'Chưa có sân' %></div>
-                                    <div class="small-muted"><%= new Date(item.ThoiGianThiDau).toLocaleString('vi-VN') %></div>
+                                    <div class="fw-bold"><%= item.DoiThu1 %> vs <%= item.DoiThu2 %></div>
+                                    <div class="small-muted"><%= item.VongDau %> • <%= new Date(item.ThoiGianThiDau).toLocaleString('vi-VN') %></div>
                                 </div>
                             <% }) %>
-                        <% } else { %>
-                            <div class="small-muted">Chưa có trận đấu nào sắp tới.</div>
-                        <% } %>
+                        <% } else { %><div class="text-muted small py-3">Chưa có lịch thi đấu cụ thể.</div><% } %>
                     </div>
                 </div>
             </div>
-
-            <div class="panel p-4">
-                <div class="section-title">
-                    <i class="bi bi-bar-chart-line me-2"></i>Trạng thái hệ thống
-                </div>
-
-                <div class="row g-3">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="d-flex justify-content-between py-2 border-bottom">
-                            <span>Đăng ký đã duyệt</span>
-                            <strong><%= tongDaDuyet %></strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="d-flex justify-content-between py-2 border-bottom">
-                            <span>Đăng ký chờ duyệt</span>
-                            <strong><%= tongChoDuyet %></strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="d-flex justify-content-between py-2 border-bottom">
-                            <span>Trận đã thi đấu</span>
-                            <strong><%= tongTranDaThiDau %></strong>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="d-flex justify-content-between py-2 border-bottom">
-                            <span>Trận sắp thi đấu</span>
-                            <strong><%= tongTranSapDienRa %></strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center text-secondary mt-4 mb-3">
-                <hr />
-                <small>© 2026 - Quản lý giải đấu FC Online</small>
+<div class="text-center text-secondary mt-5 mb-4">
+                <hr class="opacity-10">
+                <small>© 2026 FC Online Tournament Hub • Phiên bản chuyên nghiệp </small>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Phím tắt bí mật cho Admin
+        document.addEventListener('keydown', e => {
+            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a') {
+                e.preventDefault();
+                window.location = '/dangnhap_admin';
+            }
+        });
+    </script>
 </body>
 </html>

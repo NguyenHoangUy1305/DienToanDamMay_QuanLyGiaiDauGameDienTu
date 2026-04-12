@@ -1,4 +1,4 @@
-<table class="table table-bordered table-hover align-middle">
+﻿<table class="table table-bordered table-hover align-middle">
     <thead class="table-dark">
         <tr>
             <th>Giải đấu</th>
@@ -23,7 +23,16 @@
                     <td><%= item.ThoiGianThiDau ? new Date(item.ThoiGianThiDau).toLocaleString('vi-VN') : '' %></td>
                     <td><%= item.TySo1 %> - <%= item.TySo2 %></td>
                     <td><%= item.NguoiThang || '' %></td>
-                    <td><%= (typeof statusUtil !== 'undefined' && statusUtil.toVietnameseStatus) ? statusUtil.toVietnameseStatus(item.TrangThai) : (item.TrangThai || '') %></td>
+                    <td>
+                        <% 
+                            var trangThaiHienThi = (typeof toVietnameseStatus === 'function') ? toVietnameseStatus(item.TrangThai) : (item.TrangThai || '');
+                            var coTySo = ((Number(item.TySo1) > 0 || Number(item.TySo2) > 0) || !!item.NguoiThang);
+                            if (coTySo && trangThaiHienThi !== 'Đã thi đấu') {
+                                trangThaiHienThi = 'Đã thi đấu';
+                            }
+                        %>
+                        <%= trangThaiHienThi %>
+                    </td>
                     <td>
                         <% if (canManage) { %>
                             <a href="/trandau/sua/<%= item._id %>" class="btn btn-warning btn-sm">Sửa</a>
