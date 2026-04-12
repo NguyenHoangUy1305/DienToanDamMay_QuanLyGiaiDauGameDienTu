@@ -366,11 +366,6 @@ router.get('/mo-lich/:id', auth.yeuCauStaffHoacAdmin, async function (req, res) 
             return res.redirect('/trandau');
         }
 
-        // Trên Render: luôn mở link tạo sự kiện để tránh lỗi OAuth invalid_client.
-        if (process.env.RENDER === 'true') {
-            return res.redirect(googleCalendar.buildCreateEventUrl(td, td.GiaiDau ? td.GiaiDau.TenGiaiDau : null));
-        }
-
         if (!td.GoogleCalendarLink) {
             try {
                 var evt = await googleCalendar.taoSuKienTranDau(td, td.GiaiDau ? td.GiaiDau.TenGiaiDau : null);
@@ -403,11 +398,6 @@ router.get('/xuat-lich/:id', auth.yeuCauStaffHoacAdmin, async function (req, res
         if (!td.ThoiGianThiDau) {
             req.session.error = 'Tran dau chua co thoi gian de xuat lich.';
             return res.redirect('/trandau');
-        }
-
-        // Trên Render: luôn mở link tạo sự kiện để tránh lỗi OAuth invalid_client.
-        if (process.env.RENDER === 'true') {
-            return res.redirect(googleCalendar.buildCreateEventUrl(td, td.GiaiDau ? td.GiaiDau.TenGiaiDau : null));
         }
 
         if (td.GoogleCalendarLink || td.GoogleCalendarEventId) {
@@ -472,6 +462,7 @@ router.post('/nhap-ket-qua/:id', auth.yeuCauStaffHoacAdmin, async function (req,
 });
 
 module.exports = router;
+
 
 
 
