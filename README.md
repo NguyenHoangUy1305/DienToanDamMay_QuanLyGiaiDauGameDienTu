@@ -1,123 +1,110 @@
-ĐỒ ÁN ĐIỆN TOÁN ĐÁM MÂY:  Ứng dụng MongoDB Atlas Xây dựng hệ thống quản lý giải đấu bóng đá điện tử FC Online (ESPORTS / THỂ THAO)
+🏆 HỆ THỐNG QUẢN LÝ GIẢI ĐẤU ESPORTS FC ONLINE
 Môn học: Điện toán đám mây
 
-Giảng viên hướng dẫn: [Nguyễn Hoàng Tùng]
+Giảng viên hướng dẫn: Thầy Nguyễn Hoàng Tùng
 
-[Nguyễn Hoàng Uy] - [DTH235812]
+Sinh viên thực hiện: Nguyễn Hoàng Uy
 
+Mã số sinh viên: DTH235812
 
-1. MÔ TẢ DỰ ÁN
-Dự án là một ứng dụng Web giúp quản lý các giải đấu (thể thao, e-sports), hỗ trợ từ khâu người chơi đăng ký tham gia (cá nhân 1vs1 hoặc theo Đội tuyển), cho đến khâu duyệt đăng ký, bốc thăm xếp lịch thi đấu tự động và cập nhật bảng xếp hạng.
+1. TỔNG QUAN DỰ ÁN
+Dự án là một nền tảng Web-based hỗ trợ quản lý toàn diện các giải đấu thể thao điện tử (E-sports), đặc biệt tối ưu cho tựa game FC Online. Hệ thống tự động hóa các quy trình từ đăng ký, xét duyệt đến bốc thăm chia bảng và cập nhật kết quả thời gian thực.
 
-Đặc điểm nổi bật (Đáp ứng yêu cầu Đồ án):
+✨ Đặc điểm nổi bật (Cloud Native)
+Cloud Database: Sử dụng MongoDB Atlas để lưu trữ dữ liệu, đảm bảo tính sẵn sàng cao và khả năng mở rộng.
 
-Điện toán đám mây: Cơ sở dữ liệu được lưu trữ hoàn toàn trên nền tảng đám mây MongoDB Atlas (Tương đương đề tài gợi ý số 7). Source code được deploy lên dịch vụ Cloud (VD: Render, Vercel, Heroku,...).
+Cloud Deployment: Toàn bộ mã nguồn được triển khai trên nền tảng Render.
 
-Tự xây dựng: Hệ thống được phát triển từ đầu (from scratch) với Node.js, Express và MongoDB.
+Full-stack Development: Xây dựng từ con số 0 (from scratch) bằng hệ sinh thái Node.js.
 
-2. LIÊN KẾT TRUY CẬP (ĐÃ DEPLOY)
-Link ứng dụng Web (Live): [https://dientoandammay-quanlygiaidaugamedientu.onrender.com]
+Google Calendar Integration: Tích hợp API lịch của Google để đồng bộ hóa lịch thi đấu cho Ban tổ chức.
 
-Link Repository: [https://github.com/DTH235812-NHoangUy/DienToanDamMay_QuanLyGiaiDauGameDienTu]
+🔗 2. LIÊN KẾT TRUY CẬP
+🌐 Live Demo: https://dientoandammay-quanlygiaidaugamedientu.onrender.com
 
-3. CÔNG NGHỆ VÀ DỊCH VỤ ĐÁM MÂY SỬ DỤNG
-Backend: Node.js, Express.js.
-
-Database: MongoDB (Sử dụng dịch vụ đám mây MongoDB Atlas).
-
-Frontend: [EJS]
-
-Hosting/Deployment: [Render]
-
-API:Xài API của google calendar để admin/nhân viên quản lý lịch dễ hơn
-
-4. CẤU TRÚC THƯ MỤC NỔI BẬT
-Hệ thống được tổ chức theo mô hình MVC kết hợp Services, phân tách rõ ràng nhiệm vụ:
-
-📁 data/: Chứa các file .json dùng để import dữ liệu mẫu ban đầu vào database.
-
-📁 models/: Định nghĩa các lược đồ Cơ sở dữ liệu (Mongoose Schemas).
-
-📁 routers/: Bộ xử lý điều hướng (Routing), tiếp nhận các request từ client và điều hướng đến logic xử lý phù hợp.
-
-📁 views/: Chứa các tệp giao diện (Thị giác người dùng) để render trang web trực quan.
-
-📁 services/: Chứa các API và Business Logic phức tạp, đặc biệt là các thuật toán sinh lịch thi đấu, xuất lịch và bắt cặp trận đấu.
-
-📁 middlewares/: Xử lý phân quyền, xác thực (Auth) cho Admin/Nhân viên/Người chơi.
-
-📁 utils/ & 📁 scripts/: Chứa các hàm tiện ích dùng chung và script hỗ trợ tự động hóa.
+💻 GitHub Repository: DTH235812-NHoangUy/DienToanDamMay_QuanLyGiaiDauGameDienTu
 
 
-5. MÔ TẢ CƠ SỞ DỮ LIỆU
-Hệ thống sử dụng MongoDB với các Collections chính sau:
+🛠 3. CÔNG NGHỆ SỬ DỤNG
+Thành phần,Công nghệ
+Backend,"Node.js, Express.js"
+Database,MongoDB Atlas (Cloud)
+Frontend,EJS (Embedded JavaScript templates)
+Deployment,Render
+Third-party API,Google Calendar API (Xuất và quản lý lịch thi đấu)
 
-TaiKhoan: Quản lý thông tin đăng nhập, phân quyền (Admin, Nhân viên, Người chơi).
 
-NguoiChoi: Lưu trữ hồ sơ chi tiết của người chơi (Tên, Rank, hình ảnh, liên kết với Đội tuyển).
+📂 4. CẤU TRÚC THƯ MỤC (MVC PATTERN)
+├── data/        # File .json mẫu để import dữ liệu ban đầu
+├── models/      # Định nghĩa Mongoose Schemas (Cấu trúc DB)
+├── routers/     # Xử lý điều hướng các Request
+├── views/       # Giao diện người dùng (EJS)
+├── services/    # Business Logic (Thuật toán sinh lịch, API Google)
+├── middlewares/ # Kiểm soát quyền truy cập (Auth, Admin/User)
+├── utils/       # Các hàm tiện ích bổ trợ
+└── public/      # Tài nguyên tĩnh (CSS, JS, Images)
 
-DoiTuyen: Quản lý thông tin đội thi đấu, danh sách thành viên chính thức và thành viên chờ duyệt gia nhập.
 
-GiaiDau: Thông tin giải đấu (Thời gian, thể thức, số lượng tối đa).
+🗄 5. KIẾN TRÚC DỮ LIỆU
+Hệ thống được thiết kế với các Collections quan trọng sau:
 
-DangKyGiaiDau: Lưu trữ yêu cầu tham gia giải (Cá nhân hoặc Đội) cùng trạng thái chờ duyệt.
+TaiKhoan: Phân quyền quản trị và người dùng.
 
-TranDau: Quản lý chi tiết từng trận (Kèo đấu, đối thủ, tỷ số, người thắng) cho từng vòng đấu.
+NguoiChoi / DoiTuyen: Thông tin hồ sơ cá nhân và đội nhóm.
 
-BangXepHang: Thống kê điểm số, thắng/hòa/thua và xếp hạng tổng để hiển thị cho người xem.
+GiaiDau: Lưu trữ thông tin thể thức, thời gian thi đấu.
 
-ThongBao & NhatKyHeThong: Lưu trữ thông báo gửi đến người dùng và log thao tác của hệ thống.
-6. HƯỚNG DẪN SỬ DỤNG
-A. Dành cho Người chơi (Client)
-Truy cập web: Vào đường link ứng dụng trang chủ.
+DangKyGiaiDau: Trạng thái đăng ký (Chờ duyệt/Đã duyệt).
 
-Đăng nhập/Đăng ký: Tạo tài khoản và đăng nhập.
+TranDau: Chi tiết cặp đấu, kết quả, tỷ số.
 
-Đăng ký giải đấu: * Người chơi có thể chọn giải đấu đang mở.
+BangXepHang: Tự động tính điểm và xếp hạng dựa trên kết quả trận đấu.
 
-Lựa chọn hình thức thi đấu: Cá nhân (1vs1) hoặc tham gia/đăng ký thi đấu theo Đội tuyển.
+ThongBao: Hệ thống tương tác với người dùng.
 
-Bấm đăng ký và chờ Admin/Nhân viên duyệt.
+NhatKyHeThong: cập nhật tình hình nếu thêm xóa sửa của admin
 
-Xem lịch thi đấu: Sau khi được duyệt và có lịch, người chơi đăng nhập vào hệ thống, vào mục Lịch thi đấu sẽ tự động thấy được lịch trình, đối thủ của cá nhân mình hoặc đội mình.
+🎮 6. HƯỚNG DẪN SỬ DỤNG
+A. Đối với Người chơi (Client)
+Đăng ký/Đăng nhập: Tạo tài khoản cá nhân.
 
-B. Dành cho Quản trị viên (Admin / Nhân viên)
-Để bảo mật hệ thống, trang đăng nhập của Ban quản trị được ẩn đi.
+Đăng ký thi đấu: Chọn giải đấu đang mở -> Chọn hình thức (1vs1 hoặc Đội) -> Gửi yêu cầu.
 
-Tại giao diện ngoài của web, nhấn tổ hợp phím Ctrl + Shift + A. Hệ thống sẽ hiển thị form/chuyển hướng đến trang đăng nhập dành riêng cho Admin/Nhân viên.
+Theo dõi lịch: Xem lịch thi đấu cá nhân hóa ngay tại Dashboard sau khi Admin phê duyệt.
 
-Nhập tài khoản cấp quyền Quản trị.
+B. Đối với Quản trị viên (Admin)
+Truy cập ẩn: Tại trang chủ, nhấn tổ hợp phím Ctrl + Shift + A để mở form đăng nhập Admin.
 
-Duyệt đăng ký: Vào mục quản lý duyệt người chơi / đội tuyển tham gia giải.
+Duyệt hồ sơ: Quản lý danh sách đơn đăng ký tham gia.
 
-Xếp lịch thi đấu: Kích hoạt chức năng (trong services) để tự động sắp xếp đối thủ, tạo lịch thi đấu cho vòng đấu.
+Tự động hóa: Kích hoạt chức năng xếp lịch tự động và xuất lịch sang Google Calendar.
 
-Cập nhật kết quả: Nhập tỷ số trận đấu, hệ thống sẽ tự động tính toán lại và cập nhật BangXepHang.
-7. HƯỚNG DẪN CÀI ĐẶT CỤC BỘ (DÀNH CHO CHẤM ĐIỂM)
-Nếu Giảng viên muốn chạy source code trên máy cá nhân:
+Quản lý kết quả: Cập nhật tỷ số, hệ thống sẽ tự động nhảy số liệu trên Bảng xếp hạng.
 
-Giải nén source code.
+⚙️ 7. CÀI ĐẶT CỤC BỘ (LOCAL SETUP)
+Dành cho việc kiểm tra và chấm điểm:
 
-Mở terminal tại thư mục gốc của dự án.
-
-Chạy lệnh cài đặt thư viện:
-
-Bash
+Clone dự án:
+git clone https://github.com/DTH235812-NHoangUy/DienToanDamMay_QuanLyGiaiDauGameDienTu.git
+cd DienToanDamMay_QuanLyGiaiDauGameDienTu
+Cài đặt thư viện:
 npm install
-Cấu hình file .env (Chuỗi kết nối MongoDB Atlas, Port,...):
-
-Code snippet
+Cấu hình môi trường (.env): Tạo file .env với các nội dung:
 PORT=3000
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/<dbname>
-Chạy lệnh để import dữ liệu từ thư mục data (Nếu đã thiết lập script):
+MONGODB_URI=your_mongodb_atlas_connection_string
+GOOGLE_API_KEY=your_google_api_key
 
-Bash
-npm run seed  # Hoặc chạy node data/import.js tùy bạn setup
-Khởi động server:
+Khởi tạo dữ liệu (Seeding):
+npm run seed
 
-Bash
-npm start # hoặc npm run dev (nodemon)
-Truy cập http://localhost:3000 để sử dụng ứng dụng.
 
-Lời cuối cùng em cảm ơn thầy vs các bạn đã xem và góp ý đồ án của em ạ
-Sinh viên thực hiện : Nguyễn Hoàng Uy_DTH235812
+Chạy ứng dụng:
+npm start
+💖 LỜI CẢM ƠN
+Em xin chân thành cảm ơn thầy Nguyễn Hoàng Tùng đã tận tình hướng dẫn và các bạn đã đóng góp ý kiến để em hoàn thành đồ án này một cách tốt nhất.
+
+Người thực hiện: Nguyễn Hoàng Uy (DTH235812)
+
+Mọi người trên git ai có ý tưởng mới thì liên hệ qua 
+SĐT:0949353863
+Email:13hoanguy@gmail.com and uy_dth235812@student.agu.edu.vn
