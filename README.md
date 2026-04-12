@@ -47,6 +47,8 @@ Hệ thống được tổ chức theo mô hình MVC kết hợp Services, phân
 📁 middlewares/: Xử lý phân quyền, xác thực (Auth) cho Admin/Nhân viên/Người chơi.
 
 📁 utils/ & 📁 scripts/: Chứa các hàm tiện ích dùng chung và script hỗ trợ tự động hóa.
+
+
 5. MÔ TẢ CƠ SỞ DỮ LIỆU
 Hệ thống sử dụng MongoDB với các Collections chính sau:
 
