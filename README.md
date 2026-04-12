@@ -19,10 +19,14 @@ Full-stack Development: Xây dựng từ con số 0 (from scratch) bằng hệ s
 
 Google Calendar Integration: Tích hợp API lịch của Google để đồng bộ hóa lịch thi đấu cho Ban tổ chức.
 
+
+
 🔗 2. LIÊN KẾT TRUY CẬP
 🌐 Live Demo: https://dientoandammay-quanlygiaidaugamedientu.onrender.com
 
 💻 GitHub Repository: DTH235812-NHoangUy/DienToanDamMay_QuanLyGiaiDauGameDienTu
+
+
 
 
 🛠 3. CÔNG NGHỆ SỬ DỤNG
@@ -34,7 +38,13 @@ Deployment,Render
 Third-party API,Google Calendar API (Xuất và quản lý lịch thi đấu)
 
 
+
+
+
 📂 4. CẤU TRÚC THƯ MỤC (MVC PATTERN)
+
+
+
 ├── data/        # File .json mẫu để import dữ liệu ban đầu
 ├── models/      # Định nghĩa Mongoose Schemas (Cấu trúc DB)
 ├── routers/     # Xử lý điều hướng các Request
@@ -46,6 +56,8 @@ Third-party API,Google Calendar API (Xuất và quản lý lịch thi đấu)
 
 
 🗄 5. KIẾN TRÚC DỮ LIỆU
+
+
 Hệ thống được thiết kế với các Collections quan trọng sau:
 
 TaiKhoan: Phân quyền quản trị và người dùng.
@@ -65,7 +77,12 @@ ThongBao: Hệ thống tương tác với người dùng.
 NhatKyHeThong: cập nhật tình hình nếu thêm xóa sửa của admin
 
 🎮 6. HƯỚNG DẪN SỬ DỤNG
+
+
+
+
 A. Đối với Người chơi (Client)
+
 Đăng ký/Đăng nhập: Tạo tài khoản cá nhân.
 
 Đăng ký thi đấu: Chọn giải đấu đang mở -> Chọn hình thức (1vs1 hoặc Đội) -> Gửi yêu cầu.
@@ -100,6 +117,9 @@ npm run seed
 
 Chạy ứng dụng:
 npm start
+
+
+
 💖 LỜI CẢM ƠN
 Em xin chân thành cảm ơn thầy Nguyễn Hoàng Tùng đã tận tình hướng dẫn và các bạn đã đóng góp ý kiến để em hoàn thành đồ án này một cách tốt nhất.
 
