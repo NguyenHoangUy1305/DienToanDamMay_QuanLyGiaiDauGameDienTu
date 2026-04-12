@@ -24,7 +24,7 @@ Google Calendar Integration: Tích hợp API lịch của Google để đồng b
 🔗 2. LIÊN KẾT TRUY CẬP
 🌐 Live Demo: https://dientoandammay-quanlygiaidaugamedientu.onrender.com
 
-💻 GitHub Repository: DTH235812-NHoangUy/DienToanDamMay_QuanLyGiaiDauGameDienTu
+💻 GitHub Repository: https://github.com/DTH235812-NHoangUy/DienToanDamMay_QuanLyGiaiDauGameDienTu
 
 
 
@@ -46,12 +46,20 @@ Third-party API,Google Calendar API (Xuất và quản lý lịch thi đấu)
 
 
 ├── data/        # File .json mẫu để import dữ liệu ban đầu
+
 ├── models/      # Định nghĩa Mongoose Schemas (Cấu trúc DB)
+
+
 ├── routers/     # Xử lý điều hướng các Request
+
 ├── views/       # Giao diện người dùng (EJS)
+
 ├── services/    # Business Logic (Thuật toán sinh lịch, API Google)
+
 ├── middlewares/ # Kiểm soát quyền truy cập (Auth, Admin/User)
+
 ├── utils/       # Các hàm tiện ích bổ trợ
+
 └── public/      # Tài nguyên tĩnh (CSS, JS, Images)
 
 
@@ -104,12 +112,19 @@ Dành cho việc kiểm tra và chấm điểm:
 Clone dự án:
 git clone https://github.com/DTH235812-NHoangUy/DienToanDamMay_QuanLyGiaiDauGameDienTu.git
 cd DienToanDamMay_QuanLyGiaiDauGameDienTu
+
 Cài đặt thư viện:
+
 npm install
+
 Cấu hình môi trường (.env): Tạo file .env với các nội dung:
+
 PORT=3000
+
 MONGODB_URI=your_mongodb_atlas_connection_string
+
 GOOGLE_API_KEY=your_google_api_key
+
 
 Khởi tạo dữ liệu (Seeding):
 npm run seed
