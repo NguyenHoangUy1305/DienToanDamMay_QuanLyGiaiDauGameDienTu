@@ -1,4 +1,4 @@
-﻿<table class="table table-bordered table-hover align-middle">
+<table class="table table-bordered table-hover align-middle">
     <thead class="table-dark">
         <tr>
             <th>Giải đấu</th>
@@ -9,7 +9,7 @@
             <th>Tỷ số</th>
             <th>Người thắng</th>
             <th>Trạng thái</th>
-            <th width="420">Chức năng</th>
+            <th width="480">Chức năng</th>
         </tr>
     </thead>
     <tbody>
@@ -19,7 +19,33 @@
                     var isResultLocked = !!item.KetQuaXacNhan || ((Number(item.TySo1) > 0 || Number(item.TySo2) > 0) || !!item.NguoiThang);
                     var laTranDoi = item && (item.LoaiTran === 'TEAM' || item.LoaiDoiTuongThiDau === 'DoiTuyen');
 
-                    var hienThiTySo = (item.TySo1 + ' - ' + item.TySo2);
+                    var tySoChinh = (item.TySo1 + ' - ' + item.TySo2);
+                    var tySoPhu = '';
+
+                    var diemGame1 = 0; var diemGame2 = 0;
+                    if (laTranDoi && item.ChiTietTySo && item.DanhSachKeoDau) {
+                        var mapBanThangT = {};
+                        (item.ChiTietTySo || []).forEach(function(ct){
+                            if(ct && ct.NguoiChoi) mapBanThangT[ct.NguoiChoi.toString()] = Number(ct.BanThang || 0);
+                        });
+                        (item.DanhSachKeoDau || []).forEach(function(k){
+                            var p1 = k.NguoiChoi1Id ? k.NguoiChoi1Id.toString() : '';
+                            var p2 = k.NguoiChoi2Id ? k.NguoiChoi2Id.toString() : '';
+                            if(p1 && p2) {
+                                var s1 = mapBanThangT[p1] || 0;
+                                var s2 = mapBanThangT[p2] || 0;
+                                if(s1 > s2) diemGame1++;
+                                else if(s2 > s1) diemGame2++;
+                            }
+                        });
+                        
+                        // Nếu đã có chi tiết tỷ số thì hiển thị tỷ số thắng game, và phụ là tổng bàn thắng
+                        if (item.ChiTietTySo.length > 0) {
+                            tySoChinh = diemGame1 + ' - ' + diemGame2;
+                            tySoPhu = 'Tổng bàn thắng: ' + item.TySo1 + ' - ' + item.TySo2;
+                        }
+                    }
+
                     if (isNguoiChoiLogin && currentNguoiChoiId && laTranDoi) {
                         var idMe = currentNguoiChoiId.toString();
                         var keo = (item.DanhSachKeoDau || []).find(function(k){
@@ -38,7 +64,9 @@
 
                             var banMe = ctMe ? Number(ctMe.BanThang || 0) : 0;
                             var banDoiThu = ctDoiThu ? Number(ctDoiThu.BanThang || 0) : 0;
-                            hienThiTySo = banMe + ' - ' + banDoiThu + ' (vs ' + tenDoiThu + ')';
+
+                            tySoChinh = banMe + ' - ' + banDoiThu + ' (vs ' + tenDoiThu + ')';
+                            tySoPhu = (item.ChiTietTySo.length > 0) ? 'Tổng đội: ' + diemGame1 + ' - ' + diemGame2 + ' (' + item.TySo1 + '-' + item.TySo2 + ')' : 'Tổng đội: ' + item.TySo1 + ' - ' + item.TySo2;
                         }
                     }
                 %>
@@ -48,7 +76,10 @@
                     <td><%= item.DoiThu1 %></td>
                     <td><%= item.DoiThu2 %></td>
                     <td><%= item.ThoiGianThiDau ? new Date(item.ThoiGianThiDau).toLocaleString('vi-VN') : '' %></td>
-                    <td><%= hienThiTySo %></td>
+                    <td>
+                        <div><%= tySoChinh %></div>
+                        <% if (tySoPhu) { %><small class="text-muted"><%= tySoPhu %></small><% } %>
+                    </td>
                     <td><%= item.NguoiThang || '' %></td>
                     <td>
                         <% 
@@ -60,6 +91,7 @@
                         <%= trangThaiHienThi %>
                     </td>
                     <td>
+                        <a href="/trandau/chi-tiet/<%= item._id %>" class="btn btn-outline-dark btn-sm">Xem chi tiết</a>
                         <% if (canManage) { %>
                             <% if (isResultLocked) { %>
                                 <button type="button" class="btn btn-secondary btn-sm" disabled>Sửa</button>

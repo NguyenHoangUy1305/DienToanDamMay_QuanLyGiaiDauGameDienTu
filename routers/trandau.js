@@ -433,6 +433,90 @@ router.get('/xuat-lich/:id', auth.yeuCauStaffHoacAdmin, async function (req, res
 });
 // ================================================================
 
+router.get('/chi-tiet/:id', auth.yeuCauDangNhap, async function (req, res) {
+    try {
+        var td = await TranDau.findById(req.params.id).populate('GiaiDau').lean().exec();
+        if (!td) {
+            req.session.error = 'Không tìm thấy trận đấu.';
+            return res.redirect('/trandau');
+        }
+
+        var vaiTro = layVaiTro(req);
+        if (vaiTro === 'nguoi_choi') {
+            var maNguoiDung = req.session && req.session.MaNguoiDung ? req.session.MaNguoiDung.toString() : '';
+            var nguoiChoiHienTai = await NguoiChoi.findOne({ TaiKhoan: maNguoiDung }).populate('DoiTuyen', '_id TenDoi').lean().exec();
+            if (!nguoiChoiHienTai) {
+                req.session.error = 'Bạn không có quyền xem trận này.';
+                return res.redirect('/trandau');
+            }
+
+            var nguoiChoiId = nguoiChoiHienTai._id ? nguoiChoiHienTai._id.toString() : '';
+            var doiTuyenId = nguoiChoiHienTai.DoiTuyen && nguoiChoiHienTai.DoiTuyen._id ? nguoiChoiHienTai.DoiTuyen._id.toString() : '';
+            var tenNguoiChoi = normalizeText(nguoiChoiHienTai.HoVaTen);
+            var tenDoi = normalizeText(nguoiChoiHienTai.DoiTuyen ? nguoiChoiHienTai.DoiTuyen.TenDoi : '');
+
+            var doiThu1Id = td && td.DoiThu1Id ? td.DoiThu1Id.toString() : '';
+            var doiThu2Id = td && td.DoiThu2Id ? td.DoiThu2Id.toString() : '';
+            var doiThu1Ten = normalizeText(td && td.DoiThu1 ? td.DoiThu1 : '');
+            var doiThu2Ten = normalizeText(td && td.DoiThu2 ? td.DoiThu2 : '');
+
+            var laTran1vs1 = (td && td.LoaiTran === '1vs1') || (td && td.LoaiDoiTuongThiDau === 'NguoiChoi');
+            var laTranDoi = (td && td.LoaiTran === 'TEAM') || (td && td.LoaiDoiTuongThiDau === 'DoiTuyen');
+
+            var trungNguoiTheoId = !!nguoiChoiId && (doiThu1Id === nguoiChoiId || doiThu2Id === nguoiChoiId);
+            var trungNguoiTheoTen = !!tenNguoiChoi && (doiThu1Ten === tenNguoiChoi || doiThu2Ten === tenNguoiChoi);
+            var trungDoiTheoId = !!doiTuyenId && (doiThu1Id === doiTuyenId || doiThu2Id === doiTuyenId);
+            var trungDoiTheoTen = !!tenDoi && (doiThu1Ten === tenDoi || doiThu2Ten === tenDoi);
+
+            var duocXem = false;
+            if (laTran1vs1) duocXem = trungNguoiTheoId || trungNguoiTheoTen;
+            else if (laTranDoi) duocXem = trungDoiTheoId || trungDoiTheoTen;
+            else duocXem = trungNguoiTheoId || trungNguoiTheoTen || trungDoiTheoId || trungDoiTheoTen;
+
+            if (!duocXem) {
+                req.session.error = 'Bạn không có quyền xem trận này.';
+                return res.redirect('/trandau');
+            }
+        }
+
+        var laTranDoi = (td && (td.LoaiTran === 'TEAM' || td.LoaiDoiTuongThiDau === 'DoiTuyen'));
+        var chiTietKeoDau = [];
+
+        if (laTranDoi) {
+            var mapBanThang = {};
+            (td.ChiTietTySo || []).forEach(function (ct) {
+                if (!ct || !ct.NguoiChoi) return;
+                mapBanThang[ct.NguoiChoi.toString()] = Number(ct.BanThang || 0);
+            });
+
+            chiTietKeoDau = (td.DanhSachKeoDau || []).map(function (k) {
+                var p1Id = k && k.NguoiChoi1Id ? k.NguoiChoi1Id.toString() : '';
+                var p2Id = k && k.NguoiChoi2Id ? k.NguoiChoi2Id.toString() : '';
+                return {
+                    GameSo: k && k.GameSo ? k.GameSo : null,
+                    TenNguoiChoi1: k && k.TenNguoiChoi1 ? k.TenNguoiChoi1 : 'Đội 1',
+                    TenNguoiChoi2: k && k.TenNguoiChoi2 ? k.TenNguoiChoi2 : 'Đội 2',
+                    TySo1: mapBanThang[p1Id] || 0,
+                    TySo2: mapBanThang[p2Id] || 0
+                };
+            });
+        }
+
+        return res.render('trandau_chitiet', {
+            title: 'Chi tiết trận đấu',
+            trandau: td,
+            laTranDoi: laTranDoi,
+            chiTietKeoDau: chiTietKeoDau,
+            toVietnameseStatus: statusUtil.toVietnameseStatus
+        });
+    } catch (err) {
+        req.session.error = 'Không thể xem chi tiết trận đấu.';
+        return res.redirect('/trandau');
+    }
+});
+
+// ================================================================
+
 router.get('/nhap-ket-qua/:id', auth.yeuCauStaffHoacAdmin, async function (req, res) {
     try {
         var td = await TranDau.findById(req.params.id).populate('GiaiDau').lean().exec();
@@ -493,6 +577,7 @@ router.post('/nhap-ket-qua/:id', auth.yeuCauStaffHoacAdmin, async function (req,
 });
 
 module.exports = router;
+
 
 
 

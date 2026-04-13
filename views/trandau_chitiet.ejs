@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chi tiết trận đấu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .score-card { border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .vs-circle {
+            width: 50px; height: 50px;
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; margin: 0 auto;
+            z-index: 10; position: relative;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <%- include('partials/sidebar', { active: 'trandau' }) %>
+
+    <div class="container mt-4" style="max-width: 1000px;">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Chi tiết trận đấu</h2>
+            <span class="badge bg-primary fs-6"><%= trandau.GiaiDau ? trandau.GiaiDau.TenGiaiDau : 'Giải đấu' %></span>
+        </div>
+
+        <% 
+            var diemGame1 = trandau.TySo1;
+            var diemGame2 = trandau.TySo2;
+            var tySoTongPhu = '';
+
+            if (laTranDoi && chiTietKeoDau && chiTietKeoDau.length > 0) {
+                var gw1 = 0, gw2 = 0;
+                chiTietKeoDau.forEach(function(k) {
+                    if (k.TySo1 > k.TySo2) gw1++;
+                    else if (k.TySo2 > k.TySo1) gw2++;
+                });
+                diemGame1 = gw1;
+                diemGame2 = gw2;
+                tySoTongPhu = 'Tổng bàn thắng: ' + trandau.TySo1 + ' - ' + trandau.TySo2;
+            }
+        %>
+
+        <div class="row align-items-center mb-4">
+            <div class="col-md-5">
+                <div class="card score-card text-center p-3 border-primary border-3">
+                    <h4 class="text-primary text-truncate"><%= trandau.DoiThu1 %></h4>
+                    <div class="fs-1 fw-bold"><%= diemGame1 %></div>
+                </div>
+            </div>
+
+            <div class="col-md-2 text-center">
+                <div class="vs-circle">VS</div>
+                <% if (tySoTongPhu) { %>
+                    <div class="text-muted small mt-2 fw-bold text-nowrap" style="margin-left: -50px; margin-right: -50px;"><%= tySoTongPhu %></div>
+                <% } %>
+            </div>
+
+            <div class="col-md-5">
+                <div class="card score-card text-center p-3 border-danger border-3">
+                    <h4 class="text-danger text-truncate"><%= trandau.DoiThu2 %></h4>
+                    <div class="fs-1 fw-bold"><%= diemGame2 %></div>
+                </div>
+            </div>
+        </div>
+
+        <% if (laTranDoi && chiTietKeoDau && chiTietKeoDau.length > 0) { %>
+            <div class="card p-3 mb-4">
+                <h5 class="mb-3 border-bottom pb-2">Chi tiết các Game đối đầu</h5>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped text-center align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Game</th>
+                                <th class="text-primary"><%= trandau.DoiThu1 %> (Tuyển thủ)</th>
+                                <th>Bàn thắng</th>
+                                <th class="text-danger"><%= trandau.DoiThu2 %> (Tuyển thủ)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% chiTietKeoDau.forEach(function(k) { %>
+                                <tr>
+                                    <td><strong>Game <%= k.GameSo %></strong></td>
+                                    <td class="text-primary fw-bold"><%= k.TenNguoiChoi1 %></td>
+                                    <td><span class="badge bg-dark fs-5"><%= k.TySo1 %> - <%= k.TySo2 %></span></td>
+                                    <td class="text-danger fw-bold"><%= k.TenNguoiChoi2 %></td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <% } %>
+
+        <div class="card p-3 mb-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fw-bold text-muted small">Thời gian thi đấu:</label>
+                    <div class="fs-5"><%= trandau.ThoiGianThiDau ? new Date(trandau.ThoiGianThiDau).toLocaleString('vi-VN') : 'Chưa xếp lịch' %></div>
+                </div>
+                <div class="col-md-4">
+                    <label class="fw-bold text-muted small">Vòng đấu:</label>
+                    <div class="fs-5 fw-bold"><%= trandau.VongDau %></div>
+                </div>
+                <div class="col-md-4">
+                    <label class="fw-bold text-muted small">Trạng thái:</label>
+                    <% 
+                        var tt = (typeof toVietnameseStatus === 'function') ? toVietnameseStatus(trandau.TrangThai) : trandau.TrangThai;
+                    %>
+                    <div class="text-success fw-bold fs-5"><%= tt %></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-end">
+            <a href="/trandau" class="btn btn-secondary btn-lg shadow"><i class="bi bi-arrow-left"></i> Quay lại Danh sách</a>
+        </div>
+    </div>
+</body>
+</html>
