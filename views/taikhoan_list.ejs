@@ -11,9 +11,9 @@
     <%- include('partials/sidebar', { active: 'taikhoan' }) %>
 
     <div class="container mt-4">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="fw-bold"><i class="bi bi-people-fill text-primary me-2"></i>Quản lý tài khoản người dùng</h2>
-            <span class="badge bg-danger p-2"><i class="bi bi-shield-lock-fill"></i> Quyền Admin</span>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold mb-0"><i class="bi bi-people-fill text-primary me-2"></i>Quản lý tài khoản</h2>
+            <span class="badge bg-danger p-2"><i class="bi bi-shield-lock-fill"></i> Chỉ Admin</span>
         </div>
 
         <% if (session.error) { %>
@@ -32,59 +32,175 @@
             <% delete session.success; %>
         <% } %>
 
-        <div class="card shadow-sm border-0 rounded-3 overflow-hidden">
-            <div class="card-body p-0">
-                <table class="table table-hover align-middle mb-0">
-                    <thead class="table-dark">
-                        <tr>
-                            <th class="ps-3">Người dùng</th>
-                            <th>Email</th>
-                            <th>Loại tài khoản</th>
-                            <th class="text-center">Trạng thái</th>
-                            <th class="text-end pe-3">Hành động</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% if (taikhoan && taikhoan.length) { %>
-                            <% taikhoan.forEach(function(t) { %>
-                                <tr>
-                                    <td class="ps-3">
-                                        <div class="fw-bold"><%= t.HoVaTen %></div>
-                                        <small class="text-muted">User: <%= t.TenDangNhap %></small>
-                                    </td>
-                                    <td><%= t.Email %></td>
-                                    <td>
-                                        <% if (t.QuyenHan === 'admin') { %>
-                                            <span class="badge bg-danger">Admin</span>
-                                        <% } else if (t.QuyenHan === 'nhanvien') { %>
-                                            <span class="badge bg-primary">Nhân viên</span>
-                                        <% } else { %>
-                                            <span class="badge bg-secondary">Người chơi</span>
-                                        <% } %>
-                                    </td>
-                                    <td class="text-center">
-                                        <% if (t.KichHoat) { %>
-                                            <span class="badge bg-success-subtle text-success border border-success">Đã kích hoạt</span>
-                                        <% } else { %>
-                                            <span class="badge bg-warning-subtle text-warning border border-warning">Chờ duyệt</span>
-                                        <% } %>
-                                    </td>
-                                    <td class="text-end pe-3">
-                                        <% if (!t.KichHoat) { %>
-                                            <form action="/taikhoan/duyet/<%= t._id %>" method="post" style="display:inline">
-                                                <button class="btn btn-sm btn-success px-3">Duyệt ngay</button>
-                                            </form>
-                                        <% } else { %>
-                                            <span class="text-muted small">Đã duyệt</span>
-                                        <% } %>
-                                    </td>
-                                </tr>
-                            <% }) %>
-                        <% } else { %>
-                            <tr><td colspan="5" class="text-center py-5 text-muted">Chưa có tài khoản nào trong hệ thống.</td></tr>
-                        <% } %>
-                    </tbody>
-                </table>
+        <div class="card shadow-sm border-0 rounded-3 mb-4">
+            <div class="card-body">
+                <h5 class="mb-3">Tạo tài khoản nội bộ (Admin / Nhân viên)</h5>
+                <form action="/taikhoan/them-noibo" method="post" class="row g-2">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" name="HoVaTen" placeholder="Họ và tên" required />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" name="TenDangNhap" placeholder="Tên đăng nhập" required />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="password" class="form-control" name="MatKhau" placeholder="Mật khẩu" required />
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select" name="QuyenHan" required>
+                            <option value="nhanvien">Nhân viên</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 d-grid">
+                        <button class="btn btn-success" type="submit">Thêm</button>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="email" class="form-control" name="Email" placeholder="Email (không bắt buộc)" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs mb-3" role="tablist">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-admin" type="button">Admin (<%= (admins || []).length %>)</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-nhanvien" type="button">Nhân viên (<%= (nhanviens || []).length %>)</button></li>
+            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-nguoichoi" type="button">Người chơi (<%= (nguoichois || []).length %>)</button></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="tab-admin">
+                <div class="card shadow-sm border-0 rounded-3 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-dark"><tr><th>Họ tên</th><th>User</th><th>Email</th><th>Trạng thái</th><th class="text-end">Thao tác</th></tr></thead>
+                            <tbody>
+                                <% if ((admins || []).length) { %>
+                                    <% admins.forEach(function(t) { %>
+                                        <tr>
+                                            <td><%= t.HoVaTen %></td>
+                                            <td><%= t.TenDangNhap %></td>
+                                            <td><%= t.Email || '' %></td>
+                                            <td><span class="badge <%= t.KichHoat ? 'bg-success' : 'bg-warning text-dark' %>"><%= t.KichHoat ? 'Kích hoạt' : 'Đang khóa' %></span></td>
+                                            <td class="text-end">
+                                                <button class="btn btn-sm btn-warning" data-bs-toggle="collapse" data-bs-target="#edit-<%= t._id %>">Sửa</button>
+                                                <% if (currentUserId !== t._id.toString()) { %>
+                                                    <form action="/taikhoan/xoa-noibo/<%= t._id %>" method="post" style="display:inline" onsubmit="return confirm('Xóa tài khoản admin này?');">
+                                                        <button class="btn btn-sm btn-danger">Xóa</button>
+                                                    </form>
+                                                <% } else { %>
+                                                    <span class="badge bg-secondary">Tài khoản hiện tại</span>
+                                                <% } %>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse" id="edit-<%= t._id %>">
+                                            <td colspan="5" class="bg-light">
+                                                <form action="/taikhoan/sua-noibo/<%= t._id %>" method="post" class="row g-2">
+                                                    <div class="col-md-3"><input type="text" class="form-control" name="HoVaTen" value="<%= t.HoVaTen %>" required /></div>
+                                                    <div class="col-md-3"><input type="email" class="form-control" name="Email" value="<%= t.Email || '' %>" /></div>
+                                                    <div class="col-md-3"><input type="password" class="form-control" name="MatKhauMoi" placeholder="Mật khẩu mới (để trống nếu giữ nguyên)" /></div>
+                                                    <div class="col-md-2">
+                                                        <select name="KichHoat" class="form-select">
+                                                            <option value="1" <%= t.KichHoat ? 'selected' : '' %>>Kích hoạt</option>
+                                                            <option value="0" <%= !t.KichHoat ? 'selected' : '' %>>Khóa</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-1 d-grid"><button class="btn btn-primary">Lưu</button></div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    <% }) %>
+                                <% } else { %>
+                                    <tr><td colspan="5" class="text-center py-4 text-muted">Chưa có tài khoản admin.</td></tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab-nhanvien">
+                <div class="card shadow-sm border-0 rounded-3 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-dark"><tr><th>Họ tên</th><th>User</th><th>Email</th><th>Trạng thái</th><th class="text-end">Thao tác</th></tr></thead>
+                            <tbody>
+                                <% if ((nhanviens || []).length) { %>
+                                    <% nhanviens.forEach(function(t) { %>
+                                        <tr>
+                                            <td><%= t.HoVaTen %></td>
+                                            <td><%= t.TenDangNhap %></td>
+                                            <td><%= t.Email || '' %></td>
+                                            <td><span class="badge <%= t.KichHoat ? 'bg-success' : 'bg-warning text-dark' %>"><%= t.KichHoat ? 'Kích hoạt' : 'Đang khóa' %></span></td>
+                                            <td class="text-end">
+                                                <button class="btn btn-sm btn-warning" data-bs-toggle="collapse" data-bs-target="#edit-<%= t._id %>">Sửa</button>
+                                                <form action="/taikhoan/xoa-noibo/<%= t._id %>" method="post" style="display:inline" onsubmit="return confirm('Xóa tài khoản nhân viên này?');">
+                                                    <button class="btn btn-sm btn-danger">Xóa</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse" id="edit-<%= t._id %>">
+                                            <td colspan="5" class="bg-light">
+                                                <form action="/taikhoan/sua-noibo/<%= t._id %>" method="post" class="row g-2">
+                                                    <div class="col-md-3"><input type="text" class="form-control" name="HoVaTen" value="<%= t.HoVaTen %>" required /></div>
+                                                    <div class="col-md-3"><input type="email" class="form-control" name="Email" value="<%= t.Email || '' %>" /></div>
+                                                    <div class="col-md-3"><input type="password" class="form-control" name="MatKhauMoi" placeholder="Mật khẩu mới (để trống nếu giữ nguyên)" /></div>
+                                                    <div class="col-md-2">
+                                                        <select name="KichHoat" class="form-select">
+                                                            <option value="1" <%= t.KichHoat ? 'selected' : '' %>>Kích hoạt</option>
+                                                            <option value="0" <%= !t.KichHoat ? 'selected' : '' %>>Khóa</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-1 d-grid"><button class="btn btn-primary">Lưu</button></div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    <% }) %>
+                                <% } else { %>
+                                    <tr><td colspan="5" class="text-center py-4 text-muted">Chưa có tài khoản nhân viên.</td></tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab-nguoichoi">
+                <div class="card shadow-sm border-0 rounded-3 overflow-hidden">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-dark"><tr><th>Họ tên</th><th>User</th><th>Email</th><th class="text-center">Trạng thái</th><th class="text-end">Thao tác</th></tr></thead>
+                            <tbody>
+                                <% if ((nguoichois || []).length) { %>
+                                    <% nguoichois.forEach(function(t) { %>
+                                        <tr>
+                                            <td><%= t.HoVaTen %></td>
+                                            <td><%= t.TenDangNhap %></td>
+                                            <td><%= t.Email || '' %></td>
+                                            <td class="text-center">
+                                                <% if (t.KichHoat) { %>
+                                                    <span class="badge bg-success">Đã kích hoạt</span>
+                                                <% } else { %>
+                                                    <span class="badge bg-warning text-dark">Chờ duyệt</span>
+                                                <% } %>
+                                            </td>
+                                            <td class="text-end">
+                                                <% if (!t.KichHoat) { %>
+                                                    <form action="/taikhoan/duyet/<%= t._id %>" method="post" style="display:inline">
+                                                        <button class="btn btn-sm btn-success">Duyệt</button>
+                                                    </form>
+                                                <% } else { %>
+                                                    <span class="text-muted small">Giữ nguyên theo nghiệp vụ người chơi</span>
+                                                <% } %>
+                                            </td>
+                                        </tr>
+                                    <% }) %>
+                                <% } else { %>
+                                    <tr><td colspan="5" class="text-center py-4 text-muted">Chưa có tài khoản người chơi.</td></tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
