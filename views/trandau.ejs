@@ -9,14 +9,22 @@
 </head>
 <body>
     <% 
+        // =========================================================================
+        // KHỞI TẠO BIẾN MẶC ĐỊNH
+        // Nếu Backend (Router) quên truyền các biến này sang, hệ thống sẽ tự động 
+        // gán giá trị mặc định là false/rỗng để tránh bị lỗi sập trang (undefined)
+        // =========================================================================
         if (typeof canManage === 'undefined') { var canManage = false; }
         if (typeof isAdmin === 'undefined') { var isAdmin = false; }
         if (typeof message === 'undefined') { var message = ''; }
     %>
+
     <div class="container mt-4">
         <%- include('partials/sidebar', { active: 'trandau' }) %>
+        
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h2>Quản lý trận đấu</h2>
+            
             <% if (canManage) { %>
                 <a href="/trandau/them" class="btn btn-success"><i class="bi bi-plus-circle"></i> Thêm trận đấu</a>
             <% } %>
@@ -25,19 +33,42 @@
         <div class="mb-3"><%- message %></div>
 
         <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabSolo" type="button">1vs1 (<%= (trandau1vs1 || []).length %>)</button></li>
-            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabDoi" type="button">Giải Đội (<%= (trandauDoi || []).length %>)</button></li>
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabSolo" type="button">
+                    1vs1 (<%= (trandau1vs1 || []).length %>)
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabDoi" type="button">
+                    Giải Đội (<%= (trandauDoi || []).length %>)
+                </button>
+            </li>
         </ul>
 
         <div class="tab-content border border-top-0 p-3 bg-white shadow-sm rounded-bottom">
+            
             <div class="tab-pane fade show active" id="tabSolo">
-                <%- include('partials/trandau_table', { data: trandau1vs1, emptyText: 'Chưa có trận 1vs1.', canManage: canManage, isAdmin: isAdmin, toVietnameseStatus: toVietnameseStatus }) %>
+                <%- include('partials/trandau_table', { 
+                    data: trandau1vs1, 
+                    emptyText: 'Chưa có trận 1vs1.', 
+                    canManage: canManage, 
+                    isAdmin: isAdmin, 
+                    toVietnameseStatus: toVietnameseStatus 
+                }) %>
             </div>
+
             <div class="tab-pane fade" id="tabDoi">
-                <%- include('partials/trandau_table', { data: trandauDoi, emptyText: 'Chưa có trận đội.', canManage: canManage, isAdmin: isAdmin, toVietnameseStatus: toVietnameseStatus }) %>
+                <%- include('partials/trandau_table', { 
+                    data: trandauDoi, 
+                    emptyText: 'Chưa có trận đội.', 
+                    canManage: canManage, 
+                    isAdmin: isAdmin, 
+                    toVietnameseStatus: toVietnameseStatus 
+                }) %>
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

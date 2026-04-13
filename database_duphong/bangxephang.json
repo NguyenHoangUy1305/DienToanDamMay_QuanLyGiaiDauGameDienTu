@@ -1,0 +1,11 @@
+[
+  {"_id":{"$oid":"66e100000000000000006001"},"GiaiDau":{"$oid":"66e100000000000000003001"},"DoiTuongThiDau":"Pham Quoc Bao","LoaiDoiTuong":"NguoiChoi","SoTran":2,"Thang":2,"Hoa":0,"Thua":0,"BanThang":5,"BanThua":1,"HieuSo":4,"Diem":6,"XepHang":1},
+  {"_id":{"$oid":"66e100000000000000006002"},"GiaiDau":{"$oid":"66e100000000000000003001"},"DoiTuongThiDau":"Le Minh Khoa","LoaiDoiTuong":"NguoiChoi","SoTran":1,"Thang":0,"Hoa":1,"Thua":0,"BanThang":1,"BanThua":1,"HieuSo":0,"Diem":1,"XepHang":2},
+  {"_id":{"$oid":"66e100000000000000006003"},"GiaiDau":{"$oid":"66e100000000000000003001"},"DoiTuongThiDau":"Luu Vong","LoaiDoiTuong":"NguoiChoi","SoTran":1,"Thang":0,"Hoa":1,"Thua":0,"BanThang":1,"BanThua":1,"HieuSo":0,"Diem":1,"XepHang":3},
+  {"_id":{"$oid":"66e100000000000000006004"},"GiaiDau":{"$oid":"66e100000000000000003001"},"DoiTuongThiDau":"Lubo Tran","LoaiDoiTuong":"NguoiChoi","SoTran":1,"Thang":0,"Hoa":0,"Thua":1,"BanThang":0,"BanThua":3,"HieuSo":-3,"Diem":0,"XepHang":4},
+  {"_id":{"$oid":"66e100000000000000006005"},"GiaiDau":{"$oid":"66e100000000000000003001"},"DoiTuongThiDau":"Nguyen Gia Han","LoaiDoiTuong":"NguoiChoi","SoTran":1,"Thang":0,"Hoa":0,"Thua":1,"BanThang":1,"BanThua":2,"HieuSo":-1,"Diem":0,"XepHang":5},
+
+  {"_id":{"$oid":"66e100000000000000006010"},"GiaiDau":{"$oid":"66e100000000000000003002"},"DoiTuongThiDau":"Blue Shark","LoaiDoiTuong":"DoiTuyen","SoTran":1,"Thang":1,"Hoa":0,"Thua":0,"BanThang":3,"BanThua":2,"HieuSo":1,"Diem":3,"XepHang":1},
+  {"_id":{"$oid":"66e100000000000000006011"},"GiaiDau":{"$oid":"66e100000000000000003002"},"DoiTuongThiDau":"Da Nang Phoenix","LoaiDoiTuong":"DoiTuyen","SoTran":1,"Thang":0,"Hoa":1,"Thua":0,"BanThang":1,"BanThua":1,"HieuSo":0,"Diem":1,"XepHang":2},
+  {"_id":{"$oid":"66e100000000000000006012"},"GiaiDau":{"$oid":"66e100000000000000003002"},"DoiTuongThiDau":"Can Tho Warriors","LoaiDoiTuong":"DoiTuyen","SoTran":2,"Thang":0,"Hoa":1,"Thua":1,"BanThang":3,"BanThua":4,"HieuSo":-1,"Diem":1,"XepHang":3}
+]

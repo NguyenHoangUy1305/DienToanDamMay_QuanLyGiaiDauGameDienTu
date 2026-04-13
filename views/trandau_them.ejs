@@ -14,11 +14,11 @@
 
         <% if (typeof session !== 'undefined' && session.error) { %>
             <div class="alert alert-danger"><%= session.error %></div>
-            <% delete session.error; %>
-        <% } %>
+            <% delete session.error; %> <% } %>
 
         <div class="card border-0 shadow-sm p-4">
             <form action="/trandau/them" method="post">
+                
                 <div class="mb-3">
                     <label class="form-label fw-bold">Giải đấu</label>
                     <select class="form-select" id="GiaiDau" name="GiaiDau" required>
@@ -80,7 +80,7 @@
                 <div class="mb-4">
                     <label class="form-label fw-bold">Trạng thái</label>
                     <select class="form-select" id="TrangThai" name="TrangThai">
-                        <option value="Chua thi dau" selected>Chưa thi đấu</option>
+                        <option value="Chua thi dau" selected>Sắp diễn ra (Chưa thi đấu)</option>
                         <option value="Da thi dau">Đã thi đấu</option>
                     </select>
                 </div>
@@ -97,42 +97,53 @@
     <script id="defaultLoaiData" type="application/json"><%- JSON.stringify(defaultLoaiDoiTuong || '') %></script>
     
     <script>
+        // Lấy dữ liệu JSON từ các thẻ script ở trên
         const giaiDauMeta = JSON.parse(document.getElementById('giaiDauMetaData').textContent || '[]');
         const teamMembersMap = JSON.parse(document.getElementById('teamMembersMapData').textContent || '{}');
+        
+        // Bắt các thẻ HTML cần thao tác
         const giaiDauSelect = document.getElementById('GiaiDau');
         const doiThu1Select = document.getElementById('DoiThu1Id');
         const doiThu2Select = document.getElementById('DoiThu2Id');
         const selectLoai = document.getElementById('LoaiDoiTuongThiDau');
         const khuVucKeoDau = document.getElementById('KhuVucXepKeo');
 
+        // Hàm 1: Đổ danh sách người chơi/đội tuyển vào Dropdown Đối thủ 1 & 2
         function renderOptions(selectedTournamentId, type) {
             const tournament = giaiDauMeta.find(x => x.id === selectedTournamentId);
             const participants = tournament ? tournament.participants : [];
+            // Lọc ra đúng loại (NguoiChoi hoặc DoiTuyen)
             const filtered = type ? participants.filter(p => p.type === type) : participants;
 
+            // Tạo mã HTML chứa các <option>
             const html = ['<option value="">-- Chọn đối thủ --</option>']
                 .concat(filtered.map(p => `<option value="${p.id}">${p.name}</option>`))
                 .join('');
 
             doiThu1Select.innerHTML = html;
             doiThu2Select.innerHTML = html;
-            updateKeoDau(); 
+            updateKeoDau(); // Xóa/Reset lại khu vực 4 Game
         }
 
+        // Hàm 2: Trái tim của Giải Đội - Sinh ra 4 hàng bắt cặp thi đấu 1vs1
         function updateKeoDau() {
             const loai = selectLoai.value;
             const t1 = doiThu1Select.value;
             const t2 = doiThu2Select.value;
 
+            // ĐIỀU KIỆN KÍCH HOẠT: Là giải Đội + Đã chọn Đội 1 + Đã chọn Đội 2 + Hai đội không trùng nhau
             if (loai === 'DoiTuyen' && t1 && t2 && t1 !== t2) {
+                // Lấy danh sách thành viên của 2 đội
                 const mems1 = teamMembersMap[t1] || [];
                 const mems2 = teamMembersMap[t2] || [];
 
                 let html = '<h5 class="fw-bold text-dark mb-3"><i class="bi bi-people-fill text-warning me-2"></i>Phân cặp 4 Game thi đấu (1vs1)</h5>';
 
+                // Báo lỗi nếu 1 trong 2 đội chưa duyệt đủ thành viên
                 if (mems1.length === 0 || mems2.length === 0) {
                     html += '<div class="alert alert-danger mb-0">Lỗi: Đội tuyển chưa có thành viên. Hãy vào Quản lý Đội tuyển thêm người!</div>';
                 } else {
+                    // Vòng lặp in ra 4 hàng (Game 1, 2, 3, 4)
                     for (let i = 1; i <= 4; i++) {
                         let opt1 = '<option value="">-- Chọn thành viên Đội 1 --</option>' + mems1.map(m => `<option value="${m.id}">${m.name}</option>`).join('');
                         let opt2 = '<option value="">-- Chọn thành viên Đội 2 --</option>' + mems2.map(m => `<option value="${m.id}">${m.name}</option>`).join('');
@@ -146,21 +157,26 @@
                         </div>`;
                     }
                 }
+                // Gắn HTML vào khu vực và cho nó hiện lên
                 khuVucKeoDau.innerHTML = html;
                 khuVucKeoDau.classList.remove('d-none');
             } else {
+                // Nếu là giải Cá nhân hoặc chưa chọn xong -> Giấu khu vực này đi
                 khuVucKeoDau.innerHTML = '';
                 khuVucKeoDau.classList.add('d-none');
             }
         }
 
+        // Sự kiện: Khi Admin chọn 1 Giải đấu khác
         giaiDauSelect.addEventListener('change', function() {
             const tournament = giaiDauMeta.find(x => x.id === this.value);
+            // Tự động nhảy sang Đội tuyển hoặc Cá nhân tùy theo cài đặt của giải
             const defaultType = (tournament && tournament.isTeam) ? 'DoiTuyen' : 'NguoiChoi';
             selectLoai.value = defaultType;
             renderOptions(this.value, selectLoai.value);
         });
 
+        // Sự kiện: Khi Admin đổi Đối thủ 1 hoặc Đối thủ 2 -> Gọi lại hàm kiểm tra để xổ 4 Game
         doiThu1Select.addEventListener('change', updateKeoDau);
         doiThu2Select.addEventListener('change', updateKeoDau);
     </script>

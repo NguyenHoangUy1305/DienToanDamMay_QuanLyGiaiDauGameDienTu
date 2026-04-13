@@ -9,32 +9,63 @@
 </head>
 <body>
     <% 
+        // =========================================================================
+        // KIỂM TRA BIẾN MẶC ĐỊNH
+        // Nếu Backend không truyền các biến này, hệ thống sẽ gán giá trị rỗng/false
+        // để trang web không bị lỗi sập nguồn (undefined).
+        // =========================================================================
         if (typeof canManage === 'undefined') { var canManage = false; }
         if (typeof isAdmin === 'undefined') { var isAdmin = false; }
         if (typeof message === 'undefined') { var message = ''; }
     %>
+
     <div class="container mt-4">
         <%- include('partials/sidebar', { active: 'nguoichoi' }) %>
+
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h2>Quản lý người chơi</h2>
+            
+            <% // Kiểm tra quyền: Chỉ Admin/Nhân viên (canManage) mới thấy nút Thêm %>
             <% if (canManage) { %>
-                <a href="/nguoichoi/them" class="btn btn-success"><i class="bi bi-plus-circle"></i> Thêm người chơi</a>
+                <a href="/nguoichoi/them" class="btn btn-success">
+                    <i class="bi bi-plus-circle"></i> Thêm người chơi
+                </a>
             <% } %>
         </div>
 
         <div class="mb-3"><%- message %></div>
 
         <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#canhan" type="button">Người chơi 1vs1</button></li>
-            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#theodoi" type="button">Người chơi theo đội</button></li>
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#canhan" type="button">
+                    Người chơi 1vs1
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#theodoi" type="button">
+                    Người chơi theo đội
+                </button>
+            </li>
         </ul>
 
         <div class="tab-content border border-top-0 p-3 bg-white">
+            
             <div class="tab-pane fade show active" id="canhan">
-                <%- include('partials/nguoichoi_table', { data: nguoichoiCaNhan, emptyText: 'Chưa có người chơi cá nhân.', canManage: canManage, isAdmin: isAdmin }) %>
+                <%- include('partials/nguoichoi_table', { 
+                    data: nguoichoiCaNhan, 
+                    emptyText: 'Chưa có người chơi cá nhân.', 
+                    canManage: canManage, 
+                    isAdmin: isAdmin 
+                }) %>
             </div>
+
             <div class="tab-pane fade" id="theodoi">
-                <%- include('partials/nguoichoi_table', { data: nguoichoiTheoDoi, emptyText: 'Chưa có người chơi theo đội.', canManage: canManage, isAdmin: isAdmin }) %>
+                <%- include('partials/nguoichoi_table', { 
+                    data: nguoichoiTheoDoi, 
+                    emptyText: 'Chưa có người chơi theo đội.', 
+                    canManage: canManage, 
+                    isAdmin: isAdmin 
+                }) %>
             </div>
         </div>
     </div>

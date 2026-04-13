@@ -21,7 +21,7 @@
                 <i class="bi bi-exclamation-triangle-fill me-2"></i> <%= session.error %>
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
-            <% delete session.error; %>
+            <% delete session.error; // Xóa lỗi sau khi hiển thị để không hiện lại khi reload %>
         <% } %>
 
         <% if (session.success) { %>
@@ -29,7 +29,7 @@
                 <i class="bi bi-check-circle-fill me-2"></i> <%= session.success %>
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
-            <% delete session.success; %>
+            <% delete session.success; // Xóa thông báo sau khi hiển thị %>
         <% } %>
 
         <div class="card shadow-sm border-0 rounded-3 mb-4">
@@ -83,6 +83,7 @@
                                             <td><span class="badge <%= t.KichHoat ? 'bg-success' : 'bg-warning text-dark' %>"><%= t.KichHoat ? 'Kích hoạt' : 'Đang khóa' %></span></td>
                                             <td class="text-end">
                                                 <button class="btn btn-sm btn-warning" data-bs-toggle="collapse" data-bs-target="#edit-<%= t._id %>">Sửa</button>
+                                                
                                                 <% if (currentUserId !== t._id.toString()) { %>
                                                     <form action="/taikhoan/xoa-noibo/<%= t._id %>" method="post" style="display:inline" onsubmit="return confirm('Xóa tài khoản admin này?');">
                                                         <button class="btn btn-sm btn-danger">Xóa</button>

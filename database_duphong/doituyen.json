@@ -1,0 +1,58 @@
+[
+  {
+    "_id":{"$oid":"66e100000000000000002001"},
+    "TenDoi":"Blue Shark",
+    "TruongDoi":"Nguyen Gia Han",
+    "SoDienThoai":"0911111111",
+    "Email":"blueshark@fconline.vn",
+    "GhiChu":"Đội top khu vực miền Nam",
+    "KichHoat":true,
+    "ThanhVien":[
+      {"$oid":"66e100000000000000001001"},
+      {"$oid":"66e100000000000000001002"},
+      {"$oid":"66e100000000000000001003"}
+    ],
+    "ThanhVienChoDuyet":[]
+  },
+  {
+    "_id":{"$oid":"66e100000000000000002002"},
+    "TenDoi":"Can Tho Warriors",
+    "TruongDoi":"Dinh Thanh Dat",
+    "SoDienThoai":"0922222222",
+    "Email":"canthowarriors@fconline.vn",
+    "GhiChu":"Đội thi đấu ổn định",
+    "KichHoat":true,
+    "ThanhVien":[
+      {"$oid":"66e100000000000000001004"},
+      {"$oid":"66e100000000000000001005"},
+      {"$oid":"66e100000000000000001006"}
+    ],
+    "ThanhVienChoDuyet":[]
+  },
+  {
+    "_id":{"$oid":"66e100000000000000002003"},
+    "TenDoi":"Da Nang Phoenix",
+    "TruongDoi":"Huynh Minh Thuan",
+    "SoDienThoai":"0933333333",
+    "Email":"danangphoenix@fconline.vn",
+    "GhiChu":"Đội tấn công mạnh",
+    "KichHoat":true,
+    "ThanhVien":[
+      {"$oid":"66e100000000000000001007"},
+      {"$oid":"66e100000000000000001008"},
+      {"$oid":"66e100000000000000001009"}
+    ],
+    "ThanhVienChoDuyet":[{"$oid":"66e100000000000000001012"}]
+  },
+  {
+    "_id":{"$oid":"66e100000000000000002004"},
+    "TenDoi":"EFC Academy",
+    "TruongDoi":"Pham Quoc Bao",
+    "SoDienThoai":"0944444444",
+    "Email":"efcacademy@fconline.vn",
+    "GhiChu":"Đội trẻ",
+    "KichHoat":true,
+    "ThanhVien":[],
+    "ThanhVienChoDuyet":[]
+  }
+]

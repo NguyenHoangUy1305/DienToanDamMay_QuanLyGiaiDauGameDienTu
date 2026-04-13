@@ -8,10 +8,12 @@
 </head>
 <body>
     <%- include('partials/sidebar', { active: 'trandau' }) %>
+    
     <div class="container mt-4">
         <h2 class="mb-4">Chỉnh sửa trận đấu</h2>
 
         <form action="/trandau/sua/<%= trandau._id %>" method="post">
+            
             <div class="mb-3">
                 <label class="form-label fw-bold">Giải đấu</label>
                 <select class="form-select bg-light" name="GiaiDau" id="GiaiDau" required>
@@ -45,6 +47,8 @@
             <div class="mb-3">
                 <label class="form-label fw-bold">Thời gian thi đấu</label>
                 <% 
+                    // Chuyển đổi định dạng ngày giờ (Date) lưu trong DB thành chuỗi chuẩn "YYYY-MM-DDTHH:mm" 
+                    // để có thể hiển thị vừa vặn trong thẻ <input type="datetime-local">
                     var d = new Date(trandau.ThoiGianThiDau);
                     var dateStr = new Date(d.getTime() - (d.getTimezoneOffset() * 60000)).toISOString().slice(0, 16);
                 %>
@@ -85,32 +89,42 @@
     </script>
 
     <script>
+        // Lấy dữ liệu cấu hình đã gói ở thẻ <script> bên trên ra
         const editData = JSON.parse(document.getElementById('edit-data').textContent);
         const { giaiDauMeta, sDoi1, sDoi2, sLoai } = editData;
 
+        // Bắt (Get) các thẻ HTML cần thao tác
         const gdSelect = document.getElementById('GiaiDau');
         const d1Select = document.getElementById('DoiThu1Id');
         const d2Select = document.getElementById('DoiThu2Id');
         const lSelect = document.getElementById('LoaiDoiTuongThiDau');
 
+        // Hàm chính: Lọc và hiển thị danh sách Đối thủ
         function applyData() {
+            // Tìm Giải đấu đang được chọn trong mảng giaiDauMeta
             const meta = giaiDauMeta.find(g => g.id === gdSelect.value);
             if(!meta) return;
 
+            // Xem Kiểu đối tượng đang chọn là Cá nhân hay Đội tuyển
             const currentLoai = lSelect.value;
+            // Lọc ra những đơn đăng ký (participants) trùng khớp với kiểu đối tượng đó
             const participants = meta.participants.filter(p => p.type === currentLoai);
 
-            const options = ['<option value="">-- Chọn --</option>']
-                .concat(participants.map(p => `<option value="${p.id}" ${p.id === sDoi1 || p.id === sDoi2 ? 'selected' : ''}>${p.name}</option>`))
-                .join('');
-            
-            // Render d1 và d2 với giá trị đã chọn
+            // ========================================================================
+            // Đổ danh sách (Render) vào Đối thủ 1 và Đối thủ 2.
+            // Đoạn code map() sẽ lặp qua danh sách participants. Nếu ID của participant 
+            // trùng với ID Đối thủ 1 (sDoi1) hoặc Đối thủ 2 (sDoi2) cũ của trận đấu, 
+            // thì nó sẽ thêm thuộc tính 'selected' để giữ nguyên giá trị người dùng đã chọn.
+            // ========================================================================
             d1Select.innerHTML = ['<option value="">-- Chọn --</option>'].concat(participants.map(p => `<option value="${p.id}" ${p.id === sDoi1 ? 'selected' : ''}>${p.name}</option>`)).join('');
             d2Select.innerHTML = ['<option value="">-- Chọn --</option>'].concat(participants.map(p => `<option value="${p.id}" ${p.id === sDoi2 ? 'selected' : ''}>${p.name}</option>`)).join('');
         }
 
+        // Lắng nghe sự kiện: Khi đổi Giải đấu HOẶC Kiểu đối tượng thì gọi lại hàm applyData để cập nhật danh sách đối thủ
         gdSelect.addEventListener('change', applyData);
         lSelect.addEventListener('change', applyData);
+        
+        // Chạy hàm lần đầu tiên khi trang vừa load xong để hiển thị sẵn danh sách đối thủ cũ
         applyData();
     </script>
 </body>

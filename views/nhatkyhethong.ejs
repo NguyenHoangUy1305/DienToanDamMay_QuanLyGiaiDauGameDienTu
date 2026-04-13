@@ -28,19 +28,33 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <% // Kiểm tra xem mảng nhatkyhethong có dữ liệu hay không %>
                         <% if (typeof nhatkyhethong !== 'undefined' && nhatkyhethong.length) { %>
                             <% nhatkyhethong.forEach(function(item) { 
-                                let cls = 'bg-info';
+                                // --- LOGIC XỬ LÝ MÀU SẮC THEO MỨC ĐỘ ---
+                                let cls = 'bg-info'; // Mặc định là màu xanh nhạt (Thông tin thường)
                                 let md = (item.MucDo || '').toLowerCase();
+
+                                // Nếu là Cảnh báo hoặc Quan trọng -> Đổi sang màu Vàng
                                 if(md.includes('quan trong') || md.includes('canh bao')) cls = 'bg-warning text-dark';
+                                
+                                // Nếu là Lỗi hoặc Nguy hiểm -> Đổi sang màu Đỏ
                                 if(md.includes('loi') || md.includes('nguy hiem')) cls = 'bg-danger';
                             %>
                                 <tr>
                                     <td class="ps-3 small text-muted"><%= new Date(item.createdAt).toLocaleString('vi-VN') %></td>
+                                    
                                     <td><strong><%= item.TaiKhoan ? item.TaiKhoan.HoVaTen : 'Hệ thống' %></strong></td>
+                                    
                                     <td><span class="fw-bold text-primary"><%= item.HanhDong %></span></td>
+                                    
                                     <td><small class="text-muted"><%= item.ChiTiet %></small></td>
-                                    <td class="text-center"><span class="badge <%= cls %> text-uppercase" style="font-size: 0.7rem;"><%= item.MucDo %></span></td>
+                                    
+                                    <td class="text-center">
+                                        <span class="badge <%= cls %> text-uppercase" style="font-size: 0.7rem;">
+                                            <%= item.MucDo %>
+                                        </span>
+                                    </td>
                                 </tr>
                             <% }) %>
                         <% } else { %>

@@ -1,0 +1,14 @@
+[
+  {
+    "_id":{"$oid":"66e100000000000000008001"},
+    "TaiKhoan":{"$oid":"66e100000000000000000001"},
+    "HanhDong":"Tạo giải đấu",
+    "DoiTuong":"FC Online Spring Open 2026 - Cá nhân",
+    "ChiTiet":"Admin tạo giải cá nhân mùa xuân.",
+    "DuLieuCu":null,
+    "DuLieuMoi":{"TenGiaiDau":"FC Online Spring Open 2026 - Cá nhân"},
+    "Ip":"127.0.0.1",
+    "MucDo":"Quan trong",
+    "createdAt":{"$date":"2026-04-01T07:00:00.000Z"}
+  }
+]

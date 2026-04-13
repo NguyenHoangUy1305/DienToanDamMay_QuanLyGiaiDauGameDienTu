@@ -1,0 +1,68 @@
+[
+  {
+    "_id":{"$oid":"66e100000000000000003001"},
+    "TenGiaiDau":"FC Online Spring Open 2026 - Cá nhân",
+    "NgayBatDau":{"$date":"2026-04-10T00:00:00.000Z"},
+    "NgayKetThuc":{"$date":"2026-04-25T00:00:00.000Z"},
+    "TheThuc":"1vs1",
+    "SoLuongToiDa":16,
+    "TrangThai":"Sap dien ra",
+    "MoTa":"Giải cá nhân mùa xuân",
+    "KichHoat":true
+  },
+  {
+    "_id":{"$oid":"66e100000000000000003002"},
+    "TenGiaiDau":"FC Online Spring Open 2026 - Đội",
+    "NgayBatDau":{"$date":"2026-04-12T00:00:00.000Z"},
+    "NgayKetThuc":{"$date":"2026-04-30T00:00:00.000Z"},
+    "TheThuc":"doi",
+    "SoLuongToiDa":8,
+    "TrangThai":"Sap dien ra",
+    "MoTa":"Giải đồng đội mùa xuân",
+    "KichHoat":true
+  },
+  {
+    "_id":{"$oid":"66e100000000000000003003"},
+    "TenGiaiDau":"FC Online Summer Cup 2026 - Cá nhân",
+    "NgayBatDau":{"$date":"2026-06-01T00:00:00.000Z"},
+    "NgayKetThuc":{"$date":"2026-06-20T00:00:00.000Z"},
+    "TheThuc":"1vs1",
+    "SoLuongToiDa":16,
+    "TrangThai":"Sap dien ra",
+    "MoTa":"Giải cá nhân mùa hè",
+    "KichHoat":true
+  },
+  {
+    "_id":{"$oid":"66e100000000000000003004"},
+    "TenGiaiDau":"FC Online Summer Cup 2026 - Đội",
+    "NgayBatDau":{"$date":"2026-06-05T00:00:00.000Z"},
+    "NgayKetThuc":{"$date":"2026-06-25T00:00:00.000Z"},
+    "TheThuc":"doi",
+    "SoLuongToiDa":8,
+    "TrangThai":"Sap dien ra",
+    "MoTa":"Giải đồng đội mùa hè",
+    "KichHoat":true
+  },
+  {
+    "_id":{"$oid":"66e100000000000000003005"},
+    "TenGiaiDau":"FC Online Autumn Cup 2026 - Cá nhân",
+    "NgayBatDau":{"$date":"2026-08-01T00:00:00.000Z"},
+    "NgayKetThuc":{"$date":"2026-08-20T00:00:00.000Z"},
+    "TheThuc":"1vs1",
+    "SoLuongToiDa":16,
+    "TrangThai":"Dang dien ra",
+    "MoTa":"Giải cá nhân mùa thu",
+    "KichHoat":true
+  },
+  {
+    "_id":{"$oid":"66e100000000000000003006"},
+    "TenGiaiDau":"FC Online Autumn Cup 2026 - Đội",
+    "NgayBatDau":{"$date":"2026-08-03T00:00:00.000Z"},
+    "NgayKetThuc":{"$date":"2026-08-28T00:00:00.000Z"},
+    "TheThuc":"doi",
+    "SoLuongToiDa":8,
+    "TrangThai":"Dang dien ra",
+    "MoTa":"Giải đồng đội mùa thu",
+    "KichHoat":true
+  }
+]

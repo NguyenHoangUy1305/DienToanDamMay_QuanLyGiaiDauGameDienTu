@@ -1,0 +1,22 @@
+[
+  {"_id":{"$oid":"66e100000000000000004001"},"GiaiDau":{"$oid":"66e100000000000000003001"},"NguoiChoi":{"$oid":"66e100000000000000001001"},"DoiTuyen":null,"NgayDangKy":{"$date":"2026-04-01T08:00:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004002"},"GiaiDau":{"$oid":"66e100000000000000003001"},"NguoiChoi":{"$oid":"66e100000000000000001002"},"DoiTuyen":null,"NgayDangKy":{"$date":"2026-04-01T08:05:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004003"},"GiaiDau":{"$oid":"66e100000000000000003001"},"NguoiChoi":{"$oid":"66e100000000000000001003"},"DoiTuyen":null,"NgayDangKy":{"$date":"2026-04-01T08:10:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004004"},"GiaiDau":{"$oid":"66e100000000000000003001"},"NguoiChoi":{"$oid":"66e100000000000000001010"},"DoiTuyen":null,"NgayDangKy":{"$date":"2026-04-01T08:15:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004005"},"GiaiDau":{"$oid":"66e100000000000000003001"},"NguoiChoi":{"$oid":"66e100000000000000001011"},"DoiTuyen":null,"NgayDangKy":{"$date":"2026-04-01T08:20:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004006"},"GiaiDau":{"$oid":"66e100000000000000003001"},"NguoiChoi":{"$oid":"66e100000000000000001012"},"DoiTuyen":null,"NgayDangKy":{"$date":"2026-04-01T08:25:00.000Z"},"TrangThaiDuyet":"Cho duyet"},
+
+  {"_id":{"$oid":"66e100000000000000004007"},"GiaiDau":{"$oid":"66e100000000000000003002"},"NguoiChoi":null,"DoiTuyen":{"$oid":"66e100000000000000002001"},"NgayDangKy":{"$date":"2026-04-02T09:00:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004008"},"GiaiDau":{"$oid":"66e100000000000000003002"},"NguoiChoi":null,"DoiTuyen":{"$oid":"66e100000000000000002002"},"NgayDangKy":{"$date":"2026-04-02T09:05:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004009"},"GiaiDau":{"$oid":"66e100000000000000003002"},"NguoiChoi":null,"DoiTuyen":{"$oid":"66e100000000000000002003"},"NgayDangKy":{"$date":"2026-04-02T09:10:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004010"},"GiaiDau":{"$oid":"66e100000000000000003002"},"NguoiChoi":null,"DoiTuyen":{"$oid":"66e100000000000000002004"},"NgayDangKy":{"$date":"2026-04-02T09:15:00.000Z"},"TrangThaiDuyet":"Cho duyet"},
+
+  {"_id":{"$oid":"66e100000000000000004011"},"GiaiDau":{"$oid":"66e100000000000000003003"},"NguoiChoi":{"$oid":"66e100000000000000001007"},"DoiTuyen":null,"NgayDangKy":{"$date":"2026-05-20T08:00:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004012"},"GiaiDau":{"$oid":"66e100000000000000003003"},"NguoiChoi":{"$oid":"66e100000000000000001008"},"DoiTuyen":null,"NgayDangKy":{"$date":"2026-05-20T08:05:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004013"},"GiaiDau":{"$oid":"66e100000000000000003003"},"NguoiChoi":{"$oid":"66e100000000000000001009"},"DoiTuyen":null,"NgayDangKy":{"$date":"2026-05-20T08:10:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004014"},"GiaiDau":{"$oid":"66e100000000000000003003"},"NguoiChoi":{"$oid":"66e100000000000000001010"},"DoiTuyen":null,"NgayDangKy":{"$date":"2026-05-20T08:15:00.000Z"},"TrangThaiDuyet":"Cho duyet"},
+
+  {"_id":{"$oid":"66e100000000000000004015"},"GiaiDau":{"$oid":"66e100000000000000003004"},"NguoiChoi":null,"DoiTuyen":{"$oid":"66e100000000000000002001"},"NgayDangKy":{"$date":"2026-05-21T09:00:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004016"},"GiaiDau":{"$oid":"66e100000000000000003004"},"NguoiChoi":null,"DoiTuyen":{"$oid":"66e100000000000000002002"},"NgayDangKy":{"$date":"2026-05-21T09:05:00.000Z"},"TrangThaiDuyet":"Da duyet"},
+  {"_id":{"$oid":"66e100000000000000004017"},"GiaiDau":{"$oid":"66e100000000000000003004"},"NguoiChoi":null,"DoiTuyen":{"$oid":"66e100000000000000002003"},"NgayDangKy":{"$date":"2026-05-21T09:10:00.000Z"},"TrangThaiDuyet":"Cho duyet"}
+]

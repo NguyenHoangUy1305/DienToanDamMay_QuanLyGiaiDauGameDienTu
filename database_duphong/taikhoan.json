@@ -1,0 +1,172 @@
+[
+  {
+    "_id": {"$oid": "66e100000000000000000001"},
+    "HoVaTen": "Admin FC Online",
+    "Email": "admin@fconline.vn",
+    "TenDangNhap": "admin",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "admin",
+    "QuyenHan": "admin",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000002"},
+    "HoVaTen": "Admin 2",
+    "Email": "admin2@fconline.vn",
+    "TenDangNhap": "admin2",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "admin",
+    "QuyenHan": "admin",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000011"},
+    "HoVaTen": "Nguyen Staff 1",
+    "Email": "staff1@fconline.vn",
+    "TenDangNhap": "staff1",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nhanvien",
+    "QuyenHan": "nhanvien",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000012"},
+    "HoVaTen": "Tran Staff 2",
+    "Email": "staff2@fconline.vn",
+    "TenDangNhap": "staff2",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nhanvien",
+    "QuyenHan": "nhanvien",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000013"},
+    "HoVaTen": "Le Staff 3",
+    "Email": "staff3@fconline.vn",
+    "TenDangNhap": "staff3",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nhanvien",
+    "QuyenHan": "nhanvien",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000101"},
+    "HoVaTen": "Pham Quoc Bao",
+    "Email": "player1@fconline.vn",
+    "TenDangNhap": "player1",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000102"},
+    "HoVaTen": "Nguyen Gia Han",
+    "Email": "player2@fconline.vn",
+    "TenDangNhap": "player2",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000103"},
+    "HoVaTen": "Le Minh Khoa",
+    "Email": "player3@fconline.vn",
+    "TenDangNhap": "player3",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000104"},
+    "HoVaTen": "Dinh Thanh Dat",
+    "Email": "player4@fconline.vn",
+    "TenDangNhap": "player4",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000105"},
+    "HoVaTen": "Vo Thanh Dat",
+    "Email": "player5@fconline.vn",
+    "TenDangNhap": "player5",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000106"},
+    "HoVaTen": "Tran Minh Khoa",
+    "Email": "player6@fconline.vn",
+    "TenDangNhap": "player6",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000107"},
+    "HoVaTen": "Huynh Minh Thuan",
+    "Email": "player7@fconline.vn",
+    "TenDangNhap": "player7",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000108"},
+    "HoVaTen": "Nguyen Trung Thanh",
+    "Email": "player8@fconline.vn",
+    "TenDangNhap": "player8",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000109"},
+    "HoVaTen": "Doan Quoc Viet",
+    "Email": "player9@fconline.vn",
+    "TenDangNhap": "player9",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000110"},
+    "HoVaTen": "Luu Vong",
+    "Email": "player10@fconline.vn",
+    "TenDangNhap": "player10",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000111"},
+    "HoVaTen": "Lubo Tran",
+    "Email": "player11@fconline.vn",
+    "TenDangNhap": "player11",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  },
+  {
+    "_id": {"$oid": "66e100000000000000000112"},
+    "HoVaTen": "Luan Nguyen",
+    "Email": "player12@fconline.vn",
+    "TenDangNhap": "player12",
+    "MatKhau": "$2b$10$lFQdlXtRFRyCtGm4TyyuA.v7C6w9g0oeAT7QLuVNL40sjquJeOCi6",
+    "VaiTro": "nguoi_choi",
+    "QuyenHan": "nguoi_choi",
+    "KichHoat": true
+  }
+]

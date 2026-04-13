@@ -1,0 +1,14 @@
+[
+  {
+    "_id":{"$oid":"66e100000000000000007001"},
+    "TieuDe":"Mở đăng ký Spring Open 2026",
+    "NoiDung":"Hệ thống đã mở đăng ký cho giải cá nhân và đồng đội mùa xuân.",
+    "LoaiThongBao":"GiaiDau",
+    "MucDo":"Thong tin",
+    "NguoiGui":{"$oid":"66e100000000000000000001"},
+    "NguoiNhan":[],
+    "DaDoc":[],
+    "KichHoat":true,
+    "NgayHetHan":{"$date":"2026-04-30T23:59:00.000Z"}
+  }
+]
