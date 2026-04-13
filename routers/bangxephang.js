@@ -19,6 +19,7 @@ function looksLikeObjectId(value) {
     return /^[a-fA-F0-9]{24}$/.test(v);
 }
 
+
 router.get('/', auth.yeuCauDangNhap, async function (req, res) {
     try {
         var giaidauList = await GiaiDau.find({ KichHoat: true }).sort({ createdAt: -1 }).lean().exec();
@@ -101,10 +102,13 @@ router.get('/', auth.yeuCauDangNhap, async function (req, res) {
             return Object.assign({}, item, { DoiTuongThiDau: raw, TenHienThi: tenHienThi });
         });
 
-        res.render('bangxephang', {
+        var bangxephangCaNhan = all.filter(function (i) { return i.LoaiDoiTuong === 'NguoiChoi'; });
+        var bangxephangDoi = all.filter(function (i) { return i.LoaiDoiTuong === 'DoiTuyen'; });
+
+                res.render('bangxephang', {
             title: 'Bảng xếp hạng',
-            bangxephangCaNhan: all.filter(function (i) { return i.LoaiDoiTuong === 'NguoiChoi'; }),
-            bangxephangDoi: all.filter(function (i) { return i.LoaiDoiTuong === 'DoiTuyen'; }),
+            bangxephangCaNhan: bangxephangCaNhan,
+            bangxephangDoi: bangxephangDoi,
             giaidau: giaidauList,
             selectedGiaiDau: selectedGiaiDau
         });
@@ -115,3 +119,4 @@ router.get('/', auth.yeuCauDangNhap, async function (req, res) {
 });
 
 module.exports = router;
+

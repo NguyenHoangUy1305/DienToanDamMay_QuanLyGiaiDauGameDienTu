@@ -9,25 +9,51 @@
             <th>Tỷ số</th>
             <th>Người thắng</th>
             <th>Trạng thái</th>
-            <th width="390">Chức năng</th>
+            <th width="420">Chức năng</th>
         </tr>
     </thead>
     <tbody>
         <% if (data && data.length > 0) { %>
             <% data.forEach(function(item) { %>
+                <% 
+                    var isResultLocked = !!item.KetQuaXacNhan || ((Number(item.TySo1) > 0 || Number(item.TySo2) > 0) || !!item.NguoiThang);
+                    var laTranDoi = item && (item.LoaiTran === 'TEAM' || item.LoaiDoiTuongThiDau === 'DoiTuyen');
+
+                    var hienThiTySo = (item.TySo1 + ' - ' + item.TySo2);
+                    if (isNguoiChoiLogin && currentNguoiChoiId && laTranDoi) {
+                        var idMe = currentNguoiChoiId.toString();
+                        var keo = (item.DanhSachKeoDau || []).find(function(k){
+                            var p1 = (k && k.NguoiChoi1Id) ? k.NguoiChoi1Id.toString() : '';
+                            var p2 = (k && k.NguoiChoi2Id) ? k.NguoiChoi2Id.toString() : '';
+                            return p1 === idMe || p2 === idMe;
+                        });
+
+                        if (keo) {
+                            var meLaBen1 = keo.NguoiChoi1Id && keo.NguoiChoi1Id.toString() === idMe;
+                            var idDoiThu = meLaBen1 ? (keo.NguoiChoi2Id ? keo.NguoiChoi2Id.toString() : '') : (keo.NguoiChoi1Id ? keo.NguoiChoi1Id.toString() : '');
+                            var tenDoiThu = meLaBen1 ? (keo.TenNguoiChoi2 || 'Đối thủ') : (keo.TenNguoiChoi1 || 'Đối thủ');
+
+                            var ctMe = (item.ChiTietTySo || []).find(function(ct){ return ct && ct.NguoiChoi && ct.NguoiChoi.toString() === idMe; });
+                            var ctDoiThu = (item.ChiTietTySo || []).find(function(ct){ return ct && ct.NguoiChoi && ct.NguoiChoi.toString() === idDoiThu; });
+
+                            var banMe = ctMe ? Number(ctMe.BanThang || 0) : 0;
+                            var banDoiThu = ctDoiThu ? Number(ctDoiThu.BanThang || 0) : 0;
+                            hienThiTySo = banMe + ' - ' + banDoiThu + ' (vs ' + tenDoiThu + ')';
+                        }
+                    }
+                %>
                 <tr>
                     <td><%= item.GiaiDau ? item.GiaiDau.TenGiaiDau : '' %></td>
                     <td><%= item.VongDau %></td>
                     <td><%= item.DoiThu1 %></td>
                     <td><%= item.DoiThu2 %></td>
                     <td><%= item.ThoiGianThiDau ? new Date(item.ThoiGianThiDau).toLocaleString('vi-VN') : '' %></td>
-                    <td><%= item.TySo1 %> - <%= item.TySo2 %></td>
+                    <td><%= hienThiTySo %></td>
                     <td><%= item.NguoiThang || '' %></td>
                     <td>
                         <% 
                             var trangThaiHienThi = (typeof toVietnameseStatus === 'function') ? toVietnameseStatus(item.TrangThai) : (item.TrangThai || '');
-                            var coTySo = ((Number(item.TySo1) > 0 || Number(item.TySo2) > 0) || !!item.NguoiThang);
-                            if (coTySo && trangThaiHienThi !== 'Đã thi đấu') {
+                            if (isResultLocked && trangThaiHienThi !== 'Đã thi đấu') {
                                 trangThaiHienThi = 'Đã thi đấu';
                             }
                         %>
@@ -35,8 +61,13 @@
                     </td>
                     <td>
                         <% if (canManage) { %>
-                            <a href="/trandau/sua/<%= item._id %>" class="btn btn-warning btn-sm">Sửa</a>
-                            <a href="/trandau/nhap-ket-qua/<%= item._id %>" class="btn btn-primary btn-sm">Nhập kết quả</a>
+                            <% if (isResultLocked) { %>
+                                <button type="button" class="btn btn-secondary btn-sm" disabled>Sửa</button>
+                                <button type="button" class="btn btn-secondary btn-sm" disabled>Đã chốt kết quả</button>
+                            <% } else { %>
+                                <a href="/trandau/sua/<%= item._id %>" class="btn btn-warning btn-sm">Sửa</a>
+                                <a href="/trandau/nhap-ket-qua/<%= item._id %>" class="btn btn-primary btn-sm">Nhập kết quả</a>
+                            <% } %>
                             <% if (isAdmin) { %>
                                 <a href="/trandau/xoa/<%= item._id %>" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa?');">Xóa</a>
                             <% } %>

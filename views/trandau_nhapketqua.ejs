@@ -5,54 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <title>Nhập kết quả - FC Online</title>
-    
     <style>
-        /* CSS tùy chỉnh cho thẻ hiển thị tỉ số: Bo góc và đổ bóng nhẹ */
         .score-card { border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        
-        /* CSS cho vòng tròn "VS" nằm giữa hai đội */
-        .vs-circle { 
-            width: 50px; height: 50px; 
-            background: #f8f9fa; 
-            border: 2px solid #dee2e6; 
-            border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center; 
-            font-weight: bold; margin: 0 auto; 
-            z-index: 10; position: relative; 
+        .vs-circle {
+            width: 50px; height: 50px;
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; margin: 0 auto;
+            z-index: 10; position: relative;
         }
     </style>
 </head>
 <body class="bg-light">
     <%- include('partials/sidebar', { active: 'trandau' }) %>
-    
+
     <div class="container mt-4" style="max-width: 1000px;">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Nhập kết quả trận đấu</h2>
             <span class="badge bg-primary fs-6"><%= trandau.GiaiDau ? trandau.GiaiDau.TenGiaiDau : 'Giải đấu' %></span>
         </div>
-        
+
         <div class="mb-3"><%- message %></div>
+
+        <% if (isLocked) { %>
+            <div class="alert alert-secondary">Kết quả trận này đã chốt. Hệ thống khóa chỉnh sửa để đảm bảo công bằng.</div>
+        <% } %>
 
         <form method="post" action="/trandau/nhap-ket-qua/<%= trandau._id %>">
             <div class="row align-items-center mb-4">
-                
                 <div class="col-md-5">
                     <div class="card score-card text-center p-3 border-primary border-3">
                         <h4 class="text-primary text-truncate"><%= trandau.DoiThu1 %></h4>
-                        
-                        <% // Kiểm tra: Nếu là giải CÁ NHÂN (1vs1) %>
+
                         <% if (!isTeamMatch) { %>
-                            <input type="number" class="form-control form-control-lg text-center fw-bold" name="TySo1" value="<%= trandau.TySo1 %>" min="0">
-                        
-                        <% // Ngược lại: Nếu là giải ĐỒNG ĐỘI (Team) %>
+                            <input type="number" class="form-control form-control-lg text-center fw-bold" name="TySo1" value="<%= trandau.TySo1 %>" min="0" <%= isLocked ? 'readonly' : '' %>>
                         <% } else { %>
                             <div class="text-start mt-3">
                                 <label class="small text-muted mb-2">Bàn thắng từng cầu thủ:</label>
-                                <% // Vòng lặp duyệt qua danh sách thành viên của Đội 1 %>
-                                <% (doiHinhDoi1 || []).forEach(p => { %>
+                                <% (doiHinhDoi1 || []).forEach(function(p) { %>
                                     <div class="input-group mb-2">
                                         <span class="input-group-text small" style="width: 120px;"><%= p.HoVaTen %></span>
-                                        <input type="number" class="form-control" name="BanThangDoi1[<%= p._id %>]" value="0" min="0">
+                                        <input type="number" class="form-control" name="BanThangDoi1[<%= p._id %>]" value="<%= (banThangDoi1Map && banThangDoi1Map[p._id.toString()] != null) ? banThangDoi1Map[p._id.toString()] : 0 %>" min="0" <%= isLocked ? 'readonly' : '' %>>
                                     </div>
                                 <% }) %>
                             </div>
@@ -67,18 +62,16 @@
                 <div class="col-md-5">
                     <div class="card score-card text-center p-3 border-danger border-3">
                         <h4 class="text-danger text-truncate"><%= trandau.DoiThu2 %></h4>
-                        
-                        <% // Logic tương tự Đội 1: Phân biệt Cá nhân và Đồng đội %>
+
                         <% if (!isTeamMatch) { %>
-                            <input type="number" class="form-control form-control-lg text-center fw-bold" name="TySo2" value="<%= trandau.TySo2 %>" min="0">
+                            <input type="number" class="form-control form-control-lg text-center fw-bold" name="TySo2" value="<%= trandau.TySo2 %>" min="0" <%= isLocked ? 'readonly' : '' %>>
                         <% } else { %>
                             <div class="text-start mt-3">
                                 <label class="small text-muted mb-2">Bàn thắng từng cầu thủ:</label>
-                                <% // Vòng lặp duyệt qua danh sách thành viên của Đội 2 %>
-                                <% (doiHinhDoi2 || []).forEach(p => { %>
+                                <% (doiHinhDoi2 || []).forEach(function(p) { %>
                                     <div class="input-group mb-2">
                                         <span class="input-group-text small" style="width: 120px;"><%= p.HoVaTen %></span>
-                                        <input type="number" class="form-control" name="BanThangDoi2[<%= p._id %>]" value="0" min="0">
+                                        <input type="number" class="form-control" name="BanThangDoi2[<%= p._id %>]" value="<%= (banThangDoi2Map && banThangDoi2Map[p._id.toString()] != null) ? banThangDoi2Map[p._id.toString()] : 0 %>" min="0" <%= isLocked ? 'readonly' : '' %>>
                                     </div>
                                 <% }) %>
                             </div>
@@ -94,9 +87,13 @@
                         <span class="text-muted"><%= trandau.VongDau %></span>
                     </div>
                     <div class="col-md-6 text-end">
-                        <button type="submit" class="btn btn-primary btn-lg shadow">
-                            <i class="bi bi-check-circle-fill me-2"></i>Xác nhận & Cập nhật BXH
-                        </button>
+                        <% if (!isLocked) { %>
+                            <button type="submit" class="btn btn-primary btn-lg shadow">
+                                <i class="bi bi-check-circle-fill me-2"></i>Xác nhận & Cập nhật BXH
+                            </button>
+                        <% } else { %>
+                            <button type="button" class="btn btn-secondary btn-lg shadow" disabled>Đã chốt kết quả</button>
+                        <% } %>
                         <a href="/trandau" class="btn btn-outline-secondary btn-lg ms-2">Bỏ qua</a>
                     </div>
                 </div>

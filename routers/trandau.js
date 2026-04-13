@@ -161,6 +161,8 @@ function xacDinhLoaiTran(giaiDau, doiThu1, doiThu2) {
 router.get('/', auth.yeuCauDangNhap, async function (req, res) {
     var td = await TranDau.find().populate('GiaiDau').sort({ ThoiGianThiDau: -1 }).exec();
     var vaiTro = layVaiTro(req);
+    var currentNguoiChoiId = '';
+    var isNguoiChoiLogin = (vaiTro === 'nguoi_choi');
 
     if (vaiTro === 'nguoi_choi') {
         var maNguoiDung = req.session && req.session.MaNguoiDung ? req.session.MaNguoiDung.toString() : '';
@@ -170,6 +172,7 @@ router.get('/', auth.yeuCauDangNhap, async function (req, res) {
             td = [];
         } else {
             var nguoiChoiId = nguoiChoiHienTai._id ? nguoiChoiHienTai._id.toString() : '';
+            currentNguoiChoiId = nguoiChoiId;
             var doiTuyenId = nguoiChoiHienTai.DoiTuyen && nguoiChoiHienTai.DoiTuyen._id ? nguoiChoiHienTai.DoiTuyen._id.toString() : '';
             var tenNguoiChoi = normalizeText(nguoiChoiHienTai.HoVaTen);
             var tenDoi = normalizeText(nguoiChoiHienTai.DoiTuyen ? nguoiChoiHienTai.DoiTuyen.TenDoi : '');
@@ -201,7 +204,9 @@ router.get('/', auth.yeuCauDangNhap, async function (req, res) {
     res.render('trandau', {
         title: 'Trận đấu', trandau: td, trandau1vs1: trandau1vs1, trandauDoi: trandauDoi,
         canManage: (vaiTro === 'admin' || vaiTro === 'nhanvien'), isAdmin: vaiTro === 'admin',
-        toVietnameseStatus: statusUtil.toVietnameseStatus
+        toVietnameseStatus: statusUtil.toVietnameseStatus,
+        currentNguoiChoiId: currentNguoiChoiId,
+        isNguoiChoiLogin: isNguoiChoiLogin
     });
 });
 
@@ -341,6 +346,8 @@ router.get('/xoa/:id', auth.yeuCauAdmin, async function (req, res) {
     try {
         var id = req.params.id;
         var td = await TranDau.findById(id).exec();
+        if (!td) { req.session.error = 'Không tìm thấy trận đấu.'; return res.redirect('/trandau'); }
+        if (td.KetQuaXacNhan || statusUtil.isDoneStatus(td.TrangThai)) { req.session.error = 'Kết quả trận này đã chốt, không thể nhập lại.'; return res.redirect('/trandau'); }
         await TranDau.findByIdAndDelete(id).exec();
         await capNhatBangXepHang(td.GiaiDau);
         req.session.success = 'Đã xóa trận đấu.';
@@ -432,7 +439,29 @@ router.get('/nhap-ket-qua/:id', auth.yeuCauStaffHoacAdmin, async function (req, 
         var isTeamMatch = td.LoaiDoiTuongThiDau === 'DoiTuyen';
         var doiHinhDoi1 = isTeamMatch ? await loadDoiHinhByTeamId(td.DoiThu1Id) : [];
         var doiHinhDoi2 = isTeamMatch ? await loadDoiHinhByTeamId(td.DoiThu2Id) : [];
-        return res.render('trandau_nhapketqua', { title: 'Nhập kết quả', trandau: td, isTeamMatch: isTeamMatch, doiHinhDoi1: doiHinhDoi1, doiHinhDoi2: doiHinhDoi2, toVietnameseStatus: statusUtil.toVietnameseStatus });
+        var isLocked = !!td.KetQuaXacNhan || statusUtil.isDoneStatus(td.TrangThai);
+
+        var banThangDoi1Map = {};
+        var banThangDoi2Map = {};
+        (td.ChiTietTySo || []).forEach(function (item) {
+            if (!item || !item.NguoiChoi) return;
+            var key = item.NguoiChoi.toString();
+            var soBan = parseNonNegativeNumber(item.BanThang);
+            if ((item.DoiThu || '') === 'Doi1') banThangDoi1Map[key] = soBan;
+            if ((item.DoiThu || '') === 'Doi2') banThangDoi2Map[key] = soBan;
+        });
+
+        return res.render('trandau_nhapketqua', {
+            title: 'Nhập kết quả',
+            trandau: td,
+            isTeamMatch: isTeamMatch,
+            doiHinhDoi1: doiHinhDoi1,
+            doiHinhDoi2: doiHinhDoi2,
+            banThangDoi1Map: banThangDoi1Map,
+            banThangDoi2Map: banThangDoi2Map,
+            toVietnameseStatus: statusUtil.toVietnameseStatus,
+            isLocked: isLocked
+        });
     } catch (err) { res.redirect('/trandau'); }
 });
 
@@ -440,6 +469,8 @@ router.post('/nhap-ket-qua/:id', auth.yeuCauStaffHoacAdmin, async function (req,
     try {
         var id = req.params.id;
         var td = await TranDau.findById(id).exec();
+        if (!td) { req.session.error = 'Không tìm thấy trận đấu.'; return res.redirect('/trandau'); }
+        if (td.KetQuaXacNhan || statusUtil.isDoneStatus(td.TrangThai)) { req.session.error = 'Kết quả trận này đã chốt, không thể nhập lại.'; return res.redirect('/trandau'); }
         var tyso1 = 0; var tyso2 = 0; var chiTietTySo = [];
 
         if (td.LoaiDoiTuongThiDau === 'DoiTuyen') {
@@ -462,6 +493,10 @@ router.post('/nhap-ket-qua/:id', auth.yeuCauStaffHoacAdmin, async function (req,
 });
 
 module.exports = router;
+
+
+
+
 
 
 

@@ -70,7 +70,7 @@
                     </table>
                 </div>
             </div>
-            
+
             <div class="tab-pane fade" id="doi">
                 <div class="table-responsive">
                     <table class="table table-hover table-vcenter mb-0">
@@ -80,6 +80,7 @@
                                 <th>Đội tuyển</th>
                                 <th class="text-center">Trận</th>
                                 <th class="text-center">T/H/B</th>
+                                <th class="text-center">Bàn thắng/bại</th>
                                 <th class="text-center">Hiệu số</th>
                                 <th class="text-center">Điểm</th>
                             </tr>
@@ -92,12 +93,13 @@
                                         <td><strong><%= item.TenHienThi || item.DoiTuongThiDau %></strong></td>
                                         <td class="text-center"><%= item.SoTran %></td>
                                         <td class="text-center"><%= item.Thang %>/<%= item.Hoa %>/<%= item.Thua %></td>
-                                        <td class="text-center"><%= item.HieuSo %></td>
+                                        <td class="text-center"><%= item.BanThang %>-<%= item.BanThua %></td>
+                                        <td class="text-center"><%= item.HieuSo > 0 ? '+' + item.HieuSo : item.HieuSo %></td>
                                         <td class="text-center text-danger fw-bold"><%= item.Diem %></td>
                                     </tr>
                                 <% }) %>
                             <% } else { %>
-                                <tr><td colspan="6" class="text-center py-4 text-muted">Chưa có dữ liệu BXH đội.</td></tr>
+                                <tr><td colspan="7" class="text-center py-4 text-muted">Chưa có dữ liệu BXH đội.</td></tr>
                             <% } %>
                         </tbody>
                     </table>
