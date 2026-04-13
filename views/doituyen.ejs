@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
@@ -8,12 +8,25 @@
     <title><%= typeof title !== 'undefined' ? title : 'Đội tuyển' %> - FC Online</title>
 </head>
 <body class="bg-light">
-    <% 
+    <%
         if (typeof canManage === 'undefined') { var canManage = false; }
         if (typeof isAdmin === 'undefined') { var isAdmin = false; }
+        if (typeof pendingTeamId === 'undefined') { var pendingTeamId = ''; }
+        var globalPendingTeamId = '';
+        if (!canManage && typeof currentPlayer !== 'undefined' && currentPlayer && Array.isArray(doituyen)) {
+            for (var i = 0; i < doituyen.length; i++) {
+                var t = doituyen[i];
+                var cho = t && t.ThanhVienChoDuyet ? t.ThanhVienChoDuyet : [];
+                var coCho = cho.some(function (m) {
+                    return m && m._id && m._id.toString() === currentPlayer._id.toString();
+                });
+                if (coCho) { globalPendingTeamId = t._id.toString(); break; }
+            }
+        }
     %>
+
     <%- include('partials/sidebar', { active: 'doituyen' }) %>
-    
+
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="fw-bold"><i class="bi bi-shield-shaded text-primary me-2"></i>Quản lý Đội tuyển</h2>
@@ -29,6 +42,7 @@
             </div>
             <% delete session.success; %>
         <% } %>
+
         <% if (typeof session !== 'undefined' && session.error) { %>
             <div class="alert alert-danger alert-dismissible fade show shadow-sm">
                 <i class="bi bi-exclamation-triangle-fill me-2"></i><%= session.error %>
@@ -46,12 +60,12 @@
                             <th>Đội trưởng</th>
                             <th class="text-center">Thành viên (Max 4)</th>
                             <th class="text-center">Trạng thái</th>
-                            <th class="text-end pe-3" width="250">Hành động</th>
+                            <th class="text-end pe-3" width="280">Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
                         <% if (typeof doituyen !== 'undefined' && doituyen.length > 0) { %>
-                            <% doituyen.forEach(function(item) { 
+                            <% doituyen.forEach(function(item) {
                                 let soLuong = item.ThanhVien ? item.ThanhVien.length : 0;
                                 let isFull = soLuong >= 4;
                             %>
@@ -59,17 +73,13 @@
                                     <td class="ps-3 fw-bold text-primary"><%= item.TenDoi %></td>
                                     <td>
                                         <div class="fw-semibold"><%= item.TruongDoi || 'Chưa có' %></div>
-                                        <% if(canManage) { %><small class="text-muted"><%= item.SoDienThoai %></small><% } %>
+                                        <% if (canManage) { %><small class="text-muted"><%= item.SoDienThoai || '' %></small><% } %>
                                     </td>
-                                    
+
                                     <td class="text-center">
-                                        <span class="badge <%= isFull ? 'bg-danger' : 'bg-info text-dark' %> fs-6 px-3">
-                                            <%= soLuong %> / 4
-                                        </span>
+                                        <span class="badge <%= isFull ? 'bg-danger' : 'bg-info text-dark' %> fs-6 px-3"><%= soLuong %> / 4</span>
                                         <% if (item.ThanhVien && item.ThanhVien.length > 0) { %>
-                                            <div class="small text-muted mt-1 fw-medium">
-                                                <%= item.ThanhVien.map(tv => tv.HoVaTen).join(' • ') %>
-                                            </div>
+                                            <div class="small text-muted mt-1 fw-medium"><%= item.ThanhVien.map(function(tv){ return tv.HoVaTen; }).join(' • ') %></div>
                                         <% } %>
                                     </td>
 
@@ -86,16 +96,16 @@
                                             <div class="mb-2">
                                                 <a href="/doituyen/sua/<%= item._id %>" class="btn btn-warning btn-sm shadow-sm" title="Sửa"><i class="bi bi-pencil"></i></a>
                                                 <% if (isAdmin) { %>
-                                                    <form action="/doituyen/xoa/<%= item._id %>" method="post" style="display:inline" onsubmit="return confirm('Xác nhận xóa đội này? Toàn bộ thành viên sẽ bị mất đội!');">
+                                                    <form action="/doituyen/xoa/<%= item._id %>" method="post" style="display:inline" onsubmit="return confirm('Xác nhận xóa đội này?');">
                                                         <button class="btn btn-danger btn-sm shadow-sm" title="Xóa"><i class="bi bi-trash"></i></button>
                                                     </form>
                                                 <% } %>
                                             </div>
-                                            
+
                                             <% if (item.ThanhVienChoDuyet && item.ThanhVienChoDuyet.length > 0) { %>
                                                 <div class="bg-warning-subtle p-2 rounded text-start mt-2 border border-warning">
                                                     <div class="small fw-bold text-dark mb-1"><i class="bi bi-hourglass-split text-warning"></i> Chờ duyệt:</div>
-                                                    <% item.ThanhVienChoDuyet.forEach(nguoiCho => { %>
+                                                    <% item.ThanhVienChoDuyet.forEach(function(nguoiCho){ %>
                                                         <div class="d-flex justify-content-between align-items-center border-bottom border-warning pb-1 mb-1">
                                                             <small class="text-truncate fw-medium" style="max-width: 120px;" title="<%= nguoiCho.HoVaTen %>"><%= nguoiCho.HoVaTen %></small>
                                                             <div class="btn-group">
@@ -110,20 +120,25 @@
                                                     <% }) %>
                                                 </div>
                                             <% } %>
-                                            
+
                                         <% } else if (typeof currentPlayer !== 'undefined' && currentPlayer) { %>
-                                            <% 
-                                                let isMember = (item.ThanhVien || []).some(m => m._id.toString() === currentPlayer._id.toString());
-                                                let isPending = (item.ThanhVienChoDuyet || []).some(m => m._id.toString() === currentPlayer._id.toString());
+                                            <%
+                                                let isMember = (item.ThanhVien || []).some(function(m){ return m._id.toString() === currentPlayer._id.toString(); });
+                                                let isPending = (item.ThanhVienChoDuyet || []).some(function(m){ return m._id.toString() === currentPlayer._id.toString(); });
                                                 let hasOtherTeam = (currentPlayer.DoiTuyen != null) && (currentPlayer.DoiTuyen.toString() !== item._id.toString());
+                                                let hasPendingThisTeam = isPending || (!!globalPendingTeamId && globalPendingTeamId === item._id.toString());
+                                                let hasPendingOtherTeam = !hasPendingThisTeam && !!globalPendingTeamId && globalPendingTeamId !== item._id.toString();
                                             %>
+
 
                                             <% if (isMember) { %>
                                                 <button class="btn btn-success btn-sm shadow-sm" disabled><i class="bi bi-house-door-fill me-1"></i>Đội của bạn</button>
-                                            <% } else if (isPending) { %>
-                                                <button class="btn btn-secondary btn-sm shadow-sm" disabled><i class="bi bi-hourglass-split me-1"></i>Đang chờ Sếp duyệt</button>
                                             <% } else if (hasOtherTeam) { %>
                                                 <button class="btn btn-outline-secondary btn-sm" disabled title="Bạn đã có đội khác. Rời đội cũ trước nhé!">Khóa</button>
+                                            <% } else if (hasPendingThisTeam) { %>
+                                                <button class="btn btn-secondary btn-sm shadow-sm" disabled><i class="bi bi-hourglass-split me-1"></i>Đang chờ Sếp duyệt</button>
+                                            <% } else if (hasPendingOtherTeam) { %>
+                                                <button class="btn btn-outline-secondary btn-sm" disabled>Khóa</button>
                                             <% } else if (isFull) { %>
                                                 <button class="btn btn-danger btn-sm shadow-sm" disabled><i class="bi bi-x-circle-fill me-1"></i>Đã Full Người</button>
                                             <% } else { %>
@@ -131,6 +146,7 @@
                                                     <button type="submit" class="btn btn-primary btn-sm shadow-sm"><i class="bi bi-box-arrow-in-right me-1"></i>Xin gia nhập</button>
                                                 </form>
                                             <% } %>
+
                                         <% } %>
                                     </td>
                                 </tr>
@@ -143,6 +159,8 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
