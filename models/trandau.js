@@ -38,7 +38,13 @@ const TranDauSchema = new Schema({
   TrangThai: { type: String },
   NguoiTao: { type: Schema.Types.ObjectId, ref: 'TaiKhoan' },
   NguoiCapNhat: { type: Schema.Types.ObjectId, ref: 'TaiKhoan' },
-  KetQuaXacNhan: { type: Boolean, default: false }
+  KetQuaXacNhan: { type: Boolean, default: false },
+
+  // === TÍNH NĂNG KHAI BÁO MINH CHỨNG ===
+  TrangThaiKhaiBao: { type: String }, // 'Chờ duyệt', 'Bị từ chối'
+  LinkMinhChung: { type: String }, 
+  LinkMinhChungKhieuNai: { type: String },
+  NguoiKhaiBao: { type: Schema.Types.ObjectId, ref: 'TaiKhoan' }
 }, { timestamps: true, collection: 'trandau' });
 
 module.exports = mongoose.model('TranDau', TranDauSchema);

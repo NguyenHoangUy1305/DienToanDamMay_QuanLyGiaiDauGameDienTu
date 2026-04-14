@@ -16,7 +16,7 @@
         <% if (data && data.length > 0) { %>
             <% data.forEach(function(item) { %>
                 <% 
-                    var isResultLocked = !!item.KetQuaXacNhan || ((Number(item.TySo1) > 0 || Number(item.TySo2) > 0) || !!item.NguoiThang);
+                    var isResultLocked = !!item.KetQuaXacNhan || (item.TrangThai === 'FINISHED' || item.TrangThai === 'DA_THI_DAU');
                     var laTranDoi = item && (item.LoaiTran === 'TEAM' || item.LoaiDoiTuongThiDau === 'DoiTuyen');
 
                     var tySoChinh = (item.TySo1 + ' - ' + item.TySo2);
@@ -73,8 +73,18 @@
                 <tr>
                     <td><%= item.GiaiDau ? item.GiaiDau.TenGiaiDau : '' %></td>
                     <td><%= item.VongDau %></td>
-                    <td><%= item.DoiThu1 %></td>
-                    <td><%= item.DoiThu2 %></td>
+                    <td>
+                        <%= item.DoiThu1 %>
+                        <% if(typeof mapLienHe !== 'undefined' && item.DoiThu1Id && mapLienHe[item.DoiThu1Id.toString()]) { %>
+                            <div class="small text-secondary mt-1" style="font-size: 0.75rem;"><i class="bi bi-info-circle-fill me-1"></i><%= mapLienHe[item.DoiThu1Id.toString()] %></div>
+                        <% } %>
+                    </td>
+                    <td>
+                        <%= item.DoiThu2 %>
+                        <% if(typeof mapLienHe !== 'undefined' && item.DoiThu2Id && mapLienHe[item.DoiThu2Id.toString()]) { %>
+                            <div class="small text-secondary mt-1" style="font-size: 0.75rem;"><i class="bi bi-info-circle-fill me-1"></i><%= mapLienHe[item.DoiThu2Id.toString()] %></div>
+                        <% } %>
+                    </td>
                     <td><%= item.ThoiGianThiDau ? new Date(item.ThoiGianThiDau).toLocaleString('vi-VN') : '' %></td>
                     <td>
                         <div><%= tySoChinh %></div>
@@ -91,20 +101,40 @@
                         <%= trangThaiHienThi %>
                     </td>
                     <td>
-                        <a href="/trandau/chi-tiet/<%= item._id %>" class="btn btn-outline-dark btn-sm">Xem chi tiết</a>
+                        <a href="/trandau/chi-tiet/<%= item._id %>" class="btn btn-outline-dark btn-sm mb-1">Xem chi tiết</a>
                         <% if (canManage) { %>
                             <% if (isResultLocked) { %>
-                                <button type="button" class="btn btn-secondary btn-sm" disabled>Sửa</button>
-                                <button type="button" class="btn btn-secondary btn-sm" disabled>Đã chốt kết quả</button>
+                                <button type="button" class="btn btn-secondary btn-sm mb-1" disabled>Sửa</button>
+                                <button type="button" class="btn btn-secondary btn-sm mb-1" disabled>Đã chốt kết quả</button>
                             <% } else { %>
-                                <a href="/trandau/sua/<%= item._id %>" class="btn btn-warning btn-sm">Sửa</a>
-                                <a href="/trandau/nhap-ket-qua/<%= item._id %>" class="btn btn-primary btn-sm">Nhập kết quả</a>
+                                <a href="/trandau/sua/<%= item._id %>" class="btn btn-warning btn-sm mb-1">Sửa</a>
+                                <% if (item.TrangThai === 'PENDING_APPROVAL') { %>
+                                    <a href="/trandau/nhap-ket-qua/<%= item._id %>" class="btn btn-success btn-sm mb-1 fw-bold">Duyệt kết quả</a>
+                                <% } else if (item.TrangThai === 'DISPUTE') { %>
+                                    <a href="/trandau/nhap-ket-qua/<%= item._id %>" class="btn btn-danger btn-sm mb-1 fw-bold text-white">Xử lý Khiếu nại</a>
+                                <% } else { %>
+                                    <a href="/trandau/nhap-ket-qua/<%= item._id %>" class="btn btn-primary btn-sm mb-1">Nhập kết quả</a>
+                                <% } %>
                             <% } %>
                             <% if (isAdmin) { %>
-                                <a href="/trandau/xoa/<%= item._id %>" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa?');">Xóa</a>
+                                <a href="/trandau/xoa/<%= item._id %>" class="btn btn-danger btn-sm mb-1" onclick="return confirm('Bạn có chắc muốn xóa?');">Xóa</a>
                             <% } %>
-                            <a href="/trandau/xuat-lich/<%= item._id %>" target="_blank" rel="noopener noreferrer" class="btn btn-info btn-sm text-white">Xuất lịch</a>
-                            <a href="/trandau/mo-lich/<%= item._id %>" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm">Mở lịch</a>
+                            <a href="/trandau/xuat-lich/<%= item._id %>" target="_blank" rel="noopener noreferrer" class="btn btn-info btn-sm text-white mb-1">Xuất lịch</a>
+                            <a href="/trandau/mo-lich/<%= item._id %>" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info btn-sm mb-1">Mở lịch</a>
+                        <% } else if (isNguoiChoiLogin) { %>
+                            <% if (isResultLocked) { %>
+                                <button type="button" class="btn btn-secondary btn-sm mb-1" disabled>Đã chốt KQ</button>
+                            <% } else if (item.TrangThai === 'DISPUTE') { %>
+                                <button type="button" class="btn btn-danger btn-sm mb-1 fw-bold" disabled>Đang tranh chấp</button>
+                            <% } else if (item.TrangThai === 'PENDING_APPROVAL') { %>
+                                <% if (item.NguoiKhaiBao && session && item.NguoiKhaiBao.toString() === session.MaNguoiDung.toString()) { %>
+                                    <button type="button" class="btn btn-warning btn-sm mb-1 text-dark fw-bold" disabled>Đang chờ duyệt</button>
+                                <% } else { %>
+                                    <a href="/trandau/khieu-nai/<%= item._id %>" class="btn btn-danger btn-sm mb-1 fw-bold">Kiểm tra & Khiếu nại</a>
+                                <% } %>
+                            <% } else { %>
+                                <a href="/trandau/khai-bao/<%= item._id %>" class="btn btn-warning btn-sm mb-1 fw-bold text-dark">Báo cáo KQ</a>
+                            <% } %>
                         <% } %>
                     </td>
                 </tr>

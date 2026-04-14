@@ -53,16 +53,20 @@
                 <div class="mb-3"><%- typeof message !== 'undefined' ? message : '' %></div>
                 <form action="/dangky" method="post">
                     <div class="row g-3">
-                        <div class="col-md-6">
-                            <label for="HoVaTen" class="form-label">Họ và tên thật</label>
-                            <input type="text" class="form-control" id="HoVaTen" name="HoVaTen" placeholder="Nguyễn Văn A" required />
+                        <div class="col-md-12">
+                            <label for="HoVaTen" class="form-label">Tên hiển thị (Tên In-game)</label>
+                            <input type="text" class="form-control" id="HoVaTen" name="HoVaTen" placeholder="Nhập tên thật hoặc tên In-game" required />
                         </div>
                         <div class="col-md-6">
                             <label for="Email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="Email" name="Email" placeholder="vidu@gmail.com" required />
                         </div>
                         <div class="col-md-6">
-                            <label for="TenDangNhap" class="form-label">Tên đăng nhập (Tài khoản)</label>
+                            <label for="SoDienThoai" class="form-label">Số điện thoại</label>
+                            <input type="tel" class="form-control" id="SoDienThoai" name="SoDienThoai" placeholder="09xxxxxxx" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="TenDangNhap" class="form-label">Tên đăng nhập</label>
                             <input type="text" class="form-control" id="TenDangNhap" name="TenDangNhap" required />
                         </div>
                         <div class="col-md-6">

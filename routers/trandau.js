@@ -1,4 +1,4 @@
-﻿var express = require('express');
+var express = require('express');
 var router = express.Router();
 
 var TranDau = require('../models/trandau');
@@ -201,12 +201,23 @@ router.get('/', auth.yeuCauDangNhap, async function (req, res) {
     var trandau1vs1 = (td || []).filter(function (item) { return (item && (item.LoaiTran === '1vs1' || item.LoaiDoiTuongThiDau === 'NguoiChoi')); });
     var trandauDoi = (td || []).filter(function (item) { return (item && (item.LoaiTran === 'TEAM' || item.LoaiDoiTuongThiDau === 'DoiTuyen')); });
 
+    var tatCaNguoiChoi = await NguoiChoi.find().lean().exec();
+    var tatCaDoiTuyen = await DoiTuyen.find().lean().exec();
+    var mapLienHe = {};
+    tatCaNguoiChoi.forEach(function(p) { 
+        if (p._id) mapLienHe[p._id.toString()] = (p.SoDienThoai ? 'SĐT: ' + p.SoDienThoai : (p.Email ? 'Email: ' + p.Email : 'Chưa cập nhật LH')); 
+    });
+    tatCaDoiTuyen.forEach(function(t) { 
+        if (t._id) mapLienHe[t._id.toString()] = (t.SoDienThoai ? 'SĐT Đội: ' + t.SoDienThoai : (t.Email ? 'Email Đội: ' + t.Email : 'Chưa cập nhật LH Đội')); 
+    });
+
     res.render('trandau', {
         title: 'Trận đấu', trandau: td, trandau1vs1: trandau1vs1, trandauDoi: trandauDoi,
         canManage: (vaiTro === 'admin' || vaiTro === 'nhanvien'), isAdmin: vaiTro === 'admin',
         toVietnameseStatus: statusUtil.toVietnameseStatus,
         currentNguoiChoiId: currentNguoiChoiId,
-        isNguoiChoiLogin: isNguoiChoiLogin
+        isNguoiChoiLogin: isNguoiChoiLogin,
+        mapLienHe: mapLienHe
     });
 });
 

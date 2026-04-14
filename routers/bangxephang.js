@@ -1,4 +1,4 @@
-﻿var express = require('express');
+var express = require('express');
 var router = express.Router();
 var BangXepHang = require('../models/bangxephang');
 var GiaiDau = require('../models/giaidau');
@@ -19,6 +19,12 @@ function looksLikeObjectId(value) {
     return /^[a-fA-F0-9]{24}$/.test(v);
 }
 
+
+function isTeamTournament(theThuc) {
+    if (!theThuc) return false;
+    var val = theThuc.toString().toLowerCase();
+    return ['team', 'doi', 'đội', 'dong doi', '2vs2', '4vs4'].some(s => val.includes(s));
+}
 
 router.get('/', auth.yeuCauDangNhap, async function (req, res) {
     try {
@@ -105,12 +111,25 @@ router.get('/', auth.yeuCauDangNhap, async function (req, res) {
         var bangxephangCaNhan = all.filter(function (i) { return i.LoaiDoiTuong === 'NguoiChoi'; });
         var bangxephangDoi = all.filter(function (i) { return i.LoaiDoiTuong === 'DoiTuyen'; });
 
-                res.render('bangxephang', {
+        var giaidauCaNhan = giaidauList.filter(g => !isTeamTournament(g.TheThuc));
+        var giaidauDoi = giaidauList.filter(g => isTeamTournament(g.TheThuc));
+
+        var activeTab = 'canhan';
+        if (selectedGiaiDau) {
+            var selectedG = giaidauList.find(g => g._id.toString() === selectedGiaiDau.toString());
+            if (selectedG && isTeamTournament(selectedG.TheThuc)) activeTab = 'doi';
+        } else {
+            if (giaidauCaNhan.length === 0 && giaidauDoi.length > 0) activeTab = 'doi';
+        }
+
+        res.render('bangxephang', {
             title: 'Bảng xếp hạng',
             bangxephangCaNhan: bangxephangCaNhan,
             bangxephangDoi: bangxephangDoi,
-            giaidau: giaidauList,
-            selectedGiaiDau: selectedGiaiDau
+            giaidauCaNhan: giaidauCaNhan,
+            giaidauDoi: giaidauDoi,
+            selectedGiaiDau: selectedGiaiDau,
+            activeTab: activeTab
         });
     } catch (err) {
         console.error(err);

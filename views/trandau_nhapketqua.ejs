@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
@@ -23,7 +23,7 @@
 
     <div class="container mt-4" style="max-width: 1000px;">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2>Nhập kết quả trận đấu</h2>
+            <h2>Duyệt / Nhập kết quả trận đấu</h2>
             <span class="badge bg-primary fs-6"><%= trandau.GiaiDau ? trandau.GiaiDau.TenGiaiDau : 'Giải đấu' %></span>
         </div>
 
@@ -80,21 +80,59 @@
                 </div>
             </div>
 
+            <% if (trandau.LinkMinhChung) { %>
+                <div class="row">
+                    <div class="col-md-<%= trandau.LinkMinhChungKhieuNai ? '6' : '12' %>">
+                        <div class="card p-3 mb-4 shadow-sm border-info">
+                            <div class="mb-2">
+                                <label class="form-label fw-bold text-info-emphasis">
+                                    <i class="bi bi-link-45deg"></i> Link Minh Chứng Gốc:
+                                </label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="<%= trandau.LinkMinhChung %>" readonly>
+                                    <a href="<%= trandau.LinkMinhChung %>" target="_blank" class="btn btn-info text-white">Mở xem</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% if (trandau.LinkMinhChungKhieuNai) { %>
+                    <div class="col-md-6">
+                        <div class="card p-3 mb-4 shadow-sm border-danger">
+                            <div class="mb-2">
+                                <label class="form-label fw-bold text-danger">
+                                    <i class="bi bi-shield-exclamation"></i> Minh Chứng KHIẾU NẠI:
+                                </label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="<%= trandau.LinkMinhChungKhieuNai %>" readonly>
+                                    <a href="<%= trandau.LinkMinhChungKhieuNai %>" target="_blank" class="btn btn-danger text-white">Mở xem K.Nại</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+                </div>
+            <% } %>
+
             <div class="card p-3 mb-4">
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <label class="form-label fw-bold">Vòng đấu:</label>
                         <span class="text-muted"><%= trandau.VongDau %></span>
                     </div>
-                    <div class="col-md-6 text-end">
+                    <div class="col-md-7 text-end">
                         <% if (!isLocked) { %>
-                            <button type="submit" class="btn btn-primary btn-lg shadow">
-                                <i class="bi bi-check-circle-fill me-2"></i>Xác nhận & Cập nhật BXH
+                            <% if (trandau.LinkMinhChung) { %>
+                                <button type="submit" name="TuChoi" value="true" class="btn btn-danger btn-lg shadow text-nowrap" onclick="return confirm('Từ chối minh chứng này? Nó sẽ bị xóa!');">
+                                    <i class="bi bi-x-circle me-1"></i>Từ chối
+                                </button>
+                            <% } %>
+                            <button type="submit" class="btn btn-success btn-lg shadow text-nowrap ms-1">
+                                <i class="bi bi-check-circle-fill me-1"></i>Duyệt & Cập nhật BXH
                             </button>
                         <% } else { %>
                             <button type="button" class="btn btn-secondary btn-lg shadow" disabled>Đã chốt kết quả</button>
                         <% } %>
-                        <a href="/trandau" class="btn btn-outline-secondary btn-lg ms-2">Bỏ qua</a>
+                        <a href="/trandau" class="btn btn-outline-secondary btn-lg ms-1">Hủy</a>
                     </div>
                 </div>
             </div>

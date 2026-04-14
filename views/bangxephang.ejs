@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
@@ -16,27 +16,39 @@
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="fw-bold"><i class="bi bi-trophy-fill text-warning me-2"></i>Bảng xếp hạng</h2>
-            <form id="filterForm" method="get" action="/bangxephang" class="d-flex gap-2">
-                <select name="GiaiDau" id="GiaiDauSelect" class="form-select shadow-sm" onchange="this.form.submit()">
-                    <option value="">-- Chọn giải đấu --</option>
-                    <% (giaidau || []).forEach(function(g) { %>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <ul class="nav nav-pills" id="bxhTabs" role="tablist">
+                <li class="nav-item">
+                    <button class="nav-link <%= activeTab === 'canhan' ? 'active' : '' %>" data-bs-toggle="tab" data-bs-target="#canhan" type="button" onclick="document.getElementById('dd-canhan').classList.remove('d-none'); document.getElementById('dd-doi').classList.add('d-none');">Giải cá nhân</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link <%= activeTab === 'doi' ? 'active' : '' %>" data-bs-toggle="tab" data-bs-target="#doi" type="button" onclick="document.getElementById('dd-doi').classList.remove('d-none'); document.getElementById('dd-canhan').classList.add('d-none');">Giải đồng đội</button>
+                </li>
+            </ul>
+
+            <form method="get" action="/bangxephang" class="d-flex w-auto m-0 <%= activeTab === 'canhan' ? '' : 'd-none' %>" id="dd-canhan">
+                <select name="GiaiDau" class="form-select shadow-sm" onchange="this.form.submit()" style="min-width: 250px;">
+                    <option value="">-- Chọn giải đấu cá nhân --</option>
+                    <% (giaidauCaNhan || []).forEach(function(g) { %>
+                        <option value="<%= g._id %>" <%= selectedGiaiDau == g._id.toString() ? 'selected' : '' %>><%= g.TenGiaiDau %></option>
+                    <% }) %>
+                </select>
+            </form>
+
+            <form method="get" action="/bangxephang" class="d-flex w-auto m-0 <%= activeTab === 'doi' ? '' : 'd-none' %>" id="dd-doi">
+                <select name="GiaiDau" class="form-select shadow-sm" onchange="this.form.submit()" style="min-width: 250px;">
+                    <option value="">-- Chọn giải đấu đồng đội --</option>
+                    <% (giaidauDoi || []).forEach(function(g) { %>
                         <option value="<%= g._id %>" <%= selectedGiaiDau == g._id.toString() ? 'selected' : '' %>><%= g.TenGiaiDau %></option>
                     <% }) %>
                 </select>
             </form>
         </div>
 
-        <ul class="nav nav-pills mb-3" id="bxhTabs" role="tablist">
-            <li class="nav-item">
-                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#canhan" type="button">Giải cá nhân</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#doi" type="button">Giải đồng đội</button>
-            </li>
-        </ul>
-
         <div class="tab-content card shadow-sm border-0 rounded-3 overflow-hidden">
-            <div class="tab-pane fade show active" id="canhan">
+            <div class="tab-pane fade <%= activeTab === 'canhan' ? 'show active' : '' %>" id="canhan">
                 <div class="table-responsive">
                     <table class="table table-hover table-vcenter mb-0">
                         <thead class="table-dark">
@@ -71,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="doi">
+            <div class="tab-pane fade <%= activeTab === 'doi' ? 'show active' : '' %>" id="doi">
                 <div class="table-responsive">
                     <table class="table table-hover table-vcenter mb-0">
                         <thead class="table-info">
