@@ -587,6 +587,148 @@ router.post('/nhap-ket-qua/:id', auth.yeuCauStaffHoacAdmin, async function (req,
     } catch (err) { res.redirect('/trandau/nhap-ket-qua/' + req.params.id); }
 });
 
+// ===================== KHAI BÁO KẾT QUẢ =====================
+router.get('/khai-bao/:id', auth.yeuCauDangNhap, async function (req, res) {
+    try {
+        var td = await TranDau.findById(req.params.id).populate('GiaiDau').lean().exec();
+        if (!td) { req.session.error = 'Không tìm thấy trận đấu.'; return res.redirect('/trandau'); }
+        var isTeamMatch = td.LoaiDoiTuongThiDau === 'DoiTuyen';
+        var doiHinhDoi1 = isTeamMatch ? await loadDoiHinhByTeamId(td.DoiThu1Id) : [];
+        var doiHinhDoi2 = isTeamMatch ? await loadDoiHinhByTeamId(td.DoiThu2Id) : [];
+        var banThangDoi1Map = {};
+        var banThangDoi2Map = {};
+        (td.ChiTietTySo || []).forEach(function (ct) {
+            if (!ct || !ct.NguoiChoi) return;
+            if ((ct.DoiThu || '') === 'Doi1') banThangDoi1Map[ct.NguoiChoi.toString()] = Number(ct.BanThang || 0);
+            if ((ct.DoiThu || '') === 'Doi2') banThangDoi2Map[ct.NguoiChoi.toString()] = Number(ct.BanThang || 0);
+        });
+        var message = '';
+        return res.render('trandau_khaibao', { title: 'Khai báo kết quả', trandau: td, isTeamMatch: isTeamMatch, doiHinhDoi1: doiHinhDoi1, doiHinhDoi2: doiHinhDoi2, banThangDoi1Map: banThangDoi1Map, banThangDoi2Map: banThangDoi2Map, message: message });
+    } catch (err) {
+        console.error('ERROR khai-bao GET:', err);
+        req.session.error = 'Không thể mở trang khai báo.';
+        return res.redirect('/trandau');
+    }
+});
+
+router.post('/khai-bao/:id', auth.yeuCauDangNhap, async function (req, res) {
+    try {
+        var id = req.params.id;
+        var td = await TranDau.findById(id).exec();
+        if (!td) { req.session.error = 'Không tìm thấy trận đấu.'; return res.redirect('/trandau'); }
+        if (td.KetQuaXacNhan || statusUtil.isDoneStatus(td.TrangThai)) { req.session.error = 'Trận đấu đã có kết quả, không thể khai báo.'; return res.redirect('/trandau'); }
+
+        var chiTietTySo = [];
+        var tyso1 = 0; var tyso2 = 0;
+        if (td.LoaiDoiTuongThiDau === 'DoiTuyen') {
+            var doiHinh1 = await loadDoiHinhByTeamId(td.DoiThu1Id);
+            var doiHinh2 = await loadDoiHinhByTeamId(td.DoiThu2Id);
+            var map1 = req.body.BanThangDoi1 || {};
+            var map2 = req.body.BanThangDoi2 || {};
+            doiHinh1.forEach(function (p) {
+                var key = p._id.toString();
+                var v = parseNonNegativeNumber(map1[key]);
+                tyso1 += v;
+                chiTietTySo.push({ NguoiChoi: p._id, TenNguoiChoi: p.HoVaTen, DoiThu: 'Doi1', BanThang: v });
+            });
+            doiHinh2.forEach(function (p) {
+                var key = p._id.toString();
+                var v = parseNonNegativeNumber(map2[key]);
+                tyso2 += v;
+                chiTietTySo.push({ NguoiChoi: p._id, TenNguoiChoi: p.HoVaTen, DoiThu: 'Doi2', BanThang: v });
+            });
+        } else {
+            tyso1 = parseNonNegativeNumber(req.body.TySo1);
+            tyso2 = parseNonNegativeNumber(req.body.TySo2);
+        }
+
+        td.TySo1 = tyso1; td.TySo2 = tyso2; td.ChiTietTySo = chiTietTySo;
+        td.LinkMinhChung = req.body.LinkMinhChung || td.LinkMinhChung || '';
+        td.TrangThai = statusUtil.STATUS.CHO_DUYET;
+        td.TrangThaiKhaiBao = 'Chờ duyệt';
+        td.NguoiKhaiBao = req.session.MaNguoiDung || null;
+        await td.save();
+
+        req.session.success = 'Đã gửi báo cáo, chờ Ban Tổ Chức duyệt.';
+        return res.redirect('/trandau');
+    } catch (err) {
+        console.error('ERROR khai-bao POST:', err);
+        req.session.error = 'Không thể gửi báo cáo.';
+        return res.redirect('/trandau/khai-bao/' + (req.params.id || ''));
+    }
+});
+
+// ===================== KHIẾU NẠI KẾT QUẢ =====================
+router.get('/khieu-nai/:id', auth.yeuCauDangNhap, async function (req, res) {
+    try {
+        var td = await TranDau.findById(req.params.id).populate('GiaiDau').lean().exec();
+        if (!td) { req.session.error = 'Không tìm thấy trận đấu.'; return res.redirect('/trandau'); }
+        var isTeamMatch = td.LoaiDoiTuongThiDau === 'DoiTuyen';
+        var doiHinhDoi1 = isTeamMatch ? await loadDoiHinhByTeamId(td.DoiThu1Id) : [];
+        var doiHinhDoi2 = isTeamMatch ? await loadDoiHinhByTeamId(td.DoiThu2Id) : [];
+        var banThangDoi1Map = {};
+        var banThangDoi2Map = {};
+        (td.ChiTietTySo || []).forEach(function (ct) {
+            if (!ct || !ct.NguoiChoi) return;
+            if ((ct.DoiThu || '') === 'Doi1') banThangDoi1Map[ct.NguoiChoi.toString()] = Number(ct.BanThang || 0);
+            if ((ct.DoiThu || '') === 'Doi2') banThangDoi2Map[ct.NguoiChoi.toString()] = Number(ct.BanThang || 0);
+        });
+        var message = '';
+        return res.render('trandau_khieunai', { title: 'Khiếu nại kết quả', trandau: td, isTeamMatch: isTeamMatch, doiHinhDoi1: doiHinhDoi1, doiHinhDoi2: doiHinhDoi2, banThangDoi1Map: banThangDoi1Map, banThangDoi2Map: banThangDoi2Map, message: message });
+    } catch (err) {
+        console.error('ERROR khieu-nai GET:', err);
+        req.session.error = 'Không thể mở trang khiếu nại.';
+        return res.redirect('/trandau');
+    }
+});
+
+router.post('/khieu-nai/:id', auth.yeuCauDangNhap, async function (req, res) {
+    try {
+        var id = req.params.id;
+        var td = await TranDau.findById(id).exec();
+        if (!td) { req.session.error = 'Không tìm thấy trận đấu.'; return res.redirect('/trandau'); }
+        if (td.KetQuaXacNhan || statusUtil.isDoneStatus(td.TrangThai)) { req.session.error = 'Trận đấu đã có kết quả, không thể khiếu nại.'; return res.redirect('/trandau'); }
+
+        var chiTietTySo = [];
+        var tyso1 = 0; var tyso2 = 0;
+        if (td.LoaiDoiTuongThiDau === 'DoiTuyen') {
+            var doiHinh1 = await loadDoiHinhByTeamId(td.DoiThu1Id);
+            var doiHinh2 = await loadDoiHinhByTeamId(td.DoiThu2Id);
+            var map1 = req.body.BanThangDoi1 || {};
+            var map2 = req.body.BanThangDoi2 || {};
+            doiHinh1.forEach(function (p) {
+                var key = p._id.toString();
+                var v = parseNonNegativeNumber(map1[key]);
+                tyso1 += v;
+                chiTietTySo.push({ NguoiChoi: p._id, TenNguoiChoi: p.HoVaTen, DoiThu: 'Doi1', BanThang: v });
+            });
+            doiHinh2.forEach(function (p) {
+                var key = p._id.toString();
+                var v = parseNonNegativeNumber(map2[key]);
+                tyso2 += v;
+                chiTietTySo.push({ NguoiChoi: p._id, TenNguoiChoi: p.HoVaTen, DoiThu: 'Doi2', BanThang: v });
+            });
+        } else {
+            tyso1 = parseNonNegativeNumber(req.body.TySo1);
+            tyso2 = parseNonNegativeNumber(req.body.TySo2);
+        }
+
+        td.TySo1 = tyso1; td.TySo2 = tyso2; td.ChiTietTySo = chiTietTySo;
+        td.LinkMinhChungKhieuNai = req.body.LinkMinhChungKhieuNai || td.LinkMinhChungKhieuNai || '';
+        td.TrangThai = statusUtil.STATUS.TRANH_CHAP;
+        td.TrangThaiKhaiBao = 'Đang tranh chấp';
+        td.NguoiKhaiBao = req.session.MaNguoiDung || null;
+        await td.save();
+
+        req.session.success = 'Đã gửi khiếu nại, chờ Ban Tổ Chức xử lý.';
+        return res.redirect('/trandau');
+    } catch (err) {
+        console.error('ERROR khieu-nai POST:', err);
+        req.session.error = 'Không thể gửi khiếu nại.';
+        return res.redirect('/trandau/khieu-nai/' + (req.params.id || ''));
+    }
+});
+
 module.exports = router;
 
 
